@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<root>
+
+  <item>
+    <name>Use ctrl+v to paste in iTerm</name>
+    <appendix>(Control+V to Command_L+V)</appendix>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>remap.pc_style_paste_in_iterm</identifier>
+    <only>TERMINAL</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use PC Style Alt+F4</name>
+    <appendix>Disable Cmd+Q, remap Alt/Cmd+F4 to Cmd+Q</appendix>
+    <identifier>remap.pcstyle_altf4_all</identifier>
+    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
+  </item>
+
+  <item>
+    <name>F19 to F19</name>
+    <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)</appendix>
+    <identifier>private.f192f19</identifier>
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::F19,
+      KeyCode::COMMAND_L,
+      ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::F19
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+backspace To Del</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+backspace, send del</appendix>
+    <identifier>private.hyperspace2enter</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::DELETE, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::FORWARD_DELETE
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+J To Down</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+J, send down</appendix>
+    <identifier>private.hyperj2down</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::J, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_DOWN
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+K To Up</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+k, send up</appendix>
+    <identifier>private.hyperk2up</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::K, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_UP
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+H To Left</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+h, send left</appendix>
+    <identifier>private.hyperh2left</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+L To Right</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+l, send right</appendix>
+    <identifier>private.hyperl2right</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_RIGHT
+    </autogen>
+  </item>
+  <item>
+    <name>Hyper+Tab To Capslock</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+tab, send capslock</appendix>
+    <identifier>private.hypertab2capslock</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CAPSLOCK
+    </autogen>
+  </item>
+</root>
