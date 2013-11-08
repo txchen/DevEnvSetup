@@ -1,5 +1,101 @@
 <?xml version="1.0"?>
 <root>
+  <appdef>
+    <appname>INTELLIJ</appname>
+    <equal>com.jetbrains.intellij</equal>
+    <equal>com.jetbrains.intellij.ce</equal>
+  </appdef>
+
+  <appdef>
+    <appname>SUBLIMETEXT</appname>
+    <equal>com.sublimetext.3</equal>
+    <equal>com.sublimetext.2</equal>
+  </appdef>
+
+  <item>
+    <name>F19 to F19</name>
+    <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)</appendix>
+    <identifier>private.f192f19</identifier>
+    <autogen>
+      --KeyOverlaidModifier--
+      KeyCode::F19,
+      KeyCode::COMMAND_L,
+      ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::F19
+    </autogen>
+  </item>
+
+  <item>
+    <name>Hyper+Tab To Capslock</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+tab, send capslock</appendix>
+    <identifier>private.hypertab2capslock</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CAPSLOCK
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use PC Style Alt+F4</name>
+    <appendix>Disable Cmd+Q, remap Alt/Cmd+F4 to Cmd+Q</appendix>
+    <identifier>private.pc_style_close_app</identifier>
+    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
+  </item>
+
+  <item>
+      <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab</name>
+      <appendix>(Control+C/V/X/Z/A/S/T to Command_L+C/V/X/Z/A/S/T)</appendix>
+      <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
+      <appendix>(Control+F to Command_L+F)</appendix>
+      <appendix>(Control+G to Command_L+G)</appendix>
+      <appendix>(F3 to Command_L+G)</appendix>
+      <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
+      <appendix></appendix>
+      <appendix>Except in Terminal, SublimeText, IntelliJ</appendix>
+      <identifier>private.pc_style_shortcuts</identifier>
+      <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+      <autogen>
+        __KeyToKey__
+        KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::C, ModifierFlag::COMMAND_L,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::V, ModifierFlag::COMMAND_L,
+      </autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+        KeyCode::X, ModifierFlag::COMMAND_L,
+      </autogen>
+      <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
+      <autogen>
+        __KeyToKey__
+        KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+        KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::SHIFT_L
+      </autogen>
+      <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+      <name>Use PC Style Delete-Last-Word</name>
+      <name>(Control+Backspace to Option+Backspace)</name>
+      <appendix></appendix>
+      <appendix>Except in Terminal, Sublime, IntelliJ</appendix>
+      <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
+      <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+      <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
 
   <item>
     <name>Use ctrl+v to paste in iTerm</name>
@@ -16,27 +112,6 @@
   </item>
 
   <item>
-    <name>Use PC Style Alt+F4</name>
-    <appendix>Disable Cmd+Q, remap Alt/Cmd+F4 to Cmd+Q</appendix>
-    <identifier>remap.pcstyle_altf4_all</identifier>
-    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-    <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
-  </item>
-
-  <item>
-    <name>F19 to F19</name>
-    <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)</appendix>
-    <identifier>private.f192f19</identifier>
-    <autogen>
-      --KeyOverlaidModifier--
-      KeyCode::F19,
-      KeyCode::COMMAND_L,
-      ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
-      KeyCode::F19
-    </autogen>
-  </item>
-  <item>
     <name>Hyper+backspace To Del</name>
     <appendix>Hyper(cmd+ctrl+shift+opt)+backspace, send del</appendix>
     <identifier>private.hyperspace2enter</identifier>
@@ -46,54 +121,57 @@
       KeyCode::FORWARD_DELETE
     </autogen>
   </item>
+
   <item>
-    <name>Hyper+J To Down</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+J, send down</appendix>
-    <identifier>private.hyperj2down</identifier>
+    <name>Hyper+HJKL To Left-Down-Up-Right</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+HJKL, send left/down/up/right</appendix>
+    <identifier>private.hyperhjkl2leftdownupright</identifier>
     <autogen>
       --KeyToKey--
       KeyCode::J, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_DOWN
     </autogen>
-  </item>
-  <item>
-    <name>Hyper+K To Up</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+k, send up</appendix>
-    <identifier>private.hyperk2up</identifier>
     <autogen>
       --KeyToKey--
       KeyCode::K, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_UP
     </autogen>
-  </item>
-  <item>
-    <name>Hyper+H To Left</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+h, send left</appendix>
-    <identifier>private.hyperh2left</identifier>
     <autogen>
       --KeyToKey--
       KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_LEFT
     </autogen>
-  </item>
-  <item>
-    <name>Hyper+L To Right</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+l, send right</appendix>
-    <identifier>private.hyperl2right</identifier>
     <autogen>
       --KeyToKey--
       KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_RIGHT
     </autogen>
   </item>
+
   <item>
-    <name>Hyper+Tab To Capslock</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+tab, send capslock</appendix>
-    <identifier>private.hypertab2capslock</identifier>
+    <name>Hyper+Curson To PageUp/PageDown/Home/End</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+left/right, send Home/End</appendix>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+up/down, send PageUp/PageDown</appendix>
+    <identifier>private.hypercursor2homeendpageuppagedown</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
-      KeyCode::CAPSLOCK
+      KeyCode::CURSOR_UP, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::PAGEUP
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::PAGEDOWN
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::HOME
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::END
     </autogen>
   </item>
 </root>
