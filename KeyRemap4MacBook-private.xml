@@ -113,12 +113,32 @@
     <appendix>(Control+V to Command_L+V)</appendix>
     <appendix></appendix>
     <appendix>(Only in iTerm2)</appendix>
-    <identifier>remap.pc_style_paste_in_iterm</identifier>
+    <identifier>private.pc_style_paste_in_iterm</identifier>
     <only>TERMINAL</only>
     <autogen>
       __KeyToKey__
       KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
       KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use cmd+H/L to switch tab</name>
+    <appendix>(Command_L+H to Command_L+LEFT)</appendix>
+    <appendix>(Command_L+L to Command_L+RIGHT)</appendix>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>private.cmd_h_l_switch_tab</identifier>
+    <only>TERMINAL</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L,
     </autogen>
   </item>
 
