@@ -123,26 +123,6 @@
   </item>
 
   <item>
-    <name>Use cmd+H/L to switch tab</name>
-    <appendix>(Command_L+H to Command_L+LEFT)</appendix>
-    <appendix>(Command_L+L to Command_L+RIGHT)</appendix>
-    <appendix></appendix>
-    <appendix>(Only in iTerm2)</appendix>
-    <identifier>private.cmd_h_l_switch_tab</identifier>
-    <only>TERMINAL</only>
-    <autogen>
-      __KeyToKey__
-      KeyCode::H, ModifierFlag::COMMAND_L,
-      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::L, ModifierFlag::COMMAND_L,
-      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L,
-    </autogen>
-  </item>
-
-  <item>
     <name>Hyper+HJKL To Left-Down-Up-Right</name>
     <appendix>Hyper(cmd+ctrl+shift+opt)+HJKL, send left/down/up/right</appendix>
     <identifier>private.hyperhjkl2leftdownupright</identifier>
@@ -165,6 +145,26 @@
       --KeyToKey--
       KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_RIGHT
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use cmd+H/L to switch tab</name>
+    <appendix>(Command_L+H to Command_L+LEFT)</appendix>
+    <appendix>(Command_L+L to Command_L+RIGHT)</appendix>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>private.cmd_h_l_switch_tab</identifier>
+    <only>TERMINAL</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::H, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::L, ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L,
     </autogen>
   </item>
 
