@@ -38,53 +38,52 @@
 
   <item>
     <name>Use PC Style Alt+F4</name>
-    <appendix>Disable Cmd+Q, remap Alt/Cmd+F4 to Cmd+Q</appendix>
+    <appendix>Disable Cmd+Q, remap Alt+F4 to Cmd+Q</appendix>
     <identifier>private.pc_style_close_app</identifier>
-    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
     <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
     <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
   </item>
 
   <item>
-      <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab</name>
-      <appendix>(Control+C/V/X/Z/A/S/T to Command_L+C/V/X/Z/A/S/T)</appendix>
-      <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
-      <appendix>(Control+F to Command_L+F)</appendix>
-      <appendix>(Control+G to Command_L+G)</appendix>
-      <appendix>(F3 to Command_L+G)</appendix>
-      <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
-      <appendix></appendix>
-      <appendix>Except in Terminal, SublimeText, IntelliJ</appendix>
-      <identifier>private.pc_style_shortcuts</identifier>
-      <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
-      <autogen>
-        __KeyToKey__
-        KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-        KeyCode::C, ModifierFlag::COMMAND_L,
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-        KeyCode::V, ModifierFlag::COMMAND_L,
-      </autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-        KeyCode::X, ModifierFlag::COMMAND_L,
-      </autogen>
-      <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
-      <autogen>
-        __KeyToKey__
-        KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
-        KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::SHIFT_L
-      </autogen>
-      <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-      <autogen>__KeyToKey__ KeyCode::F3, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+    <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab</name>
+    <appendix>(Control+C/V/X/Z/A/S/T to Command_L+C/V/X/Z/A/S/T)</appendix>
+    <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
+    <appendix>(Control+F to Command_L+F)</appendix>
+    <appendix>(Control+G to Command_L+G)</appendix>
+    <appendix>(F3 to Command_L+G)</appendix>
+    <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
+    <appendix></appendix>
+    <appendix>Except in Terminal, SublimeText, IntelliJ</appendix>
+    <identifier>private.pc_style_shortcuts</identifier>
+    <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+    <autogen>
+      __KeyToKey__
+      KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::C, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::X, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+      KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F3, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
   </item>
 
   <item>
@@ -99,27 +98,13 @@
   </item>
 
   <item>
-      <name>Use PC Style Delete-Last-Word</name>
-      <name>(Control+Backspace to Option+Backspace)</name>
-      <appendix></appendix>
-      <appendix>Except in Terminal, Sublime, IntelliJ</appendix>
-      <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-      <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
-      <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
-  </item>
-
-  <item>
-    <name>Use ctrl+v to paste in iTerm</name>
-    <appendix>(Control+V to Command_L+V)</appendix>
+    <name>Use PC Style Delete-Last-Word</name>
+    <name>(Control+Backspace to Option+Backspace)</name>
     <appendix></appendix>
-    <appendix>(Only in iTerm2)</appendix>
-    <identifier>private.pc_style_paste_in_iterm</identifier>
-    <only>TERMINAL</only>
-    <autogen>
-      __KeyToKey__
-      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-      KeyCode::V, ModifierFlag::COMMAND_L,
-    </autogen>
+    <appendix>Except in Terminal, Sublime, IntelliJ</appendix>
+    <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
+    <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+    <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
@@ -149,7 +134,31 @@
   </item>
 
   <item>
-    <name>Use cmd+H/L to switch tab</name>
+    <name>Use PC Style Delete-Last-Word in iTerm</name>
+    <name>(Control+Backspace to Alt+Backspace)</name>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>private.control_backspace_to_alt_backspace_winstyle_in_iterm</identifier>
+    <only>TERMINAL</only>
+    <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Use ctrl+v to paste in iTerm</name>
+    <appendix>(Control+V to Command_L+V)</appendix>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>private.pc_style_paste_in_iterm</identifier>
+    <only>TERMINAL</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+  </item>
+
+  <item>
+    <name>Use cmd+H/L to switch tab in iTerm</name>
     <appendix>(Command_L+H to Command_L+LEFT)</appendix>
     <appendix>(Command_L+L to Command_L+RIGHT)</appendix>
     <appendix></appendix>
@@ -169,7 +178,23 @@
   </item>
 
   <item>
-    <name>Hyper+Curson To PageUp/PageDown/Home/End</name>
+    <name>Hyper+A/E to Home/End</name>
+    <appendix>Hyper(cmd+ctrl+shift+opt)+a/e, send Home/End</appendix>
+    <identifier>private.hyperAE2HomeEnd</identifier>
+    <autogen>
+      --KeyToKey--
+      KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::HOME
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::END
+    </autogen>
+  </item>
+
+  <item>
+    <name>Hyper+Curson to PageUp/PageDown/Home/End</name>
     <appendix>Hyper(cmd+ctrl+shift+opt)+left/right, send Home/End</appendix>
     <appendix>Hyper(cmd+ctrl+shift+opt)+up/down, send PageUp/PageDown</appendix>
     <identifier>private.hypercursor2homeendpageuppagedown</identifier>
@@ -193,5 +218,37 @@
       KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::END
     </autogen>
+  </item>
+
+  <item>
+    <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
+    <identifier>private.alt_tab_to_switch_application</identifier>
+    <autogen>
+      __KeyToKey__
+      KeyCode::OPTION_L,
+
+      KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab,
+      KeyCode::OPTION_L,
+
+      Option::KEYTOKEY_AFTER_KEYUP,
+      KeyCode::VK_LOCK_COMMAND_L_FORCE_OFF,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab,
+      KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab_tab_mode,
+    </autogen>
+    <block>
+      <config_only>notsave.modifier_tab_to_command_tab_tab_mode</config_only>
+      <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+    </block>
+
+    <block>
+      <config_only>notsave.modifier_tab_to_command_tab</config_only>
+      <autogen>
+        __KeyToKey__
+        KeyCode::TAB, ModifierFlag::OPTION_L,
+        KeyCode::TAB, ModifierFlag::COMMAND_L,
+        KeyCode::VK_LOCK_COMMAND_L_FORCE_ON, ModifierFlag::COMMAND_L,
+        KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
+      </autogen>
+    </block>
   </item>
 </root>
