@@ -44,5 +44,8 @@ plugins=(git osx autojump)
 
 source $ZSH/oh-my-zsh.sh
 
+# disable ctrl+s to stop the terminal, as vim might need this hotkey
+stty -ixon
+
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
