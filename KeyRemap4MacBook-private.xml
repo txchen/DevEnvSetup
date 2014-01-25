@@ -53,9 +53,9 @@
     <appendix>(F3 to Command_L+G)</appendix>
     <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
     <appendix></appendix>
-    <appendix>Except in Terminal, SublimeText, IntelliJ</appendix>
+    <appendix>Except in Terminal, SublimeText, IntelliJ, Xcode</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -101,9 +101,9 @@
     <name>Use PC Style Delete-Last-Word</name>
     <name>(Control+Backspace to Option+Backspace)</name>
     <appendix></appendix>
-    <appendix>Except in Terminal, Sublime, IntelliJ</appendix>
+    <appendix>Except in Sublime, IntelliJ, Xcode</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, TERMINAL, INTELLIJ</not>
+    <not>SUBLIMETEXT, INTELLIJ, XCODE</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
@@ -131,16 +131,6 @@
       KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
       KeyCode::CURSOR_RIGHT
     </autogen>
-  </item>
-
-  <item>
-    <name>Use PC Style Delete-Last-Word in iTerm</name>
-    <name>(Control+Backspace to Alt+Backspace)</name>
-    <appendix></appendix>
-    <appendix>(Only in iTerm2)</appendix>
-    <identifier>private.control_backspace_to_alt_backspace_winstyle_in_iterm</identifier>
-    <only>TERMINAL</only>
-    <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
