@@ -20,7 +20,7 @@ set cursorline                " highlight current line
 syntax on
 
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 
 " ================ Indentation ======================

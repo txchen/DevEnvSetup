@@ -12,26 +12,31 @@
     <equal>com.sublimetext.2</equal>
   </appdef>
 
+  <appdef>
+    <appname>TEAMVIEWER</appname>
+    <equal>com.teamviewer.TeamViewer</equal>
+  </appdef>
+
   <item>
     <name>F19 to F19</name>
-    <appendix>(F19 to Hyper (ctrl+shift+cmd+opt) + F19 Only, F19)</appendix>
+    <appendix>(F19 to Hyper (ctrl+cmd+opt+extra1) + F19)</appendix>
     <identifier>private.f192f19</identifier>
     <autogen>
       --KeyOverlaidModifier--
       KeyCode::F19,
-      KeyCode::COMMAND_L,
-      ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L,
+      KeyCode::CONTROL_L,
+      ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L,
       KeyCode::F19
     </autogen>
   </item>
 
   <item>
     <name>Hyper+Tab To Capslock</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+tab, send capslock</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + tab, send capslock</appendix>
     <identifier>private.hypertab2capslock</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::TAB, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::TAB, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CAPSLOCK
     </autogen>
   </item>
@@ -40,6 +45,7 @@
     <name>Use PC Style Alt+F4</name>
     <appendix>Disable Cmd+Q, remap Alt+F4 to Cmd+Q</appendix>
     <identifier>private.pc_style_close_app</identifier>
+    <not>TEAMVIEWER</not>
     <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
     <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
   </item>
@@ -55,7 +61,7 @@
     <appendix></appendix>
     <appendix>Except in Terminal, SublimeText, IntelliJ, Xcode</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE</not>
+    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE, TEAMVIEWER</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -88,11 +94,11 @@
 
   <item>
     <name>Hyper+backspace To Del</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+backspace, send del</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + backspace, send del</appendix>
     <identifier>private.hyperbackspace2del</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::DELETE, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::DELETE, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::FORWARD_DELETE
     </autogen>
   </item>
@@ -103,32 +109,32 @@
     <appendix></appendix>
     <appendix>Except in Sublime, IntelliJ, Xcode</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, INTELLIJ, XCODE</not>
+    <not>SUBLIMETEXT, INTELLIJ, XCODE, TEAMVIEWER</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
     <name>Hyper+HJKL To Left-Down-Up-Right</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+HJKL, send left/down/up/right</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + HJKL, send left/down/up/right</appendix>
     <identifier>private.hyperhjkl2leftdownupright</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::J, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::J, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_DOWN
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::K, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::K, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_UP
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::H, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::H, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_LEFT
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::L, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::L, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_RIGHT
     </autogen>
   </item>
@@ -168,44 +174,55 @@
   </item>
 
   <item>
-    <name>Hyper+A/E to Home/End</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+a/e, send Home/End</appendix>
+    <name>Hyper+A/E/U/D to Home/End/PageUp/PageDown</name>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + a/e, send Home/End</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + u/d, send PageUp/PageDown</appendix>
     <identifier>private.hyperAE2HomeEnd</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::A, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::A, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::HOME
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::E, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::E, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::END
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::U, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
+      KeyCode::PAGEUP
+    </autogen>
+    <autogen>
+      --KeyToKey--
+      KeyCode::D, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
+      KeyCode::PAGEDOWN
     </autogen>
   </item>
 
   <item>
     <name>Hyper+Curson to PageUp/PageDown/Home/End</name>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+left/right, send Home/End</appendix>
-    <appendix>Hyper(cmd+ctrl+shift+opt)+up/down, send PageUp/PageDown</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + left/right, send Home/End</appendix>
+    <appendix>Hyper(ctrl+cmd+opt+extra1) + up/down, send PageUp/PageDown</appendix>
     <identifier>private.hypercursor2homeendpageuppagedown</identifier>
     <autogen>
       --KeyToKey--
-      KeyCode::CURSOR_UP, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_UP, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::PAGEUP
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::CURSOR_DOWN, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_DOWN, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::PAGEDOWN
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::CURSOR_LEFT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_LEFT, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::HOME
     </autogen>
     <autogen>
       --KeyToKey--
-      KeyCode::CURSOR_RIGHT, ModifierFlag::OPTION_L | ModifierFlag::SHIFT_L | ModifierFlag::CONTROL_L | ModifierFlag::COMMAND_L,
+      KeyCode::CURSOR_RIGHT, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::END
     </autogen>
   </item>
@@ -213,6 +230,7 @@
   <item>
     <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
     <identifier>private.alt_tab_to_switch_application</identifier>
+    <not>TEAMVIEWER</not>
     <autogen>
       __KeyToKey__
       KeyCode::OPTION_L,
@@ -240,5 +258,18 @@
         KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
       </autogen>
     </block>
+  </item>
+
+  <item>
+    <name>cmd + E to ctrl+cmd+opt+5</name>
+    <appendix>(Command_L+E to Control_L+Command_L+Option_L+5)</appendix>
+    <appendix></appendix>
+    <identifier>private.cmd_e_to_ctrl_cmd_opt_5</identifier>
+    <not>TEAMVIEWER</not>
+    <autogen>
+      __KeyToKey__
+      KeyCode::E, ModifierFlag::COMMAND_L,
+      KeyCode::KEY_5, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
+    </autogen>
   </item>
 </root>
