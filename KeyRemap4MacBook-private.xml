@@ -13,8 +13,10 @@
   </appdef>
 
   <appdef>
-    <appname>TEAMVIEWER</appname>
+    <appname>REMOTEAPP</appname>
     <equal>com.teamviewer.TeamViewer</equal>
+    <equal>net.sourceforge.chicken</equal>
+    <equal>com.microsoft.rdc.mac</equal>
   </appdef>
 
   <item>
@@ -45,7 +47,7 @@
     <name>Use PC Style Alt+F4</name>
     <appendix>Disable Cmd+Q, remap Alt+F4 to Cmd+Q</appendix>
     <identifier>private.pc_style_close_app</identifier>
-    <not>TEAMVIEWER</not>
+    <not>REMOTEAPP</not>
     <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
     <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
   </item>
@@ -61,7 +63,7 @@
     <appendix></appendix>
     <appendix>Except in Terminal, SublimeText, IntelliJ, Xcode</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE, TEAMVIEWER</not>
+    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE, REMOTEAPP</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -109,7 +111,7 @@
     <appendix></appendix>
     <appendix>Except in Sublime, IntelliJ, Xcode</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, INTELLIJ, XCODE, TEAMVIEWER</not>
+    <not>SUBLIMETEXT, INTELLIJ, XCODE, REMOTEAPP</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
@@ -230,7 +232,7 @@
   <item>
     <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
     <identifier>private.alt_tab_to_switch_application</identifier>
-    <not>TEAMVIEWER</not>
+    <not>REMOTEAPP</not>
     <autogen>
       __KeyToKey__
       KeyCode::OPTION_L,
@@ -265,7 +267,7 @@
     <appendix>(Command_L+E to Control_L+Command_L+Option_L+5)</appendix>
     <appendix></appendix>
     <identifier>private.cmd_e_to_ctrl_cmd_opt_5</identifier>
-    <not>TEAMVIEWER</not>
+    <not>REMOTEAPP</not>
     <autogen>
       __KeyToKey__
       KeyCode::E, ModifierFlag::COMMAND_L,
