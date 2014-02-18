@@ -46,3 +46,11 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 " Enable per-directory .vimrc files and disable unsafe commands in them
 set exrc
 set secure
+
+" handle ctrl+arrow, shift+arrow correctly in tmux"
+if &term =~ '^screen'
+    execute "set <xUp>=\e[1;*A"
+    execute "set <xDown>=\e[1;*B"
+    execute "set <xRight>=\e[1;*C"
+    execute "set <xLeft>=\e[1;*D"
+endif
