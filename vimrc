@@ -17,7 +17,6 @@ set title                     " show the file name in window titlebar
 set mouse=a                   " enable mouse in all modes
 set laststatus=2              " always show status line
 set cursorline                " highlight current line
-syntax on
 
 " Show “invisible” characters
 set lcs=tab:▸\ ,trail:·,nbsp:_
@@ -31,9 +30,6 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-
-filetype plugin on
-filetype indent on
 
 " map ctrl+s to save current file
 noremap <C-s>          :w<CR>
@@ -54,3 +50,10 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+" set for golang
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
