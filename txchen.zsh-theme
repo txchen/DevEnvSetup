@@ -1,4 +1,4 @@
-PROMPT=$'%{$fg[blue]%}%~%{$reset_color%} $(_dotfiles_scm_info)%{$fg[magenta]%}[%n@%m]%{$reset_color%} %{$fg[white]%}[%T]%{$reset_color%}
+PROMPT=$'%{$fg[blue]%}%~%{$reset_color%} $(_dotfiles_scm_info)%{$fg[magenta]%}[%n@%m]%{$reset_color%} %{$fg[white]%}[%D %*]%{$reset_color%}
 %{$fg_bold[black]%}>%{$reset_color%} '
 
 PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
@@ -43,3 +43,4 @@ _dotfiles_scm_info()
   fi
   test -n "$br" && echo "%{$fg[green]%}[$br]%{$reset_color%} " || :
 }
+
