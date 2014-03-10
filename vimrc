@@ -31,10 +31,18 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" map ctrl+s to save current file
-noremap <C-s>          :w<CR>
-vnoremap <C-s>         <C-c>:w<CR>
-inoremap <C-s>         <C-o>:w<CR>
+" map ctrl+s to save current file and return to command mode
+noremap  <C-s>         :w<CR>
+vnoremap <C-s>         <C-c>:w<CR>gv
+inoremap <C-s>         <C-c>:w<CR>
+
+" map ctrl+s,s to save and exit in command mode
+noremap  <C-s><C-s>    :wq<CR>
+
+" map F2 to save if necessary, does not change mode
+noremap  <F2>          :update<CR>
+vnoremap <F2>          <ESC>:update<CR>gv
+inoremap <F2>          <C-o>:update<CR>
 
 " ================ Scrolling ========================
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
