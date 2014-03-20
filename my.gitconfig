@@ -1,7 +1,18 @@
-[oh-my-zsh]
-hide-status = 1
+[push]
+  default = current
+[pull]
+  default = current
 [color]
-ui = true
-editor = vim
+  ui = true
 [alias]
-tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+[core]
+  excludesfile = /Users/txchen/.gitignore_global
+  pager = LESS=FRXK less
+  editor = vim
+[difftool "sourcetree"]
+  cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+  path =
+[mergetool "sourcetree"]
+  cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+  trustExitCode = true
