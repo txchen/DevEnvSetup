@@ -1,7 +1,21 @@
-PROMPT=$'%{$fg[blue]%}%~%{$reset_color%} $(_dotfiles_scm_info)%{$fg[magenta]%}[%n@%m]%{$reset_color%} %{$fg[white]%}[%D %*]%{$reset_color%}
+PROMPT=$'%(?..$(_exit_information)
+)%{$fg[blue]%}%~%{$reset_color%} $(_dotfiles_scm_info)%{$fg[magenta]%}[%n@%m]%{$reset_color%} %{$fg[white]%}[%D %*]%{$reset_color%}
 %{$fg_bold[black]%}>%{$reset_color%} '
 
 PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
+
+_exit_information()
+{
+  local stat="$?"
+  if test $stat -ne 0 -a $stat -ne 128; then
+    # if exited by signal, print the signal name
+    if test $stat -gt 128; then
+      local signal="$(builtin kill -l $[$stat - 128] 2>/dev/null)"
+      test "$signal" && signal=" SIG$signal"
+    fi
+    echo "%{$fg[yellow]%}[Exit $stat$signal]%{$reset_color%}" || :
+  fi
+}
 
 _dotfiles_scm_info()
 {

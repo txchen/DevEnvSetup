@@ -47,5 +47,10 @@ source $ZSH/oh-my-zsh.sh
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
 stty -ixon
 
+# set session history size
+HISTSIZE=10000
+# set saved history size
+SAVEHIST=10000
+
 # Customize to your needs...
 export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
