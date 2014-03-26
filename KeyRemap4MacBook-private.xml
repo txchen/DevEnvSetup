@@ -1,15 +1,13 @@
 <?xml version="1.0"?>
 <root>
   <appdef>
-    <appname>INTELLIJ</appname>
-    <equal>com.jetbrains.intellij</equal>
-    <equal>com.jetbrains.intellij.ce</equal>
+    <appname>JETBRAINS</appname>
+    <prefix>com.jetbrains.</prefix>
   </appdef>
 
   <appdef>
     <appname>SUBLIMETEXT</appname>
-    <equal>com.sublimetext.3</equal>
-    <equal>com.sublimetext.2</equal>
+    <prefix>com.sublimetext.</prefix>
   </appdef>
 
   <appdef>
@@ -61,9 +59,9 @@
     <appendix>(F3 to Command_L+G)</appendix>
     <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
     <appendix></appendix>
-    <appendix>Except in Terminal, SublimeText, IntelliJ, Xcode</appendix>
+    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, INTELLIJ, XCODE, REMOTEAPP</not>
+    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -109,9 +107,9 @@
     <name>Use PC Style Delete-Last-Word</name>
     <name>(Control+Backspace to Option+Backspace)</name>
     <appendix></appendix>
-    <appendix>Except in Sublime, IntelliJ, Xcode</appendix>
+    <appendix>Except in Sublime, JetBrainsIDEs, Xcode</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, INTELLIJ, XCODE, REMOTEAPP</not>
+    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
