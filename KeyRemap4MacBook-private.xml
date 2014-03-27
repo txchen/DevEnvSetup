@@ -51,8 +51,8 @@
   </item>
 
   <item>
-    <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab</name>
-    <appendix>(Control+C/V/X/Z/A/S/T to Command_L+C/V/X/Z/A/S/T)</appendix>
+    <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab/Bold/Italic/Underline</name>
+    <appendix>(Control+C/V/X/Z/A/S/T/B/I/U to Command_L+C/V/X/Z/A/S/T/B/I/U)</appendix>
     <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
     <appendix>(Control+F to Command_L+F)</appendix>
     <appendix>(Control+G to Command_L+G)</appendix>
@@ -86,6 +86,9 @@
     <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::I, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::U, ModifierFlag::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
     <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
@@ -258,18 +261,5 @@
         KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
       </autogen>
     </block>
-  </item>
-
-  <item>
-    <name>cmd + E to ctrl+cmd+opt+5</name>
-    <appendix>(Command_L+E to Control_L+Command_L+Option_L+5)</appendix>
-    <appendix></appendix>
-    <identifier>private.cmd_e_to_ctrl_cmd_opt_5</identifier>
-    <not>REMOTEAPP</not>
-    <autogen>
-      __KeyToKey__
-      KeyCode::E, ModifierFlag::COMMAND_L,
-      KeyCode::KEY_5, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
-    </autogen>
   </item>
 </root>
