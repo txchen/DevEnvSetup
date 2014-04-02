@@ -42,60 +42,6 @@
   </item>
 
   <item>
-    <name>Use PC Style Alt+F4</name>
-    <appendix>Disable Cmd+Q, remap Alt+F4 to Cmd+Q</appendix>
-    <identifier>private.pc_style_close_app</identifier>
-    <not>REMOTEAPP</not>
-    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
-    <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
-  </item>
-
-  <item>
-    <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab/Bold/Italic/Underline</name>
-    <appendix>(Control+C/V/X/Z/A/S/T/B/I/U to Command_L+C/V/X/Z/A/S/T/B/I/U)</appendix>
-    <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
-    <appendix>(Control+F to Command_L+F)</appendix>
-    <appendix>(Control+G to Command_L+G)</appendix>
-    <appendix>(F3 to Command_L+G)</appendix>
-    <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
-    <appendix></appendix>
-    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode</appendix>
-    <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP</not>
-    <autogen>
-      __KeyToKey__
-      KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-      KeyCode::C, ModifierFlag::COMMAND_L,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-      KeyCode::V, ModifierFlag::COMMAND_L,
-    </autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-      KeyCode::X, ModifierFlag::COMMAND_L,
-    </autogen>
-    <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
-    <autogen>
-      __KeyToKey__
-      KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
-      KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::SHIFT_L
-    </autogen>
-    <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::I, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::U, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
-    <autogen>__KeyToKey__ KeyCode::F3, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
-  </item>
-
-  <item>
     <name>Hyper+backspace To Del</name>
     <appendix>Hyper(ctrl+cmd+opt+extra1) + backspace, send del</appendix>
     <identifier>private.hyperbackspace2del</identifier>
@@ -104,16 +50,6 @@
       KeyCode::DELETE, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::FORWARD_DELETE
     </autogen>
-  </item>
-
-  <item>
-    <name>Use PC Style Delete-Last-Word</name>
-    <name>(Control+Backspace to Option+Backspace)</name>
-    <appendix></appendix>
-    <appendix>Except in Sublime, JetBrainsIDEs, Xcode</appendix>
-    <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP</not>
-    <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
   <item>
@@ -139,20 +75,6 @@
       --KeyToKey--
       KeyCode::L, ModifierFlag::EXTRA1 | ModifierFlag::OPTION_L | ModifierFlag::COMMAND_L | ModifierFlag::CONTROL_L,
       KeyCode::CURSOR_RIGHT
-    </autogen>
-  </item>
-
-  <item>
-    <name>Use ctrl+v to paste in iTerm</name>
-    <appendix>(Control+V to Command_L+V)</appendix>
-    <appendix></appendix>
-    <appendix>(Only in iTerm2)</appendix>
-    <identifier>private.pc_style_paste_in_iterm</identifier>
-    <only>TERMINAL</only>
-    <autogen>
-      __KeyToKey__
-      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
-      KeyCode::V, ModifierFlag::COMMAND_L,
     </autogen>
   </item>
 
@@ -211,6 +133,85 @@
   </item>
 
   <item>
+    <name>Use PC Style Alt+F4</name>
+    <appendix>Disable Cmd+Q, remap Alt+F4 to Cmd+Q</appendix>
+    <identifier>private.pc_style_close_app</identifier>
+    <not>REMOTEAPP</not>
+    <autogen>__KeyToKey__ KeyCode::F4, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_OPTION,  KeyCode::Q, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND</autogen>
+    <autogen>__KeyToKey__ KeyCode::Q,  MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND, KeyCode::VK_NONE</autogen>
+  </item>
+
+  <item>
+    <name>Use PC Style Copy/Paste/Undo/Redo/Save/SelectAll/Find/NewTab/Bold/Italic/Underline</name>
+    <appendix>(Control+C/V/X/Z/A/S/T/B/I/U to Command_L+C/V/X/Z/A/S/T/B/I/U)</appendix>
+    <appendix>(Control+Y sends Command+Shift+Z (Windows-style Redo))</appendix>
+    <appendix>(Control+F to Command_L+F)</appendix>
+    <appendix>(Control+G to Command_L+G)</appendix>
+    <appendix>(F3 to Command_L+G)</appendix>
+    <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
+    <appendix></appendix>
+    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode</appendix>
+    <identifier>private.pc_style_shortcuts</identifier>
+    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP</not>
+    <autogen>
+      __KeyToKey__
+      KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::C, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::X, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::X, ModifierFlag::COMMAND_L,
+    </autogen>
+    <autogen>__KeyToKey__ KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::Z, ModifierFlag::COMMAND_L</autogen>
+    <autogen>
+      __KeyToKey__
+      KeyCode::Y, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL | ModifierFlag::NONE,
+      KeyCode::Z, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_COMMAND | ModifierFlag::SHIFT_L
+    </autogen>
+    <autogen>__KeyToKey__ KeyCode::A, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::A, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::S, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::S, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::T, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::T, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::B, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::B, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::I, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::I, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::U, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::U, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::F, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::G, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F3, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::G, ModifierFlag::COMMAND_L | ModifierFlag::SHIFT_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::F3, KeyCode::G, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+  <item>
+    <name>Use PC Style Delete-Last-Word</name>
+    <name>(Control+Backspace to Option+Backspace)</name>
+    <appendix></appendix>
+    <appendix>Except in Sublime, JetBrainsIDEs, Xcode</appendix>
+    <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
+    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP</not>
+    <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Use ctrl+v to paste in iTerm</name>
+    <appendix>(Control+V to Command_L+V)</appendix>
+    <appendix></appendix>
+    <appendix>(Only in iTerm2)</appendix>
+    <identifier>private.pc_style_paste_in_iterm</identifier>
+    <only>TERMINAL</only>
+    <autogen>
+      __KeyToKey__
+      KeyCode::V, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
+      KeyCode::V, ModifierFlag::COMMAND_L,
+    </autogen>
+  </item>
+
+  <!-- Now I use witch to switch application, bind alt+tab in witch. So this is not needed any more-->
+  <!--<item>
     <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
     <identifier>private.alt_tab_to_switch_application</identifier>
     <not>REMOTEAPP</not>
@@ -241,5 +242,5 @@
         KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
       </autogen>
     </block>
-  </item>
+  </item>-->
 </root>
