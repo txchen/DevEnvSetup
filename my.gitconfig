@@ -5,7 +5,7 @@
 [color]
   ui = true
 [alias]
-  tree = log --graph --decorate --pretty=oneline --abbrev-commit
+  tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short
 [core]
   excludesfile = /Users/txchen/.gitignore_global
   pager = LESS=FRXK less
