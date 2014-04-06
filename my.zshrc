@@ -53,4 +53,4 @@ HISTSIZE=10000
 SAVEHIST=10000
 
 # Customize to your needs...
-export PATH=$PATH:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/usr/local/git/bin
+export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin
