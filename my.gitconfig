@@ -1,7 +1,7 @@
 [push]
-  default = current
+  default = simple
 [pull]
-  default = current
+  rebase = true
 [color]
   ui = true
 [alias]
@@ -10,6 +10,8 @@
   excludesfile = ~/.gitignore_global
   pager = LESS=FRXK less
   editor = vim
+[branch]
+  autosetuprebase = always
 [difftool "sourcetree"]
   cmd = opendiff \"$LOCAL\" \"$REMOTE\"
   path =
