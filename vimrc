@@ -36,6 +36,16 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
+let mapleader=","
+" forgot sudo, this can fix it
+noremap <Leader>W :w !sudo tee % > /dev/null<CR>
+
+" map ctrl+a/e to home/end
+noremap  <C-a>          <Home>
+noremap  <C-e>          <End>
+inoremap <C-a>          <Home>
+inoremap <C-e>          <End>
+
 " map ctrl+j/k to go to next/prev split
 noremap  <C-j>          <C-w>w
 noremap  <C-k>          <C-w>W
