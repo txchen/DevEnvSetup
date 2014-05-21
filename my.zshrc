@@ -43,7 +43,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 if [[ $('uname') == 'Darwin' ]]; then
     plugins=(git osx z vagrant brew golang)
 elif  [[ $('uname') == 'Linux' ]]; then
-    plugins=(git z ssh-agent)
+    plugins=(git z ssh-agent golang)
 fi
 
 source $ZSH/oh-my-zsh.sh
