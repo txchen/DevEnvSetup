@@ -1,3 +1,21 @@
+" begin setup vundle
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/vundle/
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
+
+" ctrlp
+Bundle 'ctrlp.vim'
+" easymotion
+Bundle 'Lokaltog/vim-easymotion'
+
+call vundle#end()
+filetype plugin indent on
+" finish setup vundle
+
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -37,8 +55,16 @@ set tabstop=2
 set expandtab
 
 let mapleader=","
-" forgot sudo, this can fix it
+" forgot sudo, this can fix it, ',W'
 noremap <Leader>W :w !sudo tee % > /dev/null<CR>
+" configure easymotion
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Space> <Plug>(easymotion-s2)
+map s <Plug>(easymotion-s)
+" I love vimium!
+map f <Plug>(easymotion-bd-w)
+let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
 
 " map ctrl+a/e to home/end
 noremap  <C-a>          <Home>
@@ -83,6 +109,36 @@ if &term =~ '^screen'
     execute "set <xRight>=\e[1;*C"
     execute "set <xLeft>=\e[1;*D"
 endif
+
+" Tune Explorer mode, make it better, use alt+e to toggle
+function! ToggleVExplorer()
+  if exists("t:expl_buf_num")
+      let expl_win_num = bufwinnr(t:expl_buf_num)
+      if expl_win_num != -1
+          let cur_win_nr = winnr()
+          exec expl_win_num . 'wincmd w'
+          close
+          exec cur_win_nr . 'wincmd w'
+          unlet t:expl_buf_num
+      else
+          unlet t:expl_buf_num
+      endif
+  else
+      exec '1wincmd w'
+      Vexplore
+      let t:expl_buf_num = bufnr("%")
+  endif
+endfunction
+" http://stackoverflow.com/questions/8221909/m-bindings-in-vim-on-iterm2-terminal-dont-work/8224269#8224269
+noremap <ESC>e :call ToggleVExplorer()<CR>
+
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+" Default to tree mode
+let g:netrw_liststyle=3
+" Change directory to the current buffer when opening files.
+set autochdir
+" End of Explorer mode tuning
 
 " set for golang
 filetype off
