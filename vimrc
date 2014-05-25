@@ -8,9 +8,9 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 " ctrlp
-Bundle 'ctrlp.vim'
+Plugin 'ctrlp.vim'
 " easymotion
-Bundle 'Lokaltog/vim-easymotion'
+Plugin 'Lokaltog/vim-easymotion'
 
 call vundle#end()
 filetype plugin indent on
