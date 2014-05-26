@@ -58,13 +58,16 @@ let mapleader=","
 " forgot sudo, this can fix it, ',W'
 noremap <Leader>W :w !sudo tee % > /dev/null<CR>
 " configure easymotion
+let g:EasyMotion_do_mapping = 0
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
 map <Space> <Plug>(easymotion-s2)
 map s <Plug>(easymotion-s)
 " I love vimium!
 map f <Plug>(easymotion-bd-w)
+imap <ESC>f <C-o><Plug>(easymotion-bd-w)
 let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
+let g:EasyMotion_smartcase = 1
 
 " map ctrl+a/e to home/end
 noremap  <C-a>          <Home>
@@ -146,3 +149,4 @@ filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
+
