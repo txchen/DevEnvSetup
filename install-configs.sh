@@ -13,6 +13,10 @@ echo "\ncopying .gitconfig..."
 cp -f my.gitconfig ~/.gitconfig || (echo "!! failed to cp gitconfig"; exit 2)
 echo "done"
 
+echo "\ncopying .gitignore_global..."
+cp -f my.gitignore_global ~/.gitignore_global || (echo "!! failed to cp gitignore_global"; exit 2)
+echo "done"
+
 echo "\ncopying .vimrc..."
 cp -f vimrc ~/.vimrc || (echo "!! failed to cp vimrc"; exit 2)
 echo "done"
