@@ -4,12 +4,15 @@
   rebase = true
 [color]
   ui = true
+[user]
+  email = curlfw@hotmail.com
+  name = Tianxiang Chen
 [alias]
   tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short
 [core]
   excludesfile = ~/.gitignore_global
   pager = LESS=FRXK less
-  editor = vim
+  editor = vim -c 'startinsert'
 [branch]
   autosetuprebase = always
 [difftool "sourcetree"]
