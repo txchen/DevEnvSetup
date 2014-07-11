@@ -119,15 +119,18 @@ function! ToggleVExplorer()
       let expl_win_num = bufwinnr(t:expl_buf_num)
       if expl_win_num != -1
           let cur_win_nr = winnr()
-          exec expl_win_num . 'wincmd w'
-          close
-          exec cur_win_nr . 'wincmd w'
-          unlet t:expl_buf_num
+          if cur_win_nr != expl_win_num
+            exec expl_win_num . 'wincmd w'
+          else
+            exec expl_win_num . 'wincmd w'
+            close
+            exec cur_win_nr . 'wincmd w'
+            unlet t:expl_buf_num
+          endif
       else
           unlet t:expl_buf_num
       endif
   else
-      exec '1wincmd w'
       Vexplore
       let t:expl_buf_num = bufnr("%")
   endif
