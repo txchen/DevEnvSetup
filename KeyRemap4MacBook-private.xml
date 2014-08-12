@@ -215,6 +215,12 @@
     </autogen>
   </item>
 
+  <item>
+    <name>NumPad Enter to Return</name>
+    <identifier>private.remap.enter2return</identifier>
+    <autogen>__KeyToKey__ KeyCode::ENTER, KeyCode::RETURN</autogen>
+  </item>
+
   <!-- Now I use witch to switch application, bind alt+tab in witch. So this is not needed any more-->
   <!--<item>
     <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
