@@ -61,10 +61,15 @@ noremap <Leader>W :w !sudo tee % > /dev/null<CR>
 let g:EasyMotion_do_mapping = 0
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+" keep cursor column with `JK` motions
+let g:EasyMotion_startofline = 0
 map <Space> <Plug>(easymotion-s2)
 map s <Plug>(easymotion-s)
-" I love vimium!
-map f <Plug>(easymotion-bd-w)
+" unmap f key, so that alt+f can toggle easymotion-bd-w
+" want to use alt+f in every mode to trigger easymotion
+" (now insert mode cannot toggle)
+nnoremap f <NOP>
+map <ESC>f <Plug>(easymotion-bd-w)
 imap <ESC>f <C-o><Plug>(easymotion-bd-w)
 let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
 let g:EasyMotion_smartcase = 1
