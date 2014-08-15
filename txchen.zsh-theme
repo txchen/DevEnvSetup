@@ -1,6 +1,13 @@
+MD5="md5sum"
+if [[ `uname` == 'Darwin' ]]; then MD5="md5" ; fi
+# default to magenta
+HOSTNAME_COLOR="5"
+# get hash from hostname and generate number from 1 to 8
+hash ${MD5} >/dev/null 2>&1 && HOSTNAME_COLOR=$(( 16#$(printf "%.12s" "$(hostname -s | $MD5)" ) % 8 + 1 ))
+
 PROMPT=$'%(?..$(_exit_information)
-)%{$fg[blue]%}%~%{$reset_color%} $(_dotfiles_scm_info)%{$fg[magenta]%}[%n@%m]%{$reset_color%} %{$fg[white]%}[%D %*]%{$reset_color%}
-%{$fg_bold[black]%}>%{$reset_color%} '
+)%F{blue}%~ $(_dotfiles_scm_info)%F{magenta}[%n@%F{$HOSTNAME_COLOR}%m%F{magenta}] %F{white}[%D %*]
+%{$fg_bold[black]%}>%f '
 
 PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
 
@@ -55,6 +62,5 @@ _dotfiles_scm_info()
       br="git::$br"
     fi
   fi
-  test -n "$br" && echo "%{$fg[green]%}[$br]%{$reset_color%} " || :
+  test -n "$br" && echo "%F{green}[$br] " || :
 }
-
