@@ -7,7 +7,7 @@ hash ${MD5} >/dev/null 2>&1 && HOSTNAME_COLOR=$(( 16#$(printf "%.12s" "$(hostnam
 
 PROMPT=$'%(?..$(_exit_information)
 )%F{blue}%~ $(_dotfiles_scm_info)%F{magenta}[%n@%F{$HOSTNAME_COLOR}%m%F{magenta}] %F{white}[%D %*]
-%{$fg_bold[black]%}>%f '
+%{$fg_bold[black]%}> %{$reset_color%}'
 
 PROMPT2="%{$fg_blod[black]%}%_> %{$reset_color%}"
 
