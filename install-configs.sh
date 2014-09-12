@@ -26,11 +26,11 @@ echo "done"
 # set back old value for user.name user.email
 if [ ${git_username:+x} ] ; then
   echo "set back git username to $git_username"
-  git config --global user.name '$git_username'
+  git config --global user.name "$git_username"
 fi
 if [ ${git_useremail:+x} ] ; then
   echo "set back git email to $git_useremail"
-  git config --global user.email '$git_useremail'
+  git config --global user.email "$git_useremail"
 fi
 
 gitversion=`git version`
