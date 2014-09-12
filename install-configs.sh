@@ -33,6 +33,15 @@ if [ ${git_useremail:+x} ] ; then
   echo "git config --global user.email '$git_useremail'"
 fi
 
+gitversion=`git version`
+gitv180="git version 1.8.0"
+winner=$(echo -e "$gitversion\n$gitv180" | sed '/^$/d' | sort -nr | head -1)
+if [[ "$winner" == "$gitv180" ]] ; then
+  # push.default simple is only valid since 1.8.0
+  echo "set push.default to upstream, since simple is not available"
+  git config --global push.default upstream
+fi
+
 # set git credential.helper
 if [[ `uname` == 'Linux' ]]; then
   git config --global credential.helper cache

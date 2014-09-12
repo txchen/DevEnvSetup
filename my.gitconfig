@@ -5,7 +5,7 @@
 [color]
   ui = true
 [user]
-  email = curlfw@hotmail.com
+  email = txchendev@gmail.com
   name = Tianxiang Chen
 [alias]
   tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short
