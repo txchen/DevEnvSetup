@@ -13,7 +13,7 @@ trap "err 'Error happened, failed to setup golang'" ERR
 if [[ `uname` != 'Linux' ]]; then
   err "This script only works for linux"
 fi
-echo ${SUDO_USER}
+
 hash go >/dev/null 2>&1 && \
   err "go already installed, to reinstall, remove /usr/local/bin first"
 
@@ -34,6 +34,8 @@ wget -r -P /tmp ${download_url}
 echo "## extracting binaries to /usr/local/go"
 tar -C /usr/local -xzf /tmp/${package_name}
 
+mkdir -p $HOME/gocode
+
 # setup environment setting
 sh_profile="${HOME}/.bashrc"
 if [[ "${SHELL}" == "/bin/zsh" ]]; then
@@ -44,6 +46,7 @@ echo "## adding GOPATH to ${sh_profile}"
 touch ${sh_profile}
 if [[ -n "${SUDO_USER}" ]]; then
   chown ${SUDO_USER}:${SUDO_USER} ${sh_profile}
+  chown ${SUDO_USER}:${SUDO_USER} $HOME/gocode
 fi
 gopath_cfg='export GOPATH=$HOME/gocode'
 grep -q "^export GOPATH" ${sh_profile} && \
