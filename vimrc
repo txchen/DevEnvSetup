@@ -98,10 +98,9 @@ nnoremap  <C-s><C-s>    :wq<CR>
 nnoremap  <C-q><C-q>    <C-c>:q!<CR>
 inoremap  <C-q><C-q>    <C-c>:q!<CR>
 
-" map F2 to save if necessary, does not change mode
-nnoremap  <F2>          :update<CR>
-vnoremap  <F2>          <ESC>:update<CR>gv
-inoremap  <F2>          <C-o>:update<CR>
+" map F2 to toggle paste mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
 
 " ================ Scrolling ========================
 set scrolloff=8         "Start scrolling when we're 8 lines away from margins
