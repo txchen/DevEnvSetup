@@ -159,7 +159,7 @@
   'ctrl-F': 'project-find:show'
   'ctrl-f': 'find-and-replace:show'
   ## git-blame:toggle remap to ctrl-alt-b
-  'ctrl-alt-b': 'gitblame:toggle'
+  'ctrl-alt-b': 'git-blame:toggle'
 
 ## command-palette settings for windows
 '.platform-darwin, .platform-darwin .command-palette .editor':
