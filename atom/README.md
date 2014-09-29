@@ -10,8 +10,13 @@ It is copied from these files
 - custom setting for jumpy
 - find-and-replace https://github.com/atom/find-and-replace/blob/master/keymaps/find-and-replace.cson
 
+### My packages
+- jumpy
+- git-blame
+- editorconfig
 
 ## TODO
 
 - Add doc about important keymap
 - write a plugin to replace jumpy
+- config for golang writing
