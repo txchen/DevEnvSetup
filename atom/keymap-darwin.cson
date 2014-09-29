@@ -165,17 +165,6 @@
 '.platform-darwin, .platform-darwin .command-palette .editor':
   'ctrl-shift-p': 'command-palette:toggle'
 
-## make ctrl-c works better with VIM mode
-# when there is selection, use copy instead of enter command-mode
-'.platform-darwin .editor.vim-mode:not(.command-mode)':
-  'ctrl-c': 'unset!'
-'.editor.vim-mode.command-mode':
-  'ctrl-c': 'unset!'
-'.editor-contents.has-selection':
-  'ctrl-c': 'core:copy'
-'.platform-darwin .editor.vim-mode:not(.command-mode)':
-  'ctrl-c': 'vim-mode:activate-command-mode'
-
 ## jumpy - alt-f to toggle (TODO: make my own plugin)
 '.editor:not(.mini)':
   'alt-f': 'jumpy:toggle'
