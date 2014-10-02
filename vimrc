@@ -59,8 +59,8 @@ let mapleader=","
 noremap <Leader>W :w !sudo tee % > /dev/null<CR>
 " configure easymotion
 let g:EasyMotion_do_mapping = 0
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+map <ESC>n <Plug>(easymotion-j)
+map <ESC>p <Plug>(easymotion-k)
 " keep cursor column with `JK` motions
 let g:EasyMotion_startofline = 0
 map <Space> <Plug>(easymotion-s2)
