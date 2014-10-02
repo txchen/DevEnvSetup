@@ -158,6 +158,7 @@
   ## find-and-replace
   'ctrl-F': 'project-find:show'
   'ctrl-f': 'find-and-replace:show'
+  'ctrl-h': 'find-and-replace:show-replace'
   ## git-blame:toggle remap to ctrl-alt-b
   'ctrl-alt-b': 'git-blame:toggle'
 
@@ -179,6 +180,15 @@
   'ctrl-e': 'find-and-replace:use-selection-as-find-pattern'
   'ctrl-u': 'find-and-replace:select-undo'
   'ctrl-k ctrl-d': 'find-and-replace:select-skip'
+  # ctrl-r to toggle find symbol, like sublime
+  'ctrl-r': 'symbols-view:toggle-file-symbols'
+  'ctrl-R': 'symbols-view:toggle-project-symbols'
+  # bookmarks keymap, same as sublime
+  'alt-f2': 'bookmarks:view-all'
+  'f2': 'bookmarks:jump-to-next-bookmark'
+  'shift-f2': 'bookmarks:jump-to-previous-bookmark'
+  'ctrl-f2': 'bookmarks:toggle-bookmark'
+  'ctrl-shift-f2': 'bookmarks:clear-bookmarks'
 
 '.platform-darwin .find-and-replace':
   'shift-enter': 'find-and-replace:show-previous'
@@ -186,8 +196,9 @@
   'ctrl-alt-/': 'find-and-replace:toggle-regex-option'
   'ctrl-alt-c': 'find-and-replace:toggle-case-option'
   'ctrl-alt-s': 'find-and-replace:toggle-selection-option'
-  # ctrl-f toggle find
+  # ctrl-f/h toggle find/replace
   'ctrl-f': 'core:cancel'
+  'ctrl-h': 'core:cancel'
 
 '.platform-darwin .project-find':
   'ctrl-alt-/': 'project-find:toggle-regex-option'
