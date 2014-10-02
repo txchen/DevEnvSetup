@@ -11,6 +11,10 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'ctrlp.vim'
 " easymotion
 Plugin 'Lokaltog/vim-easymotion'
+" airline
+Plugin 'bling/vim-airline'
+" fugitive
+Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
 filetype plugin indent on
@@ -53,6 +57,7 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
+set term=xterm-256color
 
 let mapleader=","
 " forgot sudo, this can fix it, ',W'
@@ -139,6 +144,7 @@ function! ToggleVExplorer()
       let t:expl_buf_num = bufnr("%")
   endif
 endfunction
+" alt+e to toggle explorer
 " http://stackoverflow.com/questions/8221909/m-bindings-in-vim-on-iterm2-terminal-dont-work/8224269#8224269
 noremap <ESC>e :call ToggleVExplorer()<CR>
 
@@ -150,10 +156,12 @@ let g:netrw_liststyle=3
 set autochdir
 " End of Explorer mode tuning
 
-" set for golang
+" settings for golang
 filetype off
 filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 
+" settings for airline-vim
+let g:airline_theme='light'
