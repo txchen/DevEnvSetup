@@ -28,7 +28,7 @@ fi
 download_url="https://storage.googleapis.com/golang/${package_name}"
 echo "## downloading ${download_url}"
 
-wget -r -P /tmp ${download_url}
+wget -P /tmp ${download_url}
 
 # extract the package
 echo "## extracting binaries to /usr/local/go"
