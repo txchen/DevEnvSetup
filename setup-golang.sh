@@ -21,9 +21,9 @@ if [[ ! -w /usr/local ]] ; then
   err "cannot write to /usr/local, check your permission plz."
 fi
 
-package_name="go1.3.1.linux-386.tar.gz"
+package_name="go1.3.3.linux-386.tar.gz"
 if [[ $(arch) == x86_64 ]]; then
-  package_name="go1.3.1.linux-amd64.tar.gz"
+  package_name="go1.3.3.linux-amd64.tar.gz"
 fi
 download_url="https://storage.googleapis.com/golang/${package_name}"
 echo "## downloading ${download_url}"
