@@ -148,6 +148,10 @@
   'ctrl-t': 'unset!'
   'ctrl-b': 'unset!'
   'alt-h': 'unset!'
+  # cmd-h, previous tab, just like iterm, avoid hide window
+  'cmd-h': 'pane:show-previous-item'
+  # cmd-l, next tab
+  'cmd-l': 'pane:show-next-item'
 
 '.platform-darwin':
   ## fuzzy-finder settings for windows
