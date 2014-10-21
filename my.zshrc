@@ -56,5 +56,5 @@ HISTSIZE=10000
 # set saved history size
 SAVEHIST=10000
 
-# Customize to your needs...
-export PATH=/usr/local/bin:$PATH:/usr/bin:/bin:/usr/sbin:/sbin
+# zsh+tmux might introduce dup PATH, dedup it
+typeset -aU path
