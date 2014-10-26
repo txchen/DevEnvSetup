@@ -1,0 +1,30 @@
+'global':
+  'exception-reporting':
+    'userId': '94991619-89bf-e614-3802-8a004adc0077'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '38bb2a30268fb1e18dea437b04a0750721de38f8'
+  'editor':
+    'fontSize': 15
+    'fontFamily': 'Consolas'
+    'preferredLineLength': 120
+    'showIndentGuide': true
+    'showInvisibles': true
+    'invisibles': {}
+    'softWrap': true
+  'core':
+    'useReactEditor': true
+    'disabledPackages': [
+      'welcome'
+    ]
+    'themes': [
+      'atom-dark-ui'
+      'base16-tomorrow-dark-theme'
+    ]
+  'jumpy':
+    'highContrast': true
+  'vim-mode':
+    'startInInsertMode': true
+  'atom-beautify':
+    '_analyticsUserId': 'e62f5c3f-4807-4f59-8c3f-b34202eeac49'
