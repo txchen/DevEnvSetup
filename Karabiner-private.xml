@@ -16,6 +16,11 @@
   </appdef>
 
   <appdef>
+    <appname>ANDROIDSTUDIO</appname>
+    <equal>com.google.android.studio</equal>
+  </appdef>
+
+  <appdef>
     <appname>REMOTEAPP</appname>
     <equal>com.teamviewer.TeamViewer</equal>
     <equal>net.sourceforge.chicken</equal>
@@ -155,9 +160,9 @@
     <appendix>(F3 to Command_L+G)</appendix>
     <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
     <appendix></appendix>
-    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode, Atom</appendix>
+    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode, Atom, AndroidStudio</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP, ATOM</not>
+    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP, ATOM, ANDROIDSTUDIO</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -195,9 +200,9 @@
     <name>Use PC Style Delete-Last-Word</name>
     <name>(Control+Backspace to Option+Backspace)</name>
     <appendix></appendix>
-    <appendix>Except in Sublime, JetBrainsIDEs, Xcode, Atom</appendix>
+    <appendix>Except in Sublime, JetBrainsIDEs, Xcode, Atom, AndroidStudio</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP, ATOM</not>
+    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP, ATOM, ANDROIDSTUDIO</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
