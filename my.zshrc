@@ -8,6 +8,8 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="txchen"
 
 # Example aliases
+# find files with colored output
+alias f='find . | grep --color'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 

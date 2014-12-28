@@ -10,6 +10,9 @@ echo "done"
 
 echo "\ncopying .tmux.conf..."
 cp -f my.tmux.conf ~/.tmux.conf || { echo "!! failed to cp my.tmux.conf"; exit 2; }
+if [[ `uname` != 'Darwin' ]]; then
+  sed 's/.*# MAC ONLY$/# THIS IS ONLY VALID IN OSX, removed./' ~/.tmux.conf
+fi
 echo "done"
 
 if [ -f ~/.gitconfig ] ; then
