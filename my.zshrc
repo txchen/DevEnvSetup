@@ -10,6 +10,7 @@ ZSH_THEME="txchen"
 # Example aliases
 # find files with colored output
 alias f='find . | grep --color'
+alias godir='cd ~/gocode/src/github.com/txchen'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
