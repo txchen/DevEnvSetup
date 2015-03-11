@@ -73,7 +73,10 @@ map s <Plug>(easymotion-s)
 " unmap f key, so that alt+f can toggle easymotion-bd-w
 " want to use alt+f in every mode to trigger easymotion
 " (now insert mode cannot toggle)
+" also use shift+enter to toggle easymotion
 nnoremap f <NOP>
+map ✠ <Plug>(easymotion-bd-w)
+imap ✠ <C-o><Plug>(easymotion-bd-w)
 map <ESC>f <Plug>(easymotion-bd-w)
 imap <ESC>f <C-o><Plug>(easymotion-bd-w)
 let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
