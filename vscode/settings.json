@@ -1,0 +1,13 @@
+{
+  "editor.fontFamily": "Consolas",
+
+  "editor.fontSize": 15,
+
+  "editor.wrappingColumn": 0,
+
+  "editor.insertSpaces": "spaces",
+
+  "editor.tabSize": "2",
+
+  "editor.renderWhitespace": true
+}
