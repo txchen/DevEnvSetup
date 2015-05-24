@@ -1,17 +1,15 @@
-## Windows keybindings, from https://raw.githubusercontent.com/atom/atom/master/keymaps/win32.cson
+## Windows keybindings, copied from https://raw.githubusercontent.com/atom/atom/master/keymaps/win32.cson
 'body':
   # Platform Bindings
   'ctrl-pageup': 'pane:show-previous-item'
   'ctrl-pagedown': 'pane:show-next-item'
 
   # switch tab/pane like my tmux
-  # alt-h, previous tab
+  # alt-h, alt-l, previous/next tab
   'alt-h': 'pane:show-previous-item'
-  # alt-l, next tab
   'alt-l': 'pane:show-next-item'
-  # alt-j, focus next pane
+  # alt-j, alt-k, focus next/previous pane
   'alt-j': 'window:focus-next-pane'
-  # alt-k, focus previous pane
   'alt-k': 'window:focus-previous-pane'
 
   # Atom Specific
@@ -33,11 +31,11 @@
 
   # Sublime Parity
   'ctrl-,': 'application:show-settings'
-  #'ctrl-N': 'application:new-window' use cmd+n instead
+  #'ctrl-N': 'application:new-window' use cmd+N instead
   #'ctrl-W': 'window:close' use cmd+W instead
   #'ctrl-o': 'application:open-file' use cmd+o instead
   'ctrl-T': 'pane:reopen-closed-item'
-  'ctrl-n': 'application:new-file'
+  #'ctrl-n': 'application:new-file' use cmd+n instead
   'ctrl-s': 'core:save'
   'ctrl-S': 'core:save-as'
   'ctrl-f4': 'core:close'
@@ -102,7 +100,6 @@
   'ctrl-right': 'editor:move-to-end-of-word'
   'ctrl-shift-left': 'editor:select-to-beginning-of-word'
   'ctrl-shift-right': 'editor:select-to-end-of-word'
-  'ctrl-backspace': 'editor:delete-to-beginning-of-word'
   'ctrl-delete': 'editor:delete-to-end-of-word'
   'ctrl-home': 'core:move-to-top'
   'ctrl-end': 'core:move-to-bottom'
@@ -120,7 +117,7 @@
   # Atom specific
   'alt-ctrl-z': 'editor:checkout-head-revision'
   'ctrl-<': 'editor:scroll-to-cursor'
-  'alt-ctrl-f': 'editor:fold-selection'
+  #'alt-ctrl-f': 'editor:fold-selection' # disable this
 
   # Sublime Parity
   'ctrl-enter': 'editor:newline-below'
@@ -158,6 +155,7 @@
 
 # End of standard windows settings
 
+
 # My own settings
 'atom-text-editor':
   'ctrl-t': 'unset!'
@@ -167,6 +165,15 @@
   'cmd-h': 'pane:show-previous-item'
   # cmd-l, next tab
   'cmd-l': 'pane:show-next-item'
+  # bookmarks related
+  'ctrl-f2': 'bookmarks:view-all'
+  'f2': 'bookmarks:jump-to-next-bookmark'
+  'shift-f2': 'bookmarks:jump-to-previous-bookmark'
+  'alt-f2': 'bookmarks:toggle-bookmark'
+  'ctrl-alt-f2': 'bookmarks:clear-bookmarks'
+  # symbol view
+  'f12': 'symbols-view:go-to-declaration'
+  'ctrl-f12': 'symbols-view:return-from-declaration'
 
 '.platform-darwin':
   ## fuzzy-finder settings for windows
@@ -180,6 +187,8 @@
   'ctrl-h': 'find-and-replace:show-replace'
   ## git-blame:toggle remap to ctrl-alt-b
   'ctrl-alt-b': 'git-blame:toggle'
+  # project-manager, switch project
+  'ctrl-alt-p': 'project-manager:toggle'
 
 ## command-palette settings for windows
 '.platform-darwin, .platform-darwin .command-palette atom-text-editor':
@@ -189,6 +198,7 @@
   'f3': 'find-and-replace:find-next'
   'shift-f3': 'find-and-replace:find-previous'
   'alt-f3': 'find-and-replace:select-all'
+  'ctrl-backspace': 'editor:delete-to-beginning-of-word'
   'ctrl-d': 'find-and-replace:select-next'
   'ctrl-e': 'find-and-replace:use-selection-as-find-pattern'
   'ctrl-u': 'find-and-replace:select-undo'
@@ -196,12 +206,6 @@
   # ctrl-r to toggle find symbol, like sublime
   'ctrl-r': 'symbols-view:toggle-file-symbols'
   'ctrl-R': 'symbols-view:toggle-project-symbols'
-  # bookmarks keymap, same as sublime
-  'alt-f2': 'bookmarks:view-all'
-  'f2': 'bookmarks:jump-to-next-bookmark'
-  'shift-f2': 'bookmarks:jump-to-previous-bookmark'
-  'ctrl-f2': 'bookmarks:toggle-bookmark'
-  'ctrl-shift-f2': 'bookmarks:clear-bookmarks'
 
 '.platform-darwin .find-and-replace':
   'shift-enter': 'find-and-replace:show-previous'

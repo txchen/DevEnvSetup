@@ -10,9 +10,9 @@
     showInvisibles: true
     showIndentGuide: true
     preferredLineLength: 120
-    softWrap: true
     invisibles:
       {}
+    softWrap: true
     fontSize: 15
   core:
     disabledPackages: [
@@ -22,8 +22,7 @@
       "atom-dark-ui"
       "base16-tomorrow-dark-theme"
     ]
-  jumpy:
-    highContrast: true
+    audioBeep: false
   "vim-mode":
     startInInsertMode: true
   "atom-beautify":
