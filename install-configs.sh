@@ -4,8 +4,8 @@ echo "### install configs ###"
 hash git >/dev/null 2>&1 || { echo "!! git not installed, cannot continue"; exit 2; }
 
 echo "\ncopying zsh theme and zshrc..."
-cp -f txchen.zsh-theme ~/.oh-my-zsh/themes/ || { echo "!! failed to cp txchen.zsh-them"; exit 2; }
-cp -f my.zshrc ~/.zshrc || { echo "!! failed to cp my.zshrc"; exit 2; }
+cp -f zsh/txchen.zsh-theme ~/.oh-my-zsh/themes/ || { echo "!! failed to cp txchen.zsh-them"; exit 2; }
+cp -f zsh/my.zshrc ~/.zshrc || { echo "!! failed to cp my.zshrc"; exit 2; }
 echo "done"
 
 echo "\ncopying .tmux.conf..."
