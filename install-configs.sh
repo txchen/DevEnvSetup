@@ -59,7 +59,7 @@ cp -f my.gitignore_global ~/.gitignore_global || { echo "!! failed to cp gitigno
 echo "done"
 
 echo "\ncopying .vimrc..."
-cp -f vimrc ~/.vimrc || { echo "!! failed to cp vimrc"; exit 2; }
+cp -f vim/vimrc ~/.vimrc || { echo "!! failed to cp vimrc"; exit 2; }
 echo "done"
 
 echo "\ninstalling vundle and vim plugins..."
