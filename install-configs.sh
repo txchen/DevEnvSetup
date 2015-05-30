@@ -24,7 +24,7 @@ if [ -f ~/.gitconfig ] ; then
 fi
 
 echo "\ncopying .gitconfig..."
-cp -f my.gitconfig ~/.gitconfig || { echo "!! failed to cp gitconfig"; exit 2; }
+cp -f git/my.gitconfig ~/.gitconfig || { echo "!! failed to cp gitconfig"; exit 2; }
 echo "done"
 # set back old value for user.name user.email
 if [ ${git_username:+x} ] ; then
@@ -55,7 +55,7 @@ if [[ `uname` == 'Darwin' ]]; then
 fi
 
 echo "\ncopying .gitignore_global..."
-cp -f my.gitignore_global ~/.gitignore_global || { echo "!! failed to cp gitignore_global"; exit 2; }
+cp -f git/my.gitignore_global ~/.gitignore_global || { echo "!! failed to cp gitignore_global"; exit 2; }
 echo "done"
 
 echo "\ncopying .vimrc..."
