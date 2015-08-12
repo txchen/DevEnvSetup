@@ -47,6 +47,11 @@
     <url type="file">/Applications/Microsoft OneNote.app</url>
   </vkopenurldef>
 
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_FINDER</name>
+    <url type="file">/System/Library/CoreServices/Finder.app</url>
+  </vkopenurldef>
+
   <item>
     <name>OPTION_L + 2 Open Chrome</name>
     <identifier>private.alt_2</identifier>
@@ -69,6 +74,12 @@
     <name>OPTION_L + 5 Open OneNote</name>
     <identifier>private.alt_5</identifier>
     <autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_ONENOTE</autogen>
+  </item>
+
+  <item>
+    <name>CMD_L + E Open Finder</name>
+    <identifier>private.cmd_e</identifier>
+    <autogen>__KeyToKey__ KeyCode::E, ModifierFlag::COMMAND_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_FINDER</autogen>
   </item>
 
   <item>
