@@ -27,6 +27,50 @@
     <equal>com.microsoft.rdc.mac</equal>
   </appdef>
 
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_CHROME</name>
+    <url type="file">/Applications/Google Chrome.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_ATOM</name>
+    <url type="file">/Applications/Atom.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_SLACK</name>
+    <url type="file">/Applications/Slack.app</url>
+  </vkopenurldef>
+
+  <vkopenurldef>
+    <name>KeyCode::VK_OPEN_URL_ONENOTE</name>
+    <url type="file">/Applications/Microsoft OneNote.app</url>
+  </vkopenurldef>
+
+  <item>
+    <name>OPTION_L + 2 Open Chrome</name>
+    <identifier>private.alt_2</identifier>
+    <autogen>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_CHROME</autogen>
+  </item>
+
+  <item>
+    <name>OPTION_L + 3 Open Atom</name>
+    <identifier>private.alt_3</identifier>
+    <autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_ATOM</autogen>
+  </item>
+
+  <item>
+    <name>OPTION_L + 4 Open Slack</name>
+    <identifier>private.alt_4</identifier>
+    <autogen>__KeyToKey__ KeyCode::KEY_4, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_SLACK</autogen>
+  </item>
+
+  <item>
+    <name>OPTION_L + 5 Open OneNote</name>
+    <identifier>private.alt_5</identifier>
+    <autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_ONENOTE</autogen>
+  </item>
+
   <item>
     <name>F19 to F19</name>
     <appendix>(F19 to Hyper (ctrl+cmd+opt+extra1) + F19)</appendix>
@@ -228,35 +272,35 @@
 
   <!-- Now I use witch to switch application, bind alt+tab in witch. So this is not needed any more-->
   <!--<item>
-    <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
-    <identifier>private.alt_tab_to_switch_application</identifier>
-    <not>REMOTEAPP</not>
-    <autogen>
-      __KeyToKey__
-      KeyCode::OPTION_L,
+  <name>Use Alt+Tab as "Switch application" (Command+Tab)</name>
+  <identifier>private.alt_tab_to_switch_application</identifier>
+  <not>REMOTEAPP</not>
+  <autogen>
+  __KeyToKey__
+  KeyCode::OPTION_L,
 
-      KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab,
-      KeyCode::OPTION_L,
+  KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab,
+  KeyCode::OPTION_L,
 
-      Option::KEYTOKEY_AFTER_KEYUP,
-      KeyCode::VK_LOCK_COMMAND_L_FORCE_OFF,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab,
-      KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab_tab_mode,
-    </autogen>
-    <block>
-      <config_only>notsave.modifier_tab_to_command_tab_tab_mode</config_only>
-      <autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
-    </block>
+  Option::KEYTOKEY_AFTER_KEYUP,
+  KeyCode::VK_LOCK_COMMAND_L_FORCE_OFF,
+  KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab,
+  KeyCode::VK_CONFIG_FORCE_OFF_notsave_modifier_tab_to_command_tab_tab_mode,
+</autogen>
+<block>
+<config_only>notsave.modifier_tab_to_command_tab_tab_mode</config_only>
+<autogen>__KeyToKey__ KeyCode::TAB, ModifierFlag::COMMAND_L | ModifierFlag::OPTION_L, KeyCode::TAB, ModifierFlag::COMMAND_L</autogen>
+</block>
 
-    <block>
-      <config_only>notsave.modifier_tab_to_command_tab</config_only>
-      <autogen>
-        __KeyToKey__
-        KeyCode::TAB, ModifierFlag::OPTION_L,
-        KeyCode::TAB, ModifierFlag::COMMAND_L,
-        KeyCode::VK_LOCK_COMMAND_L_FORCE_ON, ModifierFlag::COMMAND_L,
-        KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
-      </autogen>
-    </block>
-  </item>-->
+<block>
+<config_only>notsave.modifier_tab_to_command_tab</config_only>
+<autogen>
+__KeyToKey__
+KeyCode::TAB, ModifierFlag::OPTION_L,
+KeyCode::TAB, ModifierFlag::COMMAND_L,
+KeyCode::VK_LOCK_COMMAND_L_FORCE_ON, ModifierFlag::COMMAND_L,
+KeyCode::VK_CONFIG_FORCE_ON_notsave_modifier_tab_to_command_tab_tab_mode, ModifierFlag::COMMAND_L,
+</autogen>
+</block>
+</item>-->
 </root>
