@@ -10,23 +10,14 @@
     showInvisibles: true
     showIndentGuide: true
     preferredLineLength: 120
-    invisibles:
-      {}
+    invisibles: {}
     softWrap: true
     fontSize: 15
   core:
     disabledPackages: [
       "welcome"
     ]
-    themes: [
-      "atom-dark-ui"
-      "base16-tomorrow-dark-theme"
-    ]
     audioBeep: false
-  "vim-mode":
-    startInInsertMode: true
-  "atom-beautify":
-    _analyticsUserId: "e62f5c3f-4807-4f59-8c3f-b34202eeac49"
   "go-plus":
     goPath: "$HOME/gocode"
     formatTool: "gofmt"
@@ -34,14 +25,25 @@
     confirmCompletion: "tab and enter"
     defaultProvider: "Symbol"
   "tree-view":
-    {}
+    hideIgnoredNames: true
+  linter: {}
+  "linter-jscs":
+    onlyConfig: true
+  "linter-eslint":
+    disableWhenNoEslintrcFileInPath: true
 ".gohtml.html.text":
   editor:
     preferredLineLength: 120
-".ini.source":
+".cs.source":
+  editor:
+    tabLength: 4
+".source.yaml":
+  editor:
+    tabLength: 4
+".gotemplate.source":
   editor:
     preferredLineLength: 120
-    showInvisibles: false
+    scrollPastEnd: true
 ".go.source":
   editor:
     softWrapAtPreferredLineLength: false
@@ -50,10 +52,7 @@
     tabLength: 2
     preferredLineLength: 120
     scrollPastEnd: true
-".gotemplate.source":
+".ini.source":
   editor:
     preferredLineLength: 120
-    scrollPastEnd: true
-".source.yaml":
-  editor:
-    tabLength: 4
+    showInvisibles: false
