@@ -15,6 +15,17 @@ if [[ `uname` != 'Darwin' ]]; then
 fi
 echo "done"
 
+echo "\ninstalling tmux resurrect"
+TMUXRESURRECTDIR=~/.tmux-resurrect/
+if [ -d "$TMUXRESURRECTDIR" ]; then
+  rm -rf $TMUXRESURRECTDIR
+fi
+git clone https://github.com/tmux-plugins/tmux-resurrect.git $TMUXRESURRECTDIR || {
+  echo "!! failed to setup tmux resurrect"
+  exit 2
+}
+echo "done"
+
 if [ -f ~/.gitconfig ] ; then
   echo "~/.gitconfig already exists, get the existing username and email first"
   git_username=$(git config --global user.name)
