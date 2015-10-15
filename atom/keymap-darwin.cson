@@ -188,7 +188,7 @@
   ## git-blame:toggle remap to ctrl-alt-b
   'ctrl-alt-b': 'git-blame:toggle'
   # project-manager, switch project
-  'ctrl-alt-p': 'project-manager:toggle'
+  'ctrl-alt-p': 'project-manager:list-projects'
 
 ## command-palette settings for windows
 '.platform-darwin, .platform-darwin .command-palette atom-text-editor':
