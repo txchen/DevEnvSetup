@@ -1,23 +1,12 @@
 <?xml version="1.0"?>
 <root>
   <appdef>
-    <appname>JETBRAINS</appname>
-    <prefix>com.jetbrains.</prefix>
-  </appdef>
-
-  <appdef>
-    <appname>SUBLIMETEXT</appname>
-    <prefix>com.sublimetext.</prefix>
-  </appdef>
-
-  <appdef>
-    <appname>ATOM</appname>
-    <equal>com.github.atom</equal>
-  </appdef>
-
-  <appdef>
-    <appname>ANDROIDSTUDIO</appname>
+    <appname>CODEEDITOR</appname>
     <equal>com.google.android.studio</equal>
+    <equal>com.github.atom</equal>
+    <equal>com.microsoft.VSCode</equal>
+    <prefix>com.sublimetext.</prefix>
+    <prefix>com.jetbrains.</prefix>
   </appdef>
 
   <appdef>
@@ -215,9 +204,9 @@
     <appendix>(F3 to Command_L+G)</appendix>
     <appendix>(Control+F3 to Shift+Command_L+G)</appendix>
     <appendix></appendix>
-    <appendix>Except in Terminal, SublimeText, JetBrains IDEs, Xcode, Atom, AndroidStudio</appendix>
+    <appendix>Except in Editors, Terminal, Xcode, RemoteDesktop</appendix>
     <identifier>private.pc_style_shortcuts</identifier>
-    <not>SUBLIMETEXT, TERMINAL, JETBRAINS, XCODE, REMOTEAPP, ATOM, ANDROIDSTUDIO</not>
+    <not>CODEEDITOR, TERMINAL, XCODE, REMOTEAPP</not>
     <autogen>
       __KeyToKey__
       KeyCode::C, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL,
@@ -255,9 +244,9 @@
     <name>Use PC Style Delete-Last-Word</name>
     <name>(Control+Backspace to Option+Backspace)</name>
     <appendix></appendix>
-    <appendix>Except in Sublime, JetBrainsIDEs, Xcode, Atom, AndroidStudio</appendix>
+    <appendix>Except in Editors, Xcode, RemoteDesktop</appendix>
     <identifier>private.control_backspace_to_cmd_backspace_winstyle</identifier>
-    <not>SUBLIMETEXT, JETBRAINS, XCODE, REMOTEAPP, ATOM, ANDROIDSTUDIO</not>
+    <not>CODEEDITOR, XCODE, REMOTEAPP</not>
     <autogen>__KeyToKey__ KeyCode::DELETE, MODIFIERFLAG_EITHER_LEFT_OR_RIGHT_CONTROL, KeyCode::DELETE, ModifierFlag::OPTION_L</autogen>
   </item>
 
