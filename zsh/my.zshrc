@@ -12,6 +12,7 @@ ZSH_THEME="txchen"
 alias f='find . | grep --color'
 alias godir='cd ~/gocode/src/github.com/txchen'
 alias nr='npm run'
+alias dn='dotnet'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
