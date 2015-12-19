@@ -52,6 +52,10 @@ elif  [[ $('uname') == 'Linux' ]]; then
     plugins=(git z ssh-agent golang colored-man)
 fi
 
+function curlperf {
+  curl -o /dev/null -s -w "time_namelookup=%{time_namelookup}\ntime_connect=%{time_connect}\ntime_appconnect=%{time_appconnect}\ntime_total=%{time_total}\n" "$1"
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
