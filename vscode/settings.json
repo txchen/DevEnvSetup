@@ -5,9 +5,11 @@
 
   "editor.wrappingColumn": 0,
 
-  "editor.insertSpaces": "spaces",
+  "editor.insertSpaces": true,
 
-  "editor.tabSize": "2",
+  "editor.tabSize": 2,
 
-  "editor.renderWhitespace": true
+  "editor.renderWhitespace": true,
+
+  "files.trimTrailingWhitespace": true
 }
