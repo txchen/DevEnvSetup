@@ -8,6 +8,7 @@
 * ctrl+r, go to symbol
 * ctrl+alt+-, go to back, ctrl+alt+=, go to forward
 * alt+a/e, move to start/end of line
+* ctrl+f to toggle find
 
 ## Useful shortcuts
 

@@ -87,6 +87,8 @@
                                      "when": "editorTextFocus && editorHasMultipleSelections" },
 { "key": "ctrl+f3",               "command": "actions.find" },
 { "key": "ctrl+f",                "command": "actions.find" },
+{ "key": "ctrl+f",                "command": "closeFindWidget",
+                                     "when": "editorFocus && findWidgetVisible" },
 { "key": "ctrl+k ctrl+c",         "command": "editor.action.addCommentLine",
                                      "when": "editorTextFocus" },
 { "key": "ctrl+d",                "command": "editor.action.addSelectionToNextFindMatch",
