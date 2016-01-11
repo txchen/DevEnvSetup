@@ -22,8 +22,8 @@
   </vkopenurldef>
 
   <vkopenurldef>
-    <name>KeyCode::VK_OPEN_URL_ATOM</name>
-    <url type="file">/Applications/Atom.app</url>
+    <name>KeyCode::VK_OPEN_URL_VSCODE</name>
+    <url type="file">/Applications/Visual Studio Code.app</url>
   </vkopenurldef>
 
   <vkopenurldef>
@@ -48,9 +48,9 @@
   </item>
 
   <item>
-    <name>OPTION_L + 3 Open Atom</name>
+    <name>OPTION_L + 3 Open VSCode</name>
     <identifier>private.alt_3</identifier>
-    <autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_ATOM</autogen>
+    <autogen>__KeyToKey__ KeyCode::KEY_3, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_VSCODE</autogen>
   </item>
 
   <item>
