@@ -47,7 +47,6 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [[ $('uname') == 'Darwin' ]]; then
     plugins=(git osx z ssh-agent brew golang colored-man)
-    code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ;}
 elif  [[ $('uname') == 'Linux' ]]; then
     plugins=(git z ssh-agent golang colored-man)
 fi
