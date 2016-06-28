@@ -1,6 +1,6 @@
 My development environment settings
 ===========
-[VSCode](#VSCODE)
+[VSCode](#vscode)
 
 ## Installation
 ```bash
