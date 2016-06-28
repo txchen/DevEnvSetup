@@ -1,7 +1,8 @@
 My development environment settings
 ===========
+[VSCode](#VSCODE)
 
-### Installation
+## Installation
 ```bash
 curl -L http://install.ohmyz.sh | sh
 mkdir -p ~/GithubCode
@@ -11,7 +12,7 @@ cd DevEnvSetup
 ./install-configs.sh
 ```
 
-### VSCODE
+## VSCODE
 
 Installed extensions:
 
