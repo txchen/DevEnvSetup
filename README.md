@@ -40,6 +40,7 @@ My keybindings (custom and useful ones):
 | ctrl+2 | focus second editor | |
 | ctrl+3 | focus third editor | |
 | ctrl+` | toggle terminal | |
+| ctrl+j | toggle panel | |
 | alt+j  | open next working file  | cycle through working files  |
 | alt+k  | open previous working file  |   |
 | alt+l  | go to right editor | can be used to split editor |
