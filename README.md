@@ -59,8 +59,8 @@ My keybindings (custom and useful ones):
 | alt+left | navigate back | |
 | alt+right | navigate forword | |
 | ctrl+g | go to line | |
-| ctrl+r | go to symbol | |
-| ctrl+t | show all symbols | |
+| ctrl+r | go to symbol in current file | |
+| ctrl+t | search and go to symbol in workspace | |
 | alt+f3 | go to next for current selection | shift+f3 to go previous |
 | **basic editing** | | |
 | ctrl+enter | insert line after | |
@@ -78,6 +78,7 @@ My keybindings (custom and useful ones):
 | shift+alt+left | smart select shrink | |
 | ctrl+shift+space | trigger parameter hints | |
 | ctrl+space | trigger suggestion | |
+| alt+shift+f | format code | |
 | f2 | rename | |
 | f12 | go to declaration | |
 | alt+f12 | preview declaration | |
