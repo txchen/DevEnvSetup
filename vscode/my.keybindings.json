@@ -24,7 +24,7 @@
                                      "when": "editorTextFocus" },
 { "key": "alt+a",                 "command": "cursorHome",
                                      "when": "editorTextFocus" },
-{ "key": "alt+w",                 "command": "cursorWordRight",
+{ "key": "alt+f",                 "command": "cursorWordRight",
                                      "when": "editorTextFocus" },
 { "key": "alt+b",                 "command": "cursorWordLeft",
                                      "when": "editorTextFocus" },

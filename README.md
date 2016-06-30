@@ -57,8 +57,8 @@ My keybindings (custom and useful ones):
 | **In editor navigation** | | |
 | alt+a  | cursor move to the begining of line |  |
 | alt+e  | cursor move to the end of line | |
-| alt+w  | cursor word right | faster than move right |
-| alt+b  | cursor word left | faster than move left |
+| alt+f  | cursor word right | faster than move right, similar to emacs alt+f |
+| alt+b  | cursor word left | faster than move left, similar to emacs alt+b |
 | alt+left | navigate back | |
 | alt+right | navigate forword | |
 | ctrl+g | go to line | |
