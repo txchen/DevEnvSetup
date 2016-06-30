@@ -49,7 +49,7 @@ My keybindings (custom and useful ones):
 | ctrl+shift+g | view git window | |
 | ctrl+shift+f | view search window | |
 | ctrl+shift+d | view debug window | |
-| ctrl+w or alt+w | close active editor | |
+| ctrl+w | close active editor | |
 | ctrl+k, enter | add to working files | |
 | ctrl+k, w | close file | will remove from working files |
 | f8 | go to next warning or error | |
@@ -57,12 +57,14 @@ My keybindings (custom and useful ones):
 | **In editor navigation** | | |
 | alt+a  | cursor move to the begining of line |  |
 | alt+e  | cursor move to the end of line | |
+| alt+w  | cursor word right | faster than move right |
+| alt+b  | cursor word left | faster than move left |
 | alt+left | navigate back | |
 | alt+right | navigate forword | |
 | ctrl+g | go to line | |
 | ctrl+r | go to symbol in current file | |
 | ctrl+t | search and go to symbol in workspace | |
-| alt+f3 | go to next for current selection | shift+f3 to go previous |
+| alt+f3 | go to next for current selection | if no selection, current word will be selected. |
 | **basic editing** | | |
 | ctrl+enter | insert line after | |
 | ctrl+shift+enter | insert line before | |
