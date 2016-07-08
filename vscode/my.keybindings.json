@@ -101,12 +101,12 @@
                                      "when": "editorTextFocus" },
 { "key": "ctrl+f2",               "command": "editor.action.changeAll",
                                      "when": "editorTextFocus" },
-{ "key": "ctrl+insert",           "command": "editor.action.clipboardCopyAction" },
-{ "key": "ctrl+c",                "command": "editor.action.clipboardCopyAction" },
-{ "key": "shift+delete",          "command": "editor.action.clipboardCutAction" },
-{ "key": "ctrl+x",                "command": "editor.action.clipboardCutAction" },
-{ "key": "shift+insert",          "command": "editor.action.clipboardPasteAction" },
-{ "key": "ctrl+v",                "command": "editor.action.clipboardPasteAction" },
+{ "key": "ctrl+c",                "command": "editor.action.clipboardCopyAction",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+x",                "command": "editor.action.clipboardCutAction",
+                                     "when": "editorTextFocus" },
+{ "key": "ctrl+v",                "command": "editor.action.clipboardPasteAction",
+                                     "when": "editorTextFocus" },
 { "key": "ctrl+/",                "command": "editor.action.commentLine",
                                      "when": "editorTextFocus" },
 { "key": "shift+alt+down",        "command": "editor.action.copyLinesDownAction",
@@ -241,12 +241,11 @@
 { "key": "escape",                "command": "cancelRenameInput",
                                      "when": "editorFocus && renameInputVisible" },
 { "key": "ctrl+w",                "command": "workbench.action.closeActiveEditor" },
+{ "key": "ctrl+shift+w",           "command": "workbench.action.reopenClosedEditor" },
 { "key": "ctrl+f4",               "command": "workbench.action.closeActiveEditor" },
 { "key": "ctrl+k f",              "command": "workbench.action.closeFolder" },
 { "key": "escape",                "command": "workbench.action.closeMessages",
                                      "when": "globalMessageVisible" },
-// { "key": "ctrl+shift+w",          "command": "workbench.action.closeWindow" },
-// { "key": "ctrl+`",                "command": "workbench.action.cycleEditor" },
 { "key": "f5",                    "command": "workbench.action.debug.continue",
                                      "when": "inDebugMode" },
 { "key": "f5",                    "command": "workbench.action.debug.start",
@@ -264,14 +263,12 @@
 { "key": "ctrl+s",                "command": "workbench.action.files.save" },
 { "key": "ctrl+shift+s",          "command": "workbench.action.files.saveAs" },
 { "key": "ctrl+k o",              "command": "workbench.action.files.showOpenedFileInNewWindow" },
-{ "key": "ctrl+1",                "command": "workbench.action.focusFirstEditor" },
-// { "key": "ctrl+alt+left",         "command": "workbench.action.focusLeftEditor" },
-{ "key": "alt+h",                 "command": "workbench.action.focusLeftEditor" },
-// { "key": "ctrl+alt+right",        "command": "workbench.action.focusRightEditor" },
-{ "key": "alt+l",                 "command": "workbench.action.focusRightEditor" },
-{ "key": "ctrl+2",                "command": "workbench.action.focusSecondEditor" },
+{ "key": "ctrl+1",                "command": "workbench.action.focusFirstEditorGroup" },
+{ "key": "alt+h",                 "command": "workbench.action.focusPreviousGroup" },
+{ "key": "alt+l",                 "command": "workbench.action.focusNextGroup" },
+{ "key": "ctrl+2",                "command": "workbench.action.focusSecondEditorGroup" },
 { "key": "ctrl+0",                "command": "workbench.action.focusSideBar" },
-{ "key": "ctrl+3",                "command": "workbench.action.focusThirdEditor" },
+{ "key": "ctrl+3",                "command": "workbench.action.focusThirdEditorGroup" },
 { "key": "ctrl+g",                "command": "workbench.action.gotoLine" },
 { "key": "ctrl+shift+o",          "command": "workbench.action.gotoSymbol" },
 { "key": "ctrl+r",                "command": "workbench.action.gotoSymbol" },
@@ -282,8 +279,8 @@
 { "key": "alt+left",              "command": "workbench.action.navigateBack" },
 { "key": "alt+right",             "command": "workbench.action.navigateForward" },
 { "key": "ctrl+shift+n",          "command": "workbench.action.newWindow" },
-{ "key": "ctrl+shift+tab",        "command": "workbench.action.openPreviousEditor" },
-{ "key": "ctrl+tab",              "command": "workbench.action.openPreviousEditor" },
+{ "key": "ctrl+tab",              "command": "workbench.action.openNextRecentlyUsedEditorInGroup" },
+{ "key": "ctrl+shift+tab",        "command": "workbench.action.openPreviousRecentlyUsedEditorInGroup" },
 { "key": "ctrl+shift+u",          "command": "workbench.action.output.toggleOutput" },
 { "key": "ctrl+e",                "command": "workbench.action.quickOpen" },
 { "key": "ctrl+p",                "command": "workbench.action.quickOpen" },
@@ -308,13 +305,12 @@
 { "key": "ctrl+j",                "command": "workbench.action.togglePanel" },
 { "key": "ctrl+=",                "command": "workbench.action.zoomIn" },
 { "key": "ctrl+-",                "command": "workbench.action.zoomOut" },
-{ "key": "ctrl+k enter",          "command": "workbench.files.action.addToWorkingFiles" },
-{ "key": "ctrl+k ctrl+w",         "command": "workbench.files.action.closeAllFiles" },
-{ "key": "ctrl+k w",              "command": "workbench.files.action.closeFile" },
+{ "key": "ctrl+k enter",          "command": "workbench.action.keepEditor" },
+{ "key": "ctrl+k ctrl+w",         "command": "workbench.action.closeAllEditors" },
 { "key": "ctrl+k down",           "command": "workbench.files.action.openNextWorkingFile" },
 { "key": "ctrl+k up",             "command": "workbench.files.action.openPreviousWorkingFile" },
-{ "key": "alt+j",                 "command": "workbench.files.action.openNextWorkingFile" },
-{ "key": "alt+k",                 "command": "workbench.files.action.openPreviousWorkingFile" },
+{ "key": "alt+j",                 "command": "workbench.action.nextEditor" },
+{ "key": "alt+k",                 "command": "workbench.action.previousEditor" },
 { "key": "ctrl+shift+d",          "command": "workbench.view.debug" },
 { "key": "ctrl+shift+e",          "command": "workbench.view.explorer" },
 { "key": "ctrl+shift+g",          "command": "workbench.view.git" },
@@ -343,69 +339,3 @@
 { "key": ".",                     "command": "^acceptSelectedSuggestion",
                                      "when": "editorTextFocus && suggestWidgetVisible && editorLangId == 'csharp' && suggestionSupportsAcceptOnKey" }
 ]
-
-
-// Here are other available commands:
-// - deleteAllLeft
-// - deleteAllRight
-// - lineBreakInsert
-// - editor.action.openLink
-// - editor.action.findReferences
-// - editor.action.showReferences
-// - editor.action.goToTypeDeclaration
-// - workbench.action.toggleSidebarPosition
-// - workbench.action.closeAllEditors
-// - workbench.action.closeOtherEditors
-// - workbench.action.evenEditorWidths
-// - workbench.action.minimizeOtherEditors
-// - workbench.action.openGlobalSettings
-// - workbench.action.openGlobalKeybindings
-// - workbench.action.openWorkspaceSettings
-// - workbench.action.editor.changeEOL
-// - workbench.action.editor.changeEncoding
-// - workbench.action.files.saveAll
-// - workbench.action.files.saveFiles
-// - workbench.action.files.revert
-// - workbench.action.files.newFolder
-// - workbench.files.action.compareFileWith
-// - workbench.git.action.globalOpenChange
-// - workbench.action.markdown.showWelcome
-// - workbench.action.output.showOutput
-// - editor.action.clearoutput
-// - workbench.action.tasks.terminate
-// - workbench.action.tasks.configureTaskRunner
-// - workbench.action.tasks.showLog
-// - workbench.action.tasks.runTask
-// - workbench.action.openSnippets
-// - workbench.action.selectTheme
-// - editor.debug.action.selectionToRepl
-// - editor.debug.action.selectionToWatch
-// - editor.debug.action.runToCursor
-// - workbench.action.debug.restart
-// - workbench.action.debug.pause
-// - workbench.action.debug.configure
-// - workbench.debug.action.openRepl
-// - workbench.action.files.openFolder
-// - workbench.action.git.executeGitCommands
-// - workbench.action.openRecent
-// - workbench.action.toggleDevTools
-// - workbench.action.zoomReset
-// - workbench.action.appPerf
-// - workbench.action.reloadWindow
-// - workbench.action.files.toggleAutoSave
-// - workbench.extensions.action.listExtensions
-// - workbench.extensions.action.installExtension
-// - vscode.executeWorkspaceSymbolProvider
-// - vscode.executeDefinitionProvider
-// - vscode.executeHoverProvider
-// - vscode.executeDocumentHighlights
-// - vscode.executeReferenceProvider
-// - vscode.executeCodeActionProvider
-// - vscode.executeCodeLensProvider
-// - vscode.executeDocumentSymbolProvider
-// - vscode.executeDocumentRenameProvider
-// - vscode.executeFormatDocumentProvider
-// - vscode.executeFormatRangeProvider
-// - vscode.executeFormatOnTypeProvider
-// - vscode.executeSignatureHelpProvider
-// - vscode.executeCompletionItemProvider

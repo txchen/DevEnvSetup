@@ -36,22 +36,22 @@ My keybindings (custom and useful ones):
 | **VSCODE navigation** | | |
 | ctrl+0 | focus sidebar | |
 | ctrl+b | toggle sidebar | |
-| ctrl+1 | focus first editor | |
-| ctrl+2 | focus second editor | |
-| ctrl+3 | focus third editor | |
+| ctrl+1 | focus first group | |
+| ctrl+2 | focus second group | |
+| ctrl+3 | focus third group | |
 | ctrl+` | toggle terminal | |
 | ctrl+j | toggle panel | |
 | alt+j  | open next working file  | cycle through working files  |
 | alt+k  | open previous working file  |   |
-| alt+l  | go to right editor | can be used to split editor |
-| alt+h  | go to left editor | |
+| alt+l  | go to right editor group | can be used to split editor |
+| alt+h  | go to left editor group | |
 | ctrl+shift+e | view explorer | |
 | ctrl+shift+g | view git window | |
 | ctrl+shift+f | view search window | |
 | ctrl+shift+d | view debug window | |
 | ctrl+w | close active editor | |
-| ctrl+k, enter | add to working files | |
-| ctrl+k, w | close file | will remove from working files |
+| ctrl+shift+w | reopen closed editor | |
+| ctrl+k, enter | keep in editor | |
 | f8 | go to next warning or error | |
 | shift+f8 | go to previous warning or error | |
 | **In editor navigation** | | |
