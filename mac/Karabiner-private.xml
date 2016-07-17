@@ -41,7 +41,8 @@
     <url type="file">/System/Library/CoreServices/Finder.app</url>
   </vkopenurldef>
 
-  <item>
+  <!-- now I use Thor to launch apps -->
+  <!--<item>
     <name>OPTION_L + 2 Open Chrome</name>
     <identifier>private.alt_2</identifier>
     <autogen>__KeyToKey__ KeyCode::KEY_2, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_CHROME</autogen>
@@ -63,7 +64,7 @@
     <name>OPTION_L + 5 Open OneNote</name>
     <identifier>private.alt_5</identifier>
     <autogen>__KeyToKey__ KeyCode::KEY_5, ModifierFlag::OPTION_L|ModifierFlag::NONE, KeyCode::VK_OPEN_URL_ONENOTE</autogen>
-  </item>
+  </item>-->
 
   <item>
     <name>CMD_L + E Open Finder</name>
