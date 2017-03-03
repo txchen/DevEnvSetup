@@ -3,7 +3,7 @@
 
   "editor.fontSize": 15,
 
-  "editor.wrappingColumn": 0,
+  "editor.wordWrap": "on",
 
   "editor.insertSpaces": true,
 
@@ -13,5 +13,6 @@
 
   "editor.rulers": [ 120 ],
 
-  "files.trimTrailingWhitespace": true
+  "files.trimTrailingWhitespace": true,
+  "typescript.check.tscVersion": false
 }
