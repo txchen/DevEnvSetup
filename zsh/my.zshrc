@@ -55,6 +55,14 @@ function curlperf {
   curl -o /dev/null -s -w "time_namelookup=%{time_namelookup}\ntime_connect=%{time_connect}\ntime_appconnect=%{time_appconnect}\ntime_total=%{time_total}\n" "$1"
 }
 
+function wiki {
+  if [[ -z $1 ]]; then
+    open -a Safari "https://github.com/txchen/wiki"
+  else
+    open -a Safari "https://github.com/txchen/wiki/search?q=$*"
+  fi
+}
+
 source $ZSH/oh-my-zsh.sh
 
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
@@ -67,3 +75,4 @@ SAVEHIST=10000
 
 # zsh+tmux might introduce dup PATH, dedup it
 typeset -aU path
+
