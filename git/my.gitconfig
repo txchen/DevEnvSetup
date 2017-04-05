@@ -8,7 +8,7 @@
   email = txchendev@gmail.com
   name = Tianxiang Chen
 [alias]
-  tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short
+  tree = log --graph --decorate --pretty=format:'%C(auto)%h %C(blue)%ad%C(reset)%C(auto) - %s%d %C(yellow)[%an]' --abbrev-commit --date=short --abbrev=8
 [core]
   excludesfile = ~/.gitignore_global
   pager = LESS=FRXK less
