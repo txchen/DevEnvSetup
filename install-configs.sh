@@ -3,19 +3,22 @@ echo "### install configs ###"
 
 hash git >/dev/null 2>&1 || { echo "!! git not installed, cannot continue"; exit 2; }
 
-echo "\ncopying zsh theme and zshrc..."
+echo -e "\ncopying zsh theme and zshrc..."
 cp -f zsh/txchen.zsh-theme ~/.oh-my-zsh/themes/ || { echo "!! failed to cp txchen.zsh-them"; exit 2; }
 cp -f zsh/my.zshrc ~/.zshrc || { echo "!! failed to cp my.zshrc"; exit 2; }
 echo "done"
 
-echo "\ncopying .tmux.conf..."
+echo -e "\ncopying .tmux.conf..."
 cp -f tmux/my.tmux.conf ~/.tmux.conf || { echo "!! failed to cp my.tmux.conf"; exit 2; }
 if [[ `uname` != 'Darwin' ]]; then
   sed -i 's/.*# MAC ONLY$/# THIS IS ONLY VALID IN OSX, removed./' ~/.tmux.conf
 fi
+if [[ `uname` != 'Linux' ]]; then
+  sed -i '' 's/.*# LINUX ONLY$/# THIS IS ONLY VALID IN LINUX, removed./' ~/.tmux.conf
+fi
 echo "done"
 
-echo "\ninstalling tmux resurrect"
+echo -e "\ninstalling tmux resurrect"
 TMUXRESURRECTDIR=~/.tmux-resurrect/
 if [ -d "$TMUXRESURRECTDIR" ]; then
   rm -rf $TMUXRESURRECTDIR
@@ -34,7 +37,7 @@ if [ -f ~/.gitconfig ] ; then
   echo "email = $git_useremail"
 fi
 
-echo "\ncopying .gitconfig..."
+echo -e "\ncopying .gitconfig..."
 cp -f git/my.gitconfig ~/.gitconfig || { echo "!! failed to cp gitconfig"; exit 2; }
 echo "done"
 # set back old value for user.name user.email
@@ -65,15 +68,15 @@ if [[ `uname` == 'Darwin' ]]; then
   git config --global credential.helper osxkeychain
 fi
 
-echo "\ncopying .gitignore_global..."
+echo -e "\ncopying .gitignore_global..."
 cp -f git/my.gitignore_global ~/.gitignore_global || { echo "!! failed to cp gitignore_global"; exit 2; }
 echo "done"
 
-echo "\ncopying .vimrc..."
+echo -e "\ncopying .vimrc..."
 cp -f vim/vimrc ~/.vimrc || { echo "!! failed to cp vimrc"; exit 2; }
 echo "done"
 
-echo "\ninstalling vundle and vim plugins..."
+echo -e "\ninstalling vundle and vim plugins..."
 if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
   echo "  vundle repo not cloned yet, clone it."
   /usr/bin/env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim || {
@@ -86,4 +89,4 @@ echo "  running vim to install plugins"
 vim +PluginInstall +qall || { echo "!! failed to run vim plugin install.."; exit 2; }
 echo "done"
 
-echo "\n### install completed :) ###"
+echo -e "\n### install completed :) ###"
