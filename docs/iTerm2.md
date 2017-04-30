@@ -11,10 +11,11 @@
 * Change left/right option key acts as `+ESC`, Profiles -> Default -> Keys, then Alt key mapping can work well
 * Change scroll back line to 9999 or bigger, Profiles -> Default -> Terminal
 * Set terminal type to `xterm-256color`, Profiles -> Default -> Terminal
+* Set Preference -> General -> Applications in terminal may access clipboard
 
 ### Frequent shortcut keys
 * cmd + h/l : switch tab
-* ctrl + ` : show/hide iTerm2
+* alt + 1 : show/hide iTerm2
 * cmd + t : new tab
 * cmd + w : close tab
 * cmd + number: switch to tab

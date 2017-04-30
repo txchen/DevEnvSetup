@@ -1,18 +1,13 @@
 {
   "editor.fontFamily": "Consolas",
-
   "editor.fontSize": 15,
-
   "editor.wordWrap": "on",
-
   "editor.insertSpaces": true,
-
   "editor.tabSize": 2,
-
-  "editor.renderWhitespace": true,
-
+  "editor.renderWhitespace": "all",
   "editor.rulers": [ 120 ],
-
   "files.trimTrailingWhitespace": true,
-  "typescript.check.tscVersion": false
+  "typescript.check.tscVersion": false,
+  "workbench.colorTheme": "Atom One Dark",
+  "workbench.iconTheme": "vs-seti"
 }
