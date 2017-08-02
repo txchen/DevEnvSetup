@@ -10,11 +10,8 @@ ZSH_THEME="txchen"
 # Example aliases
 # find files with colored output
 alias f='find . | grep --color'
-alias godir='cd ~/gocode/src/github.com/txchen'
 alias nr='npm run'
 alias dn='dotnet'
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -64,6 +61,7 @@ function wiki {
 }
 
 source $ZSH/oh-my-zsh.sh
+alias gb=$GOPATH/bin/gb
 
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
 stty -ixon
