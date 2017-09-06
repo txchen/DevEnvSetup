@@ -6,8 +6,11 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.rulers": [ 120 ],
+  "files.insertFinalNewline": true,
   "files.trimTrailingWhitespace": true,
-  "typescript.check.tscVersion": false,
   "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "vs-seti"
+  "workbench.iconTheme": "vs-seti",
+  "workbench.startupEditor": "newUntitledFile",
+  "extensions.ignoreRecommendations": false,
+  "window.zoomLevel": 0
 }
