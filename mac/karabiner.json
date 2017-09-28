@@ -124,37 +124,6 @@
                         ]
                     },
                     {
-                        "description": "Change capslock to cmd+ctrl+optin+shift(hyper)",
-                        "manipulators": [
-                            {
-                                "from": {
-                                    "key_code": "caps_lock",
-                                    "modifiers": {
-                                        "optional": [
-                                            "any"
-                                        ]
-                                    }
-                                },
-                                "to": [
-                                    {
-                                        "key_code": "left_shift",
-                                        "modifiers": [
-                                            "left_command",
-                                            "left_control",
-                                            "left_option"
-                                        ]
-                                    }
-                                ],
-                                "to_if_alone": [
-                                    {
-                                        "key_code": "f19"
-                                    }
-                                ],
-                                "type": "basic"
-                            }
-                        ]
-                    },
-                    {
                         "description": "Change hyper+backspace to delete",
                         "manipulators": [
                             {
@@ -444,10 +413,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -476,10 +447,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -508,10 +481,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -540,10 +515,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -572,10 +549,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -604,10 +583,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -636,10 +617,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -668,10 +651,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -700,10 +685,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -732,10 +719,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -764,10 +753,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -796,10 +787,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -828,10 +821,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -861,10 +856,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -888,10 +885,12 @@
                                         "bundle_identifiers": [
                                             "^com\\.teamviewer\\.TeamViewer$",
                                             "^com\\.microsoft\\.rdc\\.mac$",
+                                            "^tv\\.parsec\\.www$",
+                                            "^AnyDesk\\.AnyDesk$",
                                             "^com\\.google\\.android\\.studio$",
                                             "^com\\.microsoft\\.VSCode$",
-                                            "^com\\.googlecode\\.iterm2$",
-                                            "^com\\.apple\\.Terminal$"
+                                            "^com\\.microsoft\\.visual-studio$",
+                                            "^com\\.googlecode\\.iterm2$"
                                         ]
                                     }
                                 ],
@@ -941,6 +940,34 @@
                                         "key_code": "v",
                                         "modifiers": [
                                             "left_command"
+                                        ]
+                                    }
+                                ],
+                                "type": "basic"
+                            }
+                        ]
+                    },
+                    {
+                        "description": "ctrl+alt+shift+v to paste without format",
+                        "manipulators": [
+                            {
+                                "from": {
+                                    "key_code": "v",
+                                    "modifiers": {
+                                        "mandatory": [
+                                            "left_control",
+                                            "left_option",
+                                            "left_shift"
+                                        ]
+                                    }
+                                },
+                                "to": [
+                                    {
+                                        "key_code": "v",
+                                        "modifiers": [
+                                            "left_command",
+                                            "left_option",
+                                            "left_shift"
                                         ]
                                     }
                                 ],
