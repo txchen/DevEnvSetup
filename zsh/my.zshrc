@@ -73,4 +73,5 @@ SAVEHIST=10000
 
 # zsh+tmux might introduce dup PATH, dedup it
 typeset -aU path
-
+# make ctrl+u same as bash. To delete entire line, use ctrl+c
+bindkey \^U backward-kill-line
