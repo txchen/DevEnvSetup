@@ -1,5 +1,6 @@
 {
-  "editor.fontSize": 15,
+  "editor.fontFamily": "Hack, Consolas, 'Microsoft YaHei', 'WenQuanYi Zen Hei Mono', monospace",
+  "editor.fontSize": 16,
   "editor.wordWrap": "on",
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
