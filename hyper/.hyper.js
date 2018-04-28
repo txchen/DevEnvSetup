@@ -37,13 +37,13 @@ module.exports = {
 
     // terminal background color
     // opacity is only supported on macOS
-    backgroundColor: 'rgba(34, 34, 34, 0.55)',
+    backgroundColor: 'rgba(34, 34, 34, 0.80)',
 
     // terminal selection color
     //selectionColor: '#444444',
 
     // border color (window, tabs)
-    borderColor: '#333',
+    borderColor: '#666',
 
     // custom CSS to embed in the main window
     css: '',
@@ -61,7 +61,7 @@ module.exports = {
     showWindowControls: '',
 
     // custom padding (CSS format, i.e.: `top right bottom left`)
-    padding: '0px 5px',
+    padding: '5px 5px',
 
     // the full list. if you're going to provide the full color palette,
     // including the 6 x 6 color cubes and the grayscale map, just provide
@@ -133,7 +133,7 @@ module.exports = {
   //   `hyperpower`
   //   `@company/project`
   //   `project#1.0.1`
-  plugins: ['hyper-tabs-enhanced'],
+  plugins: [],
 
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
@@ -141,17 +141,15 @@ module.exports = {
   localPlugins: [],
 
   keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
-    "tab:new": "ctrl+alt+t",
-    //"tab:close": "ctrl+alt+w",
-    "tab:next": [
-      "ctrl+alt+l",
-      "ctrl+tab"
+    'tab:new': 'ctrl+alt+t',
+    'pane:close': 'ctrl+alt+w',
+    'tab:next': [
+      'ctrl+alt+l',
+      'ctrl+tab'
     ],
-    "tab:prev": [
-      "ctrl+alt+h",
-      "ctrl+shift+tab"
+    'tab:prev': [
+      'ctrl+alt+h',
+      'ctrl+shift+tab'
     ],
   },
 };
