@@ -13,6 +13,7 @@ alias f='find . | grep --color'
 alias nr='npm run'
 alias dn='dotnet'
 alias d-c='docker-compose'
+alias gt='git tree'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
