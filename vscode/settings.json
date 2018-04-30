@@ -13,5 +13,6 @@
   "extensions.ignoreRecommendations": true,
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
-  "search.smartCase": true
+  "search.smartCase": true,
+  "window.title": "${activeEditorLong}"
 }
