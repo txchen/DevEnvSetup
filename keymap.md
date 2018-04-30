@@ -1,5 +1,11 @@
 # Keymaps
 
+* MacOS (#macos)
+* Zsh (#zsh)
+* iTerm2 (#iterm2)
+* Tmux (#tmux)
+* VS Code (#vscode)=
+
 ## MacOS
 
 | Key  | Description  | Note  |
@@ -74,3 +80,5 @@
 | ctrl+b $ | rename session | |
 
 ## Vscode
+
+TODO
