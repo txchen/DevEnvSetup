@@ -1,10 +1,10 @@
 # Keymaps
 
-* MacOS (#macos)
-* Zsh (#zsh)
-* iTerm2 (#iterm2)
-* Tmux (#tmux)
-* VS Code (#vscode)=
+* [MacOS](#macos)
+* [Zsh](#zsh)
+* [iTerm2](#iterm2)
+* [Tmux](#tmux)
+* [VS Code](#vscode)
 
 ## MacOS
 
