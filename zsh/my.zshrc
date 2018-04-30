@@ -45,25 +45,16 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [[ $('uname') == 'Darwin' ]]; then
-    plugins=(git osx z ssh-agent brew golang colored-man)
+    plugins=(git osx z ssh-agent brew colored-man)
 elif  [[ $('uname') == 'Linux' ]]; then
-    plugins=(git z ssh-agent golang colored-man)
+    plugins=(git z ssh-agent colored-man)
 fi
 
 function curlperf {
   curl -o /dev/null -s -w "time_namelookup=%{time_namelookup}\ntime_connect=%{time_connect}\ntime_appconnect=%{time_appconnect}\ntime_total=%{time_total}\n" "$1"
 }
 
-function wiki {
-  if [[ -z $1 ]]; then
-    open -a Safari "https://github.com/txchen/wiki"
-  else
-    open -a Safari "https://github.com/txchen/wiki/search?q=$*"
-  fi
-}
-
 source $ZSH/oh-my-zsh.sh
-alias gb=$GOPATH/bin/gb
 
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
 stty -ixon
