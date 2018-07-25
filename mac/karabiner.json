@@ -1041,9 +1041,8 @@
                                 ],
                                 "to_if_alone": [
                                     {
-                                        "key_code": "spacebar",
+                                        "key_code": "f18",
                                         "modifiers": [
-                                            "left_command"
                                         ]
                                     }
                                 ],
