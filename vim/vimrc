@@ -60,6 +60,8 @@ set tabstop=2
 set expandtab
 set term=xterm-256color
 
+" make delete_forward work in insert mode
+inoremap <C-d> <Esc>lxi
 let mapleader=","
 " forgot sudo, this can fix it, ',W'
 noremap <Leader>W :w !sudo tee % > /dev/null<CR>
