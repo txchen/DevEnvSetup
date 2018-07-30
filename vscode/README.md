@@ -13,7 +13,9 @@
 
 ## Sync my settings
 
-TODO
+Ext repo: https://github.com/nonoroazoro/vscode-syncing
+
+Create gist access token, then upload / download settings.
 
 ## My keybindings:
 

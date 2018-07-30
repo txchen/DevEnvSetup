@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "Hack, Consolas, 'Microsoft YaHei', 'WenQuanYi Zen Hei Mono', monospace",
-  "editor.fontSize": 15,
+  "editor.fontSize": 16,
   "editor.wordWrap": "on",
   "editor.insertSpaces": true,
   "editor.tabSize": 2,
@@ -14,5 +14,8 @@
   "workbench.startupEditor": "newUntitledFile",
   "window.zoomLevel": 0,
   "search.smartCase": true,
-  "window.title": "${activeEditorLong}"
+  "window.title": "${activeEditorLong}",
+  "syncing.excludedExtensions" : [
+    "nonoroazoro.syncing"
+  ]
 }
