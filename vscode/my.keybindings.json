@@ -432,7 +432,7 @@
                                      "when": "listFocus" },
 { "key": "space",                 "command": "list.toggleExpand",
                                      "when": "listFocus" },
-{ "key": "ctrl+shift+f",          "command": "search.action.focusActiveEditor",
+{ "key": "ctrl+shift+f",          "command": "workbench.action.focusActiveEditorGroup",
                                      "when": "searchInputBoxFocus && searchViewletVisible" },
 { "key": "f4",                    "command": "search.action.focusNextSearchResult" },
 { "key": "shift+f4",              "command": "search.action.focusPreviousSearchResult" },

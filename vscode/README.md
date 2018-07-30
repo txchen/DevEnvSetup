@@ -6,7 +6,14 @@
 * C#
 * EditorConfig
 * ESlit
+* Go
+* jumpy
+* Prettier-Standard
 * vetur
+
+## Sync my settings
+
+TODO
 
 ## My keybindings:
 
