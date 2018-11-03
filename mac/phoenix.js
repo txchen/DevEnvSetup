@@ -148,14 +148,19 @@ function toggleApp (appName, bundleName) {
 
 Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
 Key.on('1', ['alt', 'shift'], () => toggleApp('Wunderlist', 'com.wunderkinder.wunderlistdesktop'))
+
 Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
 Key.on('2', ['alt', 'shift'], () => toggleApp('Safari', 'com.apple.Safari'))
+
 Key.on('3', ['alt'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
 Key.on('3', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
+
 Key.on('4', ['alt'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
 Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
-Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
-Key.on('5', ['alt', 'shift'], () => toggleApp('Boostnote', 'com.maisin.boost'))
+
+Key.on('5', ['alt'], () => toggleApp('Notion', 'notion.id'))
+Key.on('5', ['alt', 'shift'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
+
 Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
 
 // alt + return to switch windows by showing hints
@@ -205,7 +210,7 @@ function buildHints (windows) {
 
   const screenModalCounts = {} // key: screen, value: count
   windows.forEach((win, i) => {
-    const title = `${HINT_CHARS[i].toUpperCase()}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
+    const title = `${HINT_CHARS[i]}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
     const ws = win.screen()
     const wsf = ws.frame()
     const hintModal = Modal.build({
