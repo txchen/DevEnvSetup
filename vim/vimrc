@@ -25,6 +25,7 @@ filetype plugin indent on
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+set backspace=indent,eol,start
 set nu
 set showcmd                   " show command status
 set showmatch                 " flashes matching paren when one is typed
