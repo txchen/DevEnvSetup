@@ -45,9 +45,9 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 if [[ $('uname') == 'Darwin' ]]; then
-    plugins=(git osx z ssh-agent brew colored-man)
+    plugins=(git osx z brew colored-man-pages)
 elif  [[ $('uname') == 'Linux' ]]; then
-    plugins=(git z ssh-agent colored-man)
+    plugins=(git z ssh-agent colored-man-pages)
 fi
 
 function curlperf {
