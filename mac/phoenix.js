@@ -108,32 +108,47 @@ Key.on('down', HYPER_KEY, () => {
     })
   })
 })
-// window go to left half
+// window go to left half, in 1/2, 1/3 or 2/3
 Key.on('left', HYPER_KEY, () => {
-  doOnFocusedWindow(window => {
-    const wFrame = window.frame()
-    const screenSize = window.screen().flippedVisibleFrame()
-    window.setFrame({
-      x: screenSize.x,
-      y: screenSize.y,
-      width: screenSize.width / 2,
-      height: screenSize.height
-    })
-  })
+  horizontalResize('left')
 })
-// window go to right half
+// window go to right half, in 1/2, 1/3 or 2/3
 Key.on('right', HYPER_KEY, () => {
-  doOnFocusedWindow(window => {
-    const wFrame = window.frame()
-    const screenSize = window.screen().flippedVisibleFrame()
-    window.setFrame({
-      x: screenSize.x + screenSize.width / 2,
-      y: screenSize.y,
-      width: screenSize.width / 2,
-      height: screenSize.height
-    })
-  })
+  horizontalResize('right')
 })
+
+function horizontalResize (direction) {
+  doOnFocusedWindow(window => {
+    const screenSize = window.screen().flippedVisibleFrame()
+    const wFrame = window.frame()
+    // check if the window is on the edge already
+    const onEdge = direction === 'left' ? wFrame.x === screenSize.x : wFrame.x + wFrame.width === screenSize.x + screenSize.width
+    // Phoenix.log(onEdge)
+    if (!onEdge) { // move it on to edge
+      window.setFrame({
+        x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - wFrame.width,
+        y: screenSize.y,
+        width: wFrame.width,
+        height: screenSize.height
+      })
+    } else { // already on edge, adjust the size
+      const curRatio = wFrame.width / screenSize.width
+      let newWidth = screenSize.width / 2
+      // Phoenix.log(curRatio)
+      if (curRatio <= 0.51 && curRatio >= 0.3333334) {
+        newWidth = screenSize.width / 3
+      } else if (curRatio > 0.666667 || curRatio <= 0.33333334) {
+        newWidth = screenSize.width / 3 * 2
+      }
+      window.setFrame({
+        x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - newWidth,
+        y: screenSize.y,
+        width: newWidth,
+        height: screenSize.height
+      })
+    }
+  })
+}
 
 // Toggle apps
 function toggleApp (appName, bundleName) {
