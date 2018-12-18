@@ -122,8 +122,9 @@ function horizontalResize (direction) {
     const screenSize = window.screen().flippedVisibleFrame()
     const wFrame = window.frame()
     // check if the window is on the edge already
-    const onEdge = direction === 'left' ? wFrame.x === screenSize.x : wFrame.x + wFrame.width === screenSize.x + screenSize.width
-    // Phoenix.log(onEdge)
+    const onEdge = direction === 'left' ?
+      wFrame.x === screenSize.x :
+      wFrame.x + wFrame.width === screenSize.x + screenSize.width
     if (!onEdge) { // move it on to edge
       window.setFrame({
         x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - wFrame.width,
@@ -132,13 +133,14 @@ function horizontalResize (direction) {
         height: screenSize.height
       })
     } else { // already on edge, adjust the size
-      const curRatio = wFrame.width / screenSize.width
-      let newWidth = screenSize.width / 2
-      // Phoenix.log(curRatio)
-      if (curRatio <= 0.51 && curRatio >= 0.3333334) {
-        newWidth = screenSize.width / 3
-      } else if (curRatio > 0.666667 || curRatio <= 0.33333334) {
-        newWidth = screenSize.width / 3 * 2
+      const twoThirdsWidth = Math.floor(screenSize.width / 3 * 2)
+      const oneThirdWidth = Math.floor(screenSize.width / 3)
+      const halfWidth = Math.floor(screenSize.width / 2)
+      let newWidth = halfWidth
+      if (wFrame.width > twoThirdsWidth || wFrame.width <= oneThirdWidth) {
+        newWidth = twoThirdsWidth
+      } else if (wFrame.width > oneThirdWidth && wFrame.width <= halfWidth) {
+        newWidth = oneThirdWidth
       }
       window.setFrame({
         x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - newWidth,
