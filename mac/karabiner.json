@@ -78,6 +78,59 @@
             ]
           },
           {
+            "description": "Alt + JK to cycle browser tabs",
+            "conditions": [
+              {
+                "bundle_identifiers": [
+                  "^com.google.Chrome$",
+                  "^org.mozilla.firefox$"
+                ],
+                "type": "frontmost_application_if"
+              }
+            ],
+            "manipulators": [
+              {
+                "from": {
+                  "key_code": "j",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_control"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "from": {
+                  "key_code": "k",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "tab",
+                    "modifiers": [
+                      "left_control",
+                      "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          },
+          {
             "description": "PC style delete last word",
             "manipulators": [
               {

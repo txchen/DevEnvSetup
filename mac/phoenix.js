@@ -175,8 +175,8 @@ Key.on('3', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microso
 Key.on('4', ['alt'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
 Key.on('4', ['alt', 'shift'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
 
-Key.on('5', ['alt'], () => toggleApp('Notion', 'notion.id'))
-Key.on('5', ['alt', 'shift'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
+Key.on('5', ['alt', 'shift'], () => toggleApp('Notion', 'notion.id'))
+Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
 
 Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
 
