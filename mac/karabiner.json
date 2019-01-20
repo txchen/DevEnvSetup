@@ -79,17 +79,17 @@
           },
           {
             "description": "Alt + JK to cycle browser tabs",
-            "conditions": [
-              {
-                "bundle_identifiers": [
-                  "^com.google.Chrome$",
-                  "^org.mozilla.firefox$"
-                ],
-                "type": "frontmost_application_if"
-              }
-            ],
             "manipulators": [
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "j",
                   "modifiers": {
@@ -109,6 +109,15 @@
                 "type": "basic"
               },
               {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
                 "from": {
                   "key_code": "k",
                   "modifiers": {
