@@ -482,7 +482,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -519,7 +519,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -556,7 +556,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -593,7 +593,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -630,7 +630,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -667,7 +667,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -704,7 +704,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -741,7 +741,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -778,7 +778,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -815,7 +815,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -852,7 +852,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -889,7 +889,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -926,7 +926,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -964,7 +964,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
@@ -996,7 +996,7 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.teamviewer\\.TeamViewer$",
-                      "^com\\.microsoft\\.rdc\\.mac$",
+                      "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
                       "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
