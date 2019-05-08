@@ -142,9 +142,11 @@ function horizontalResize (direction) {
       } else if (wFrame.width > oneThirdWidth && wFrame.width <= halfWidth) {
         newWidth = oneThirdWidth
       }
-      window.setFrame({
+      window.setTopLeft({
         x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - newWidth,
-        y: screenSize.y,
+        y: screenSize.y
+      })
+      window.setSize({
         width: newWidth,
         height: screenSize.height
       })
@@ -167,7 +169,7 @@ Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
 Key.on('1', ['alt', 'shift'], () => toggleApp('Wunderlist', 'com.wunderkinder.wunderlistdesktop'))
 
 Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
-Key.on('2', ['alt', 'shift'], () => toggleApp('Firefox', 'org.mozilla.firefox'))
+Key.on('2', ['alt', 'shift'], () => toggleApp('Microsoft Edge Canary', 'com.microsoft.Edge.Canary'))
 
 Key.on('3', ['alt'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
 Key.on('3', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
@@ -175,8 +177,8 @@ Key.on('3', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microso
 Key.on('4', ['alt'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
 Key.on('4', ['alt', 'shift'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
 
-Key.on('5', ['alt', 'shift'], () => toggleApp('Notion', 'notion.id'))
 Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
+Key.on('5', ['alt', 'shift'], () => toggleApp('Notion', 'notion.id'))
 
 Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
 
