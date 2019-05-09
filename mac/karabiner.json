@@ -78,20 +78,21 @@
             ]
           },
           {
-            "description": "Alt + JK to cycle browser tabs",
+            "description": "Alt + HL to cycle browser tabs",
             "manipulators": [
               {
                 "conditions": [
                   {
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
-                      "^org.mozilla.firefox$"
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.Edge"
                     ],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
-                  "key_code": "j",
+                  "key_code": "l",
                   "modifiers": {
                     "mandatory": [
                       "left_option"
@@ -113,13 +114,14 @@
                   {
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
-                      "^org.mozilla.firefox$"
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.Edge"
                     ],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
-                  "key_code": "k",
+                  "key_code": "h",
                   "modifiers": {
                     "mandatory": [
                       "left_option"
