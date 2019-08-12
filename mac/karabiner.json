@@ -11,7 +11,8 @@
           "basic.simultaneous_threshold_milliseconds": 50,
           "basic.to_delayed_action_delay_milliseconds": 500,
           "basic.to_if_alone_timeout_milliseconds": 500,
-          "basic.to_if_held_down_threshold_milliseconds": 500
+          "basic.to_if_held_down_threshold_milliseconds": 500,
+          "mouse_motion_to_scroll.speed": 100
         },
         "rules": [
           {
@@ -78,8 +79,68 @@
             ]
           },
           {
-            "description": "Alt + HL to cycle browser tabs",
+            "description": "ctrl+alt+HL to go back/forward browser history, alt + HL to cycle browser tabs",
             "manipulators": [
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.Edge"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "h",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "open_bracket",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.Edge"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "l",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "close_bracket",
+                    "modifiers": [
+                      "left_command"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
               {
                 "conditions": [
                   {
@@ -1249,12 +1310,16 @@
         }
       ],
       "name": "Default profile",
+      "parameters": {
+        "delay_milliseconds_before_open_device": 1000
+      },
       "selected": true,
       "simple_modifications": [],
       "virtual_hid_keyboard": {
         "caps_lock_delay_milliseconds": 0,
         "country_code": 0,
-        "keyboard_type": "ansi"
+        "keyboard_type": "ansi",
+        "mouse_key_xy_scale": 100
       }
     }
   ]
