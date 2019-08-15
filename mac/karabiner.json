@@ -96,8 +96,7 @@
                   "key_code": "h",
                   "modifiers": {
                     "mandatory": [
-                      "left_option",
-                      "left_control"
+                      "left_option"
                     ]
                   }
                 },
@@ -126,8 +125,7 @@
                   "key_code": "l",
                   "modifiers": {
                     "mandatory": [
-                      "left_option",
-                      "left_control"
+                      "left_option"
                     ]
                   }
                 },
@@ -156,7 +154,8 @@
                   "key_code": "l",
                   "modifiers": {
                     "mandatory": [
-                      "left_option"
+                      "left_option",
+                      "left_control"
                     ]
                   }
                 },
@@ -185,7 +184,8 @@
                   "key_code": "h",
                   "modifiers": {
                     "mandatory": [
-                      "left_option"
+                      "left_option",
+                      "left_control"
                     ]
                   }
                 },
