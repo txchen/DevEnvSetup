@@ -166,7 +166,7 @@ function toggleApp (appName, bundleName) {
 }
 
 Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
-Key.on('1', ['alt', 'shift'], () => toggleApp('Microsoft To-do', 'com.microsoft.to-do-mac'))
+Key.on('1', ['alt', 'shift'], () => toggleApp('Microsoft To Do', 'com.microsoft.to-do-mac'))
 
 Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
 Key.on('2', ['alt', 'shift'], () => toggleApp('Station', 'org.efounders.BrowserX'))
