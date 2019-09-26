@@ -79,7 +79,7 @@
             ]
           },
           {
-            "description": "alt+HL to go back/forward browser history, ctrl+alt+HL to cycle browser tabs, f5 to refresh",
+            "description": "alt+HL to go back/forward browser history, ctrl+alt+HLW to cycle or close browser tabs, f5 to refresh",
             "manipulators": [
               {
                 "conditions": [
@@ -195,6 +195,36 @@
                     "modifiers": [
                       "left_control",
                       "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.edgemac"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "w",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_option",
+                      "left_control"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "w",
+                    "modifiers": [
+                      "left_command"
                     ]
                   }
                 ],
