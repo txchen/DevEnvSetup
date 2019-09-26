@@ -172,7 +172,7 @@ Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
 Key.on('2', ['alt', 'shift'], () => toggleApp('Station', 'org.efounders.BrowserX'))
 
 Key.on('3', ['alt'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
-Key.on('3', ['alt', 'shift'], () => toggleApp('Microsoft Edge Beta', 'com.microsoft.Edge.Beta'))
+Key.on('3', ['alt', 'shift'], () => toggleApp('Microsoft Edge Beta', 'com.microsoft.edgemac.Beta'))
 
 Key.on('4', ['alt'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
 Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))

@@ -79,7 +79,7 @@
             ]
           },
           {
-            "description": "ctrl+alt+HL to go back/forward browser history, alt + HL to cycle browser tabs",
+            "description": "alt+HL to go back/forward browser history, ctrl+alt+HL to cycle browser tabs, f5 to refresh",
             "manipulators": [
               {
                 "conditions": [
@@ -87,7 +87,7 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^com.microsoft.Edge"
+                      "^com.microsoft.edgemac"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -116,7 +116,7 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^com.microsoft.Edge"
+                      "^com.microsoft.edgemac"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -145,7 +145,7 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^com.microsoft.Edge"
+                      "^com.microsoft.edgemac"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -175,7 +175,7 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^com.microsoft.Edge"
+                      "^com.microsoft.edgemac"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -195,6 +195,30 @@
                     "modifiers": [
                       "left_control",
                       "left_shift"
+                    ]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "bundle_identifiers": [
+                      "^com.google.Chrome$",
+                      "^org.mozilla.firefox$",
+                      "^com.microsoft.edgemac"
+                    ],
+                    "type": "frontmost_application_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "f5"
+                },
+                "to": [
+                  {
+                    "key_code": "r",
+                    "modifiers": [
+                      "left_command"
                     ]
                   }
                 ],
