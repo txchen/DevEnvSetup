@@ -169,16 +169,16 @@ Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
 Key.on('1', ['alt', 'shift'], () => toggleApp('Microsoft To Do', 'com.microsoft.to-do-mac'))
 
 Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
-Key.on('2', ['alt', 'shift'], () => toggleApp('Station', 'org.efounders.BrowserX'))
+Key.on('2', ['alt', 'shift'], () => toggleApp('Microsoft Edge', 'com.microsoft.edgemac'))
 
 Key.on('3', ['alt'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
-Key.on('3', ['alt', 'shift'], () => toggleApp('Microsoft Edge Beta', 'com.microsoft.edgemac.Beta'))
+Key.on('3', ['alt', 'shift'], () => toggleApp('Notion', 'notion.id'))
 
 Key.on('4', ['alt'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
 Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
 
-Key.on('5', ['alt'], () => toggleApp('Notion', 'notion.id'))
-Key.on('5', ['alt', 'shift'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
+Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
+Key.on('5', ['alt', 'shift'], () => toggleApp('Joplin', 'net.cozic.joplin-desktop'))
 
 Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
 
@@ -229,7 +229,7 @@ function buildHints (windows) {
 
   const screenModalCounts = {} // key: screen, value: count
   windows.forEach((win, i) => {
-    const title = `${HINT_CHARS[i]}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
+    const title = `${HINT_CHARS[i].toUpperCase()}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
     const ws = win.screen()
     const wsf = ws.frame()
     const hintModal = Modal.build({

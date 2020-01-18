@@ -1,4 +1,4 @@
-## My homebrew list
+# My homebrew list
 
 * m-cli
 * tmux
