@@ -14,6 +14,7 @@ alias nr='npm run'
 alias dn='dotnet'
 alias d-c='docker-compose'
 alias gt='git tree'
+alias pw='pwsh -c'
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
