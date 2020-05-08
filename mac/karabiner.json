@@ -75,6 +75,122 @@
                   }
                 ],
                 "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [
+                      {
+                        "vendor_id": 1452
+                      },
+                      {
+                        "vendor_id": 76
+                      }
+                    ],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "right_command",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f16"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [
+                      {
+                        "vendor_id": 1452
+                      },
+                      {
+                        "vendor_id": 76
+                      }
+                    ],
+                    "type": "device_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "right_command",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f17"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [
+                      {
+                        "vendor_id": 1452
+                      },
+                      {
+                        "vendor_id": 76
+                      }
+                    ],
+                    "type": "device_if"
+                  }
+                ],
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f17"
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "conditions": [
+                  {
+                    "identifiers": [
+                      {
+                        "vendor_id": 1452
+                      },
+                      {
+                        "vendor_id": 76
+                      }
+                    ],
+                    "type": "device_unless"
+                  }
+                ],
+                "from": {
+                  "key_code": "right_option",
+                  "modifiers": {
+                    "optional": [
+                      "any"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "f16"
+                  }
+                ],
+                "type": "basic"
               }
             ]
           },
@@ -598,14 +714,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -635,14 +750,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -672,14 +786,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -709,14 +822,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -746,14 +858,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -783,14 +894,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -820,14 +930,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -857,14 +966,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -894,14 +1002,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -931,14 +1038,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -968,14 +1074,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -1005,14 +1110,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -1042,14 +1146,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -1080,14 +1183,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -1112,14 +1214,13 @@
                 "conditions": [
                   {
                     "bundle_identifiers": [
-                      "^com\\.teamviewer\\.TeamViewer$",
                       "^com\\.microsoft\\.rdc\\.macos$",
                       "^tv\\.parsec\\.www$",
-                      "^AnyDesk\\.AnyDesk$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$"
+                      "^com\\.googlecode\\.iterm2$",
+                      "^com\\.facebook\\.fbvscode"
                     ],
                     "file_paths": [
                       "\\.parsec/Parsec Game Window$"
@@ -1209,7 +1310,7 @@
             ]
           },
           {
-            "description": "right shift to switch input method",
+            "description": "right shift to F18 (map to switch input method)",
             "manipulators": [
               {
                 "from": {

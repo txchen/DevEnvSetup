@@ -165,31 +165,36 @@ function toggleApp (appName, bundleName) {
   App.launch(appName, { focus: true })
 }
 
+// coding tools
 Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
-Key.on('1', ['alt', 'shift'], () => toggleApp('Microsoft To Do', 'com.microsoft.to-do-mac'))
+Key.on('1', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
 
+// browsers
 Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
 Key.on('2', ['alt', 'shift'], () => toggleApp('Microsoft Edge', 'com.microsoft.edgemac'))
 
-Key.on('3', ['alt'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
-Key.on('3', ['alt', 'shift'], () => toggleApp('Notion', 'notion.id'))
+// notebooks
+Key.on('3', ['alt'], () => toggleApp('Notion', 'notion.id'))
+Key.on('3', ['alt', 'shift'], () => toggleApp('Joplin', 'net.cozic.joplin-desktop'))
 
+// IM
 Key.on('4', ['alt'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
-Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
+// Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
 
+// others
 Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
-Key.on('5', ['alt', 'shift'], () => toggleApp('Joplin', 'net.cozic.joplin-desktop'))
+Key.on('5', ['alt', 'shift'], () => toggleApp('Microsoft To Do', 'com.microsoft.to-do-mac'))
 
 Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
 
-// alt + return to switch windows by showing hints
+// f16 (right alt) to switch windows by showing hints
 let hints = {} // key = hintKey, value = { win, modal }
 let hintkeys = []
 let hintsActive = false
 let escbind = null
 let delbind = null
-const HINT_BUTTON = 'return'
-const HINT_MODIFIERS = [ 'alt' ]
+const HINT_BUTTON = 'f16'
+const HINT_MODIFIERS = [  ]
 const HINT_CHARS = 'fjdkslaghrueiwovncmbxqpzty'.split('') // I only support single char hint, I would not open too many windows
 
 function cancelHints () {
@@ -236,7 +241,8 @@ function buildHints (windows) {
       text: title,
       appearance: 'dark',
       icon: win.app().icon(),
-      weight: 16
+      weight: 16,
+      animationDuration: 0
     })
     const mf = hintModal.frame()
     const si = ws.identifier()
