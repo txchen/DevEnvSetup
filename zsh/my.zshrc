@@ -69,3 +69,21 @@ SAVEHIST=10000
 typeset -aU path
 # make ctrl+u same as bash. To delete entire line, use ctrl+c
 bindkey \^U backward-kill-line
+
+function setup_fzf() {
+  hash fzf >/dev/null 2>&1 || return 1
+  if [[ $(uname) == 'Linux' ]]; then
+    # only works for deb package
+    [[ $- == *i* ]] && source "/usr/share/zsh/vendor-completions/_fzf" 2> /dev/null
+    source "/usr/share/doc/fzf/examples/plugin/key-bindings.zsh"
+  fi
+  if [[ $(uname) == 'Darwin' ]]; then
+    [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+    source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+  fi
+  hash fd >/dev/null 2>&1 || return 1
+  export FZF_DEFAULT_COMMAND='fd --type f --hidden --exclude .git'
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND='fd --type d --hidden --exclude .git'
+}
+setup_fzf
