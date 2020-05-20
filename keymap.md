@@ -70,7 +70,8 @@
 | (in copy-mode) ctrl+a | go to begin of the line | |
 | (in copy-mode) ctrl+e | go to end of the line | |
 | ctrl+b ctrl+p | paste tmux buffer | |
-| ctrl+b ctrl+o | rotate pane | |
+| alt+r | rotate pane | |
+| alt+z | zoom pane | |
 | ctrl+b ctrl+s | save tmux-resurrect | |
 | ctrl+b ctrl+r | load tmux-resurrect | |
 | ctrl+b c | create new tab | |
@@ -78,6 +79,7 @@
 | ctrl+b d | detach tmux | |
 | ctrl+b s | switch session | |
 | ctrl+b $ | rename session | |
+| ctrl+b <space> | toggle between layouts | |
 
 ## Vscode
 
