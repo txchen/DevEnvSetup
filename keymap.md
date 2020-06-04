@@ -16,7 +16,6 @@
 | hyper+hjkl | left down up right | karabiner |
 | hyper+a/e | home/end | karabiner |
 | hyper+u/d | page up/page down | karabiner |
-| hyper+u/d | page up/page down | karabiner |
 | hyper+tab | capslock | karabiner |
 | alt+f4 | quit app | karabiner, disable cmd+q |
 | hyper+(-/=) | shrink/enlarge window | phoenix |
@@ -28,7 +27,10 @@
 | alt+` | switch windows in same app | HyperSwitch |
 | cmd+d | show desktop | system settings |
 | alt+shift+s | take screenshot | system settings |
-| right shift | cmd+space | alternative way to switch input method |
+| right shift | map to F18 | alternative way to switch input method |
+| right alt | map to F16 | use phoenix to switch apps |
+| alt+h/l | browser go back and forward | by karabiner |
+| ctrl+alt+h/l | browser switch tab | by karabiner |
 
 ## Zsh
 
