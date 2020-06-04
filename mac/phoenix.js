@@ -166,33 +166,36 @@ function toggleApp (appName, bundleName) {
 }
 
 const appsToToggle = {
-  // coding tools
+  // alt + 1, iterm
   'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
-  'com.microsoft.VSCode': { title: 'Code', modifiers: [], key: '1' },
-  //'com.facebook.fbvscode': { title: 'VS Code @ FB', modifiers: ['alt', 'shift'], key: '1' },
-  
-  // browsers
-  'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: '2' },
-  'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt', 'shift'], key: '2' },
-  
-  // notes
+  // alt + q, vscode/FB vscode
+  'com.microsoft.VSCode': { title: 'Code', modifiers: ['alt'], key: 'q' },
+  //'com.facebook.fbvscode': { title: 'VS Code @ FB', modifiers: ['alt'], key: 'q' },
+
+  // alt + 2, edge
+  'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt'], key: '2' },
+  // alt + w, chrome
+  'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: 'w' },
+
+  // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
-  'net.cozic.joplin-desktop': { title: 'Joplin', modifiers: ['alt', 'shift'], key: '3' },
-  
-  // IM
+  // alt + shift + 3, ms todo
+  'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
+  // alt + e, joplin/quip
+  'net.cozic.joplin-desktop': { title: 'Joplin', modifiers: ['alt'], key: 'e' },
+  //'com.quip.Desktop': { title: 'Quip', modifiers: ['alt'], key: 'e' },
+
+  // alt + 4, telegram
   'ru.keepcoder.Telegram': { title: 'Telegram', modifiers: ['alt'], key: '4' },
-  'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt', 'shift'], key: '4' },
-  
-  // others
-  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: '5' },
-  'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '5' },
-  
+  // alt + r, workchat
+  'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt'], key: 'r' },
+
   // file explorer
   'com.apple.finder': { title: 'Finder', modifiers: ['cmd'], key: 'e' },
 }
-const appsBundleToToggle = Object.keys(appsToToggle)
+const appBundlesToToggle = Object.keys(appsToToggle)
 
-appsBundleToToggle.forEach(b => Key.on(appsToToggle[b].key, appsToToggle[b].modifiers, () => toggleApp(appsToToggle[b].title, b)))
+appBundlesToToggle.forEach(b => Key.on(appsToToggle[b].key, appsToToggle[b].modifiers, () => toggleApp(appsToToggle[b].title, b)))
 
 // f16 (right alt) to switch windows by showing hints
 let hints = {} // key = hintKey, value = { win, modal }
@@ -241,7 +244,7 @@ function buildHints (windows) {
 
   const screenModalCounts = {} // key: screen, value: count
   windows.forEach((win, i) => {
-    if (win.title().length === 0 || appsBundleToToggle.includes(win.app().bundleIdentifier())) {
+    if (win.title().length === 0 || appBundlesToToggle.includes(win.app().bundleIdentifier())) {
       return
     }
     const title = `${HINT_CHARS[i].toUpperCase()}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
