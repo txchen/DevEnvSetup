@@ -123,8 +123,9 @@ function horizontalResize (direction) {
     const wFrame = window.frame()
     // check if the window is on the edge already
     const onEdge = direction === 'left' ?
-      wFrame.x === screenSize.x :
-      wFrame.x + wFrame.width === screenSize.x + screenSize.width
+      Math.abs(wFrame.x - screenSize.x) < 10 :
+      Math.abs(wFrame.x + wFrame.width - screenSize.x - screenSize.width) < 10
+    // Phoenix.log(wFrame.x, screenSize.x, onEdge)
     if (!onEdge) { // move it on to edge
       window.setFrame({
         x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - wFrame.width,
@@ -132,16 +133,15 @@ function horizontalResize (direction) {
         width: wFrame.width,
         height: screenSize.height
       })
-    } else { // already on edge, adjust the size
-      const twoThirdsWidth = Math.floor(screenSize.width / 3 * 2)
-      const oneThirdWidth = Math.floor(screenSize.width / 3)
-      const halfWidth = Math.floor(screenSize.width / 2)
-      let newWidth = halfWidth
-      if (wFrame.width > twoThirdsWidth || wFrame.width <= oneThirdWidth) {
-        newWidth = twoThirdsWidth
-      } else if (wFrame.width > oneThirdWidth && wFrame.width <= halfWidth) {
-        newWidth = oneThirdWidth
+    } else { // already on edge, adjust the ratio
+      const currentRatio = wFrame.width / screenSize.width
+      let newWidth = Math.floor(screenSize.width / 2) // half
+      if (currentRatio < 0.41) {
+        newWidth = Math.floor(screenSize.width / 3 * 2) // two thirds
+      } else if (currentRatio < 0.55) {
+        newWidth = Math.floor(screenSize.width / 3) // one third
       }
+      // Phoenix.log(currentRatio, newWidth)
       window.setTopLeft({
         x: direction === 'left' ? screenSize.x : screenSize.x + screenSize.width - newWidth,
         y: screenSize.y
@@ -165,27 +165,34 @@ function toggleApp (appName, bundleName) {
   App.launch(appName, { focus: true })
 }
 
-// coding tools
-Key.on('1', ['alt'], () => toggleApp('iTerm', 'com.googlecode.iterm2'))
-Key.on('1', ['alt', 'shift'], () => toggleApp('Visual Studio Code', 'com.microsoft.VSCode'))
+const appsToToggle = {
+  // coding tools
+  'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
+  'com.microsoft.VSCode': { title: 'Code', modifiers: [], key: '1' },
+  //'com.facebook.fbvscode': { title: 'VS Code @ FB', modifiers: ['alt', 'shift'], key: '1' },
+  
+  // browsers
+  'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: '2' },
+  'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt', 'shift'], key: '2' },
+  
+  // notes
+  'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
+  'net.cozic.joplin-desktop': { title: 'Joplin', modifiers: ['alt', 'shift'], key: '3' },
+  
+  // IM
+  'ru.keepcoder.Telegram': { title: 'Telegram', modifiers: ['alt'], key: '4' },
+  'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt', 'shift'], key: '4' },
+  
+  // others
+  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: '5' },
+  'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '5' },
+  
+  // file explorer
+  'com.apple.finder': { title: 'Finder', modifiers: ['cmd'], key: 'e' },
+}
+const appsBundleToToggle = Object.keys(appsToToggle)
 
-// browsers
-Key.on('2', ['alt'], () => toggleApp('Google Chrome', 'com.google.Chrome'))
-Key.on('2', ['alt', 'shift'], () => toggleApp('Microsoft Edge', 'com.microsoft.edgemac'))
-
-// notebooks
-Key.on('3', ['alt'], () => toggleApp('Notion', 'notion.id'))
-Key.on('3', ['alt', 'shift'], () => toggleApp('Joplin', 'net.cozic.joplin-desktop'))
-
-// IM
-Key.on('4', ['alt'], () => toggleApp('Telegram', 'ru.keepcoder.Telegram'))
-// Key.on('4', ['alt', 'shift'], () => toggleApp('Slack', 'com.tinyspeck.slackmacgap'))
-
-// others
-Key.on('5', ['alt'], () => toggleApp('Microsoft OneNote', 'com.microsoft.onenote.mac'))
-Key.on('5', ['alt', 'shift'], () => toggleApp('Microsoft To Do', 'com.microsoft.to-do-mac'))
-
-Key.on('e', ['cmd'], () => toggleApp('Finder', 'com.apple.finder'))
+appsBundleToToggle.forEach(b => Key.on(appsToToggle[b].key, appsToToggle[b].modifiers, () => toggleApp(appsToToggle[b].title, b)))
 
 // f16 (right alt) to switch windows by showing hints
 let hints = {} // key = hintKey, value = { win, modal }
@@ -234,6 +241,9 @@ function buildHints (windows) {
 
   const screenModalCounts = {} // key: screen, value: count
   windows.forEach((win, i) => {
+    if (win.title().length === 0 || appsBundleToToggle.includes(win.app().bundleIdentifier())) {
+      return
+    }
     const title = `${HINT_CHARS[i].toUpperCase()}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
     const ws = win.screen()
     const wsf = ws.frame()
