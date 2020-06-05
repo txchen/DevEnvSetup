@@ -169,7 +169,7 @@ const appsToToggle = {
   // alt + 1, iterm
   'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
   // alt + q, vscode/FB vscode
-  'com.microsoft.VSCode': { title: 'Code', modifiers: ['alt'], key: 'q' },
+  'com.microsoft.VSCode': { title: 'Visual Studio Code', modifiers: ['alt'], key: 'q' },
   //'com.facebook.fbvscode': { title: 'VS Code @ FB', modifiers: ['alt'], key: 'q' },
 
   // alt + 2, edge
