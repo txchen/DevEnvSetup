@@ -47,6 +47,7 @@ autoload -Uz _zinit
 # Load a few important annexes, without Turbo
 # (this is currently required for annexes)
 zinit light-mode for \
+    zinit-zsh/z-a-rust \
     zinit-zsh/z-a-as-monitor \
     zinit-zsh/z-a-patch-dl \
     zinit-zsh/z-a-bin-gem-node
@@ -57,8 +58,15 @@ zinit light-mode for \
 zinit as="null" lucid from="gh-r" for \
     mv="exa* -> exa" sbin ogham/exa \
     mv="*/rg -> rg" sbin BurntSushi/ripgrep \
-    mv="fd* -> fd"  sbin="fd/fd"  @sharkdp/fd \
+    mv="fd* -> fd" sbin="fd/fd" @sharkdp/fd \
     sbin="fzf" junegunn/fzf-bin
+
+# use exa to replace ls
+DISABLE_LS_COLORS=true
+alias ls=exa
+
+# configure fzf, use fd
+export FZF_DEFAULT_COMMAND='fd --type f'
 
 # load binaries' auto-complete
 zinit ice mv="*.zsh -> _fzf" as="completion"
@@ -72,27 +80,18 @@ zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
 zinit ice lucid atinit='zpcompinit'
 zinit light zdharma/fast-syntax-highlighting
 
-zinit light-mode for \
-  zsh-users/zsh-completions \
-  agkozak/zsh-z \
-  zsh-users/zsh-autosuggestions
-
-zinit light-mode for \
-  OMZ::lib/completion.zsh \
-  OMZ::lib/key-bindings.zsh \
-  OMZ::lib/directories.zsh \
-  OMZ::lib/clipboard.zsh \
-  OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
-  OMZ::plugins/git/git.plugin.zsh \
-  OMZ::plugins/extract/extract.plugin.zsh \
-  OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
-
-# use exa to replace ls
-DISABLE_LS_COLORS=true
-alias ls=exa
-
-# configure fzf, use fd
-export FZF_DEFAULT_COMMAND='fd --type f'
+zinit for \
+    light-mode zsh-users/zsh-completions \
+    light-mode agkozak/zsh-z \
+    light-mode zsh-users/zsh-autosuggestions \
+    light-mode OMZ::lib/completion.zsh \
+    light-mode OMZ::lib/key-bindings.zsh \
+    light-mode OMZ::lib/directories.zsh \
+    light-mode OMZ::lib/clipboard.zsh \
+    light-mode OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
+    light-mode OMZ::plugins/git/git.plugin.zsh \
+    light-mode OMZ::plugins/extract/extract.plugin.zsh \
+    light-mode OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
 
 # p10k prompt
 zinit ice depth=1
