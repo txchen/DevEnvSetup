@@ -73,10 +73,10 @@ zinit light-mode for \
 
 # load binaries
 zinit as="null" lucid from="gh-r" for \
-    mv="exa* -> exa" sbin       ogham/exa \
-    mv="*/rg -> rg"  sbin		BurntSushi/ripgrep \
-    mv="fd* -> fd"   sbin="fd/fd"  @sharkdp/fd \
-    sbin="fzf"       junegunn/fzf-bin
+    sbin            ogham/exa \
+    sbin            BurntSushi/ripgrep \
+    sbin            @sharkdp/fd \
+    sbin            junegunn/fzf-bin
 
 # load binaries' auto-complete
 zinit ice mv="*.zsh -> _fzf" as="completion"
