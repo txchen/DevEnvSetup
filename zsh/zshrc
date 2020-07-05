@@ -5,6 +5,12 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+ZSH_AUTOSUGGEST_USE_ASYNC=1
+ZSH_AUTOSUGGEST_MANUAL_REBIND=1
+ZSH_AUTOSUGGEST_COMPLETION_IGNORE='( |man |pikaur -S )*'
+
 alias f='find . | grep --color' # find files with colored output
 alias nr='npm run'
 alias dn='dotnet'
@@ -54,6 +60,22 @@ zinit light-mode for \
 
 ### End of Zinit's installer chunk
 
+zinit ice lucid atinit='zpcompinit'
+zinit light zdharma/fast-syntax-highlighting
+
+zinit for \
+    light-mode zsh-users/zsh-completions \
+    light-mode agkozak/zsh-z \
+    light-mode zsh-users/zsh-autosuggestions \
+    light-mode OMZ::lib/completion.zsh \
+    light-mode OMZ::lib/key-bindings.zsh \
+    light-mode OMZ::lib/directories.zsh \
+    light-mode OMZ::lib/clipboard.zsh \
+    light-mode OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
+    light-mode OMZ::plugins/git/git.plugin.zsh \
+    light-mode OMZ::plugins/extract/extract.plugin.zsh \
+    light-mode OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
+
 # load binaries
 zinit as="null" lucid from="gh-r" for \
     mv="exa* -> exa" sbin ogham/exa \
@@ -76,22 +98,6 @@ zinit ice as="completion"
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
 zinit ice mv="*.zsh -> _exa" as="completion"
 zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
-
-zinit ice lucid atinit='zpcompinit'
-zinit light zdharma/fast-syntax-highlighting
-
-zinit for \
-    light-mode zsh-users/zsh-completions \
-    light-mode agkozak/zsh-z \
-    light-mode zsh-users/zsh-autosuggestions \
-    light-mode OMZ::lib/completion.zsh \
-    light-mode OMZ::lib/key-bindings.zsh \
-    light-mode OMZ::lib/directories.zsh \
-    light-mode OMZ::lib/clipboard.zsh \
-    light-mode OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
-    light-mode OMZ::plugins/git/git.plugin.zsh \
-    light-mode OMZ::plugins/extract/extract.plugin.zsh \
-    light-mode OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
 
 # p10k prompt
 zinit ice depth=1
