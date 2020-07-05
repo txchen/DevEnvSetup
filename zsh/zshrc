@@ -68,10 +68,8 @@ zinit light-mode for \
   OMZ::lib/clipboard.zsh \
   OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
   OMZ::plugins/git/git.plugin.zsh \
+  OMZ::plugins/extract/extract.plugin.zsh \
   OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
-
-zinit ice svn
-zinit snippet OMZ::plugins/extract # add an extract function
 
 # load binaries
 zinit light zinit/z-a-bin-gem-node
