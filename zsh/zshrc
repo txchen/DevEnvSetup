@@ -1,0 +1,105 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+alias f='find . | grep --color' # find files with colored output
+alias nr='npm run'
+alias dn='dotnet'
+alias d-c='docker-compose'
+alias gt='git tree'
+alias pw='pwsh -c'
+
+setopt auto_cd
+
+function curlperf {
+  curl -o /dev/null -s -w "time_namelookup=%{time_namelookup}\ntime_connect=%{time_connect}\ntime_appconnect=%{time_appconnect}\ntime_total=%{time_total}\n" "$1"
+}
+
+# # disable ctrl+s to stop the terminal, as vim might need this hotkey
+# stty -ixon
+
+# set session history size
+HISTSIZE=10000
+# set saved history size
+SAVEHIST=10000
+
+# zsh+tmux might introduce dup PATH, dedup it
+typeset -aU path
+# make ctrl+u same as bash. To delete entire line, use ctrl+c
+bindkey \^U backward-kill-line
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
+fi
+
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
+
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
+
+### End of Zinit's installer chunk
+
+zinit ice lucid atinit='zpcompinit'
+zinit light zdharma/fast-syntax-highlighting
+
+zinit light-mode for \
+  zsh-users/zsh-completions \
+  skywind3000/z.lua \
+  zsh-users/zsh-autosuggestions
+
+zinit light-mode for \
+  OMZ::lib/completion.zsh \
+  OMZ::lib/key-bindings.zsh \
+  OMZ::lib/directories.zsh \
+  OMZ::lib/clipboard.zsh \
+  OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
+  OMZ::plugins/git/git.plugin.zsh \
+  OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
+
+zinit ice svn
+zinit snippet OMZ::plugins/extract # add an extract function
+
+# load binaries
+zinit light zinit/z-a-bin-gem-node
+zinit as="null" wait="1" lucid from="gh-r" for \
+    mv="exa* -> exa" sbin       ogham/exa \
+    mv="*/rg -> rg"  sbin		BurntSushi/ripgrep \
+    mv="fd* -> fd"   sbin="fd/fd"  @sharkdp/fd \
+    sbin="fzf"       junegunn/fzf-bin
+
+# load binaries' auto-complete
+zinit ice mv="*.zsh -> _fzf" as="completion"
+zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/completion.zsh'
+zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zsh'
+zinit ice as="completion"
+zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
+zinit ice mv="*.zsh -> _exa" as="completion"
+zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
+
+# use exa to replace ls
+DISABLE_LS_COLORS=true
+alias ls=exa
+
+# configure fzf, use fd
+export FZF_DEFAULT_COMMAND='fd --type f'
+
+# p10k prompt
+zinit ice depth=1
+zinit light romkatv/powerlevel10k
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
