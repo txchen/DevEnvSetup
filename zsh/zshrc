@@ -27,6 +27,7 @@ function curlperf {
 # # disable ctrl+s to stop the terminal, as vim might need this hotkey
 # stty -ixon
 
+HISTFILE=~/.zsh_history
 # set session history size
 HISTSIZE=10000
 # set saved history size

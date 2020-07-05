@@ -3,11 +3,6 @@ echo "### install configs ###"
 
 hash git >/dev/null 2>&1 || { echo "!! git not installed, cannot continue"; exit 2; }
 
-echo -e "\ncopying zsh theme and zshrc..."
-cp -f zsh/txchen.zsh-theme ~/.oh-my-zsh/themes/ || { echo "!! failed to cp txchen.zsh-them"; exit 2; }
-cp -f zsh/my.zshrc ~/.zshrc || { echo "!! failed to cp my.zshrc"; exit 2; }
-echo "done"
-
 if [[ $(uname) == 'Darwin' ]]; then
   echo -e "\ncopying phoenix config..."
   cp -f mac/phoenix.js ~/.phoenix.js || { echo "!! failed to cp phoenix.js"; exit 2; }
