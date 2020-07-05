@@ -58,7 +58,7 @@ zinit light zdharma/fast-syntax-highlighting
 
 zinit light-mode for \
   zsh-users/zsh-completions \
-  skywind3000/z.lua \
+  agkozak/zsh-z \
   zsh-users/zsh-autosuggestions
 
 zinit light-mode for \
@@ -72,8 +72,7 @@ zinit light-mode for \
   OMZ::plugins/sudo/sudo.plugin.zsh # double press esc key to add sudo to previous cmd
 
 # load binaries
-zinit light zinit/z-a-bin-gem-node
-zinit as="null" wait="1" lucid from="gh-r" for \
+zinit as="null" lucid from="gh-r" for \
     mv="exa* -> exa" sbin       ogham/exa \
     mv="*/rg -> rg"  sbin		BurntSushi/ripgrep \
     mv="fd* -> fd"   sbin="fd/fd"  @sharkdp/fd \
