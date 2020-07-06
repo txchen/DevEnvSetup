@@ -56,21 +56,4 @@ echo -e "\ncopying .gitignore_global..."
 cp -f git/my.gitignore_global ~/.gitignore_global || { echo "!! failed to cp gitignore_global"; exit 2; }
 echo "done"
 
-echo -e "\ncopying .vimrc..."
-cp -f vim/vimrc ~/.vimrc || { echo "!! failed to cp vimrc"; exit 2; }
-echo "done"
-
-echo -e "\ninstalling vundle and vim plugins..."
-if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
-  echo "  vundle repo not cloned yet, clone it."
-  /usr/bin/env git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim || {
-    echo "!! git clone vundle failed"
-    exit 2
-  }
-fi
-hash vim >/dev/null 2>&1 || { echo "!! vim not installed! failed.."; exit 2; }
-echo "  running vim to install plugins"
-vim +PluginInstall +qall || { echo "!! failed to run vim plugin install.."; exit 2; }
-echo "done"
-
 echo -e "\n### install completed :) ###"
