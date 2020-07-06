@@ -1,57 +1,90 @@
-" begin setup vundle
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
+set nocompatible        " use vim defaults, not vi
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+" ==== INSTALL PLUGINS ====
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
-" ctrlp
-Plugin 'ctrlp.vim'
-" easymotion
-Plugin 'Lokaltog/vim-easymotion'
-" airline
-Plugin 'vim-airline/vim-airline'
-Plugin 'vim-airline/vim-airline-themes'
-" fugitive
-Plugin 'tpope/vim-fugitive'
+call plug#begin('~/.vim/plugged')
 
-call vundle#end()
-filetype plugin indent on
-" finish setup vundle
+Plug 'junegunn/vim-plug'
+Plug 'justinmk/vim-sneak'
+Plug 'tpope/vim-fugitive'
+Plug 'morhetz/gruvbox'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'easymotion/vim-easymotion'
+Plug 'junegunn/fzf'
 
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
+" Initialize plugin system
+call plug#end()
 
-set backspace=indent,eol,start
-set nu
-set showcmd                   " show command status
-set showmatch                 " flashes matching paren when one is typed
-set showmode                  " show editing mode in status (-- INSERT --)
-set ruler                     " show cursor position
-set history=1000
-set visualbell                " no sounds
-set autoread                  " reload files changed outside vim
-set hlsearch                  " highlight searches
-set ignorecase                " ignore case of searches
-set incsearch                 " hightlight dynamically as pattern is typed
-set title                     " show the file name in window titlebar
-set laststatus=2              " always show status line
-set cursorline                " highlight current line
-set ttimeoutlen=100           " make ESC key faster
+let g:gruvbox_contrast_dark = 'hard'
+if exists('+termguicolors')
+    let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+    let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+endif
+let g:gruvbox_invert_selection='0'
 
-set mouse=a                   " enable mouse in all modes
-if exists('$TMUX')            " Support resizing in tmux
+colorscheme gruvbox
+set background=dark
+
+set noswapfile          " we don't need swapfile
+set nobackup            " real man does not need it
+set nowrap              " no wrap line
+set scrolloff=8         " keep 8 lines when scrolling
+set hidden              " Hide files in the background instead of closing them.
+set colorcolumn=120
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+set updatetime=50       " improve user experience
+
+set undodir=~/.vim/undodir
+set undofile
+
+set exrc                " Enable per-directory .vimrc files and disable unsafe commands in them
+set secure
+
+set showcmd             " display incomplete commands
+set nobackup            " do not keep a backup file
+set ruler               " show the current row and column
+
+set autoread            " reload files changed outside vim
+set title               " show the file name in window titlebar
+set laststatus=2        " always show status line
+set cursorline          " highlight current line
+set ttimeoutlen=50      " make ESC key faster
+
+set mouse=a             " enable mouse in all modes
+if exists('$TMUX')      " Support resizing in tmux
   set ttymouse=xterm2
 endif
 
-" Show “invisible” characters
+set termguicolors       " otherwise a lot of things would not work
+set nu                  " show line number
+set relativenumber      " show relative number
+autocmd InsertEnter * :set norelativenumber
+autocmd InsertLeave * :set relativenumber
+
+set showmatch           " flashes matching paren when one is typed
+set showmode            " show editing mode in status (-- INSERT --)
+set hlsearch            " highlight searches
+set incsearch           " do incremental searching
+set ignorecase          " ignore case when searching
+set smartcase           " no ignorecase if Uppercase char present
+
+set visualbell t_vb=    " turn off error beep/flash
+set novisualbell        " turn off visual bell
+
+set backspace=indent,eol,start  " make that backspace key work the way it should
+
+" Show 'invisible' characters
 set lcs=tab:▸\ ,trail:·,nbsp:_
 set list
 
-" ================ Indentation ======================
+" ==== INDENTATION ====
 set autoindent
 set smartindent
 set smarttab
@@ -61,30 +94,31 @@ set tabstop=2
 set expandtab
 set term=xterm-256color
 
-" make delete_forward work in insert mode
-inoremap <C-d> <Esc>lxi
-let mapleader=","
-" forgot sudo, this can fix it, ',W'
-noremap <Leader>W :w !sudo tee % > /dev/null<CR>
-" configure easymotion
-let g:EasyMotion_do_mapping = 0
-map <ESC>n <Plug>(easymotion-j)
-map <ESC>p <Plug>(easymotion-k)
-" keep cursor column with `JK` motions
-let g:EasyMotion_startofline = 0
-map <Space> <Plug>(easymotion-s2)
-map s <Plug>(easymotion-s)
-" unmap f key, so that alt+f can toggle easymotion-bd-w
-" want to use alt+f in every mode to trigger easymotion
-" (now insert mode cannot toggle)
-" also use shift+enter to toggle easymotion
-nnoremap f <NOP>
-map ✠ <Plug>(easymotion-bd-w)
-imap ✠ <C-o><Plug>(easymotion-bd-w)
-map <ESC>f <Plug>(easymotion-bd-w)
-imap <ESC>f <C-o><Plug>(easymotion-bd-w)
-let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
-let g:EasyMotion_smartcase = 1
+syntax on               " turn syntax highlighting on by default
+filetype on             " detect type of file
+filetype indent on      " load indent file for specific file type
+
+set t_RV=               " http://bugs.debian.org/608242, http://groups.google.com/group/vim_dev/browse_thread/thread/9770ea844cec3282
+
+" ==== KEY REMAPPING ====
+" map F2 to toggle paste mode
+nnoremap <F2> :set invpaste paste?<CR>
+set pastetoggle=<F2>
+
+" map ctrl+q,q to quit without save in command and insert mode
+nnoremap  <C-q><C-q>    <ESC>:q!<CR>
+inoremap  <C-q><C-q>    <ESC>:q!<CR>
+
+" map ctrl+s to save current file and return to command mode
+nnoremap  <C-s>         :w<CR>
+vnoremap  <C-s>         <ESC>:w<CR>
+inoremap  <C-s>         <ESC>:w<CR>
+
+" map ctrl+s,s to save and exit in command mode
+nnoremap  <C-s><C-s>    :wq<CR>
+
+" map ctrl-c to esc, otherwise they are slightly different
+inoremap  <C-c> <Esc>
 
 " map ctrl+a/e to home/end
 noremap  <C-a>          <Home>
@@ -98,29 +132,6 @@ noremap  <C-k>          <C-w>W
 inoremap <C-j>          <C-o><C-w>w
 inoremap <C-k>          <C-o><C-w>W
 
-" map ctrl+s to save current file and return to command mode
-nnoremap  <C-s>         :w<CR>
-vnoremap  <C-s>         <C-c>:w<CR>
-inoremap  <C-s>         <C-c>:w<CR>
-
-" map ctrl+s,s to save and exit in command mode
-nnoremap  <C-s><C-s>    :wq<CR>
-
-" map ctrl+q,q to quit without save in command and insert mode
-nnoremap  <C-q><C-q>    <C-c>:q!<CR>
-inoremap  <C-q><C-q>    <C-c>:q!<CR>
-
-" map F2 to toggle paste mode
-nnoremap <F2> :set invpaste paste?<CR>
-set pastetoggle=<F2>
-
-" ================ Scrolling ========================
-set scrolloff=8         "Start scrolling when we're 8 lines away from margins
-
-" Enable per-directory .vimrc files and disable unsafe commands in them
-set exrc
-set secure
-
 " handle ctrl+arrow, shift+arrow correctly in tmux"
 if &term =~ '^screen'
     execute "set <xUp>=\e[1;*A"
@@ -129,46 +140,27 @@ if &term =~ '^screen'
     execute "set <xLeft>=\e[1;*D"
 endif
 
-" Tune Explorer mode, make it better, use alt+e to toggle
-function! ToggleVExplorer()
-  if exists("t:expl_buf_num")
-      let expl_win_num = bufwinnr(t:expl_buf_num)
-      if expl_win_num != -1
-          let cur_win_nr = winnr()
-          if cur_win_nr != expl_win_num
-            exec expl_win_num . 'wincmd w'
-          else
-            exec expl_win_num . 'wincmd w'
-            close
-            exec cur_win_nr . 'wincmd w'
-            unlet t:expl_buf_num
-          endif
-      else
-          unlet t:expl_buf_num
-      endif
-  else
-      Vexplore
-      let t:expl_buf_num = bufnr("%")
-  endif
-endfunction
-" alt+e to toggle explorer
-" http://stackoverflow.com/questions/8221909/m-bindings-in-vim-on-iterm2-terminal-dont-work/8224269#8224269
-noremap <ESC>e :call ToggleVExplorer()<CR>
+" ==== PLUGIN CONFIG ====
+" configure easymotion
+let g:EasyMotion_do_mapping = 0
+let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
+let g:EasyMotion_smartcase = 1
+" keep cursor column with `JK` motions
+let g:EasyMotion_startofline = 0
+" alt+n/p, to easymotion down and up
+map <ESC>n <Plug>(easymotion-j)
+map <ESC>p <Plug>(easymotion-k)
+imap <ESC>n <C-o><Plug>(easymotion-j)
+imap <ESC>p <C-o><Plug>(easymotion-k)
+" alt+f, to bd-w, need to unmap f to make it work
+nnoremap f <NOP>
+map <ESC>f <Plug>(easymotion-bd-w)
+imap <ESC>f <C-o><Plug>(easymotion-bd-w)
 
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-" Default to tree mode
-let g:netrw_liststyle=3
-" Change directory to the current buffer when opening files.
-set autochdir
-" End of Explorer mode tuning
+" configure fzf
+" map ctrl-p to fzf
+map <C-p> :FZF<CR>
+imap <C-p> <C-o>:FZF<CR>
 
-" settings for golang
-filetype off
-filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
-
-" settings for airline-vim
+" settings for airline-vim, make it beautiful
 let g:airline_theme='light'
