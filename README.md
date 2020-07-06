@@ -13,4 +13,4 @@ cd DevEnvSetup
 
 ## Keymaps
 
-[Here](./keymap.md)
+[Note](https://www.notion.so/txchen/c9879f02774d49c0a22c2db3450107ae)

@@ -13,27 +13,6 @@ if [[ $(uname) == 'Darwin' ]]; then
   echo "done"
 fi
 
-echo -e "\ncopying .tmux.conf..."
-cp -f tmux/my.tmux.conf ~/.tmux.conf || { echo "!! failed to cp my.tmux.conf"; exit 2; }
-if [[ $(uname) != 'Darwin' ]]; then
-  sed -i 's/.*# MAC ONLY$/# THIS IS ONLY VALID IN OSX, removed./' ~/.tmux.conf
-fi
-if [[ $(uname) != 'Linux' ]]; then
-  sed -i '' 's/.*# LINUX ONLY$/# THIS IS ONLY VALID IN LINUX, removed./' ~/.tmux.conf
-fi
-echo "done"
-
-echo -e "\ninstalling tmux resurrect"
-TMUXRESURRECTDIR=~/.tmux-resurrect/
-if [ -d "$TMUXRESURRECTDIR" ]; then
-  rm -rf $TMUXRESURRECTDIR
-fi
-git clone https://github.com/tmux-plugins/tmux-resurrect.git $TMUXRESURRECTDIR || {
-  echo "!! failed to setup tmux resurrect"
-  exit 2
-}
-echo "done"
-
 if [ -f ~/.gitconfig ] ; then
   echo "$HOME/.gitconfig already exists, get the existing username and email first"
   git_username=$(git config --global user.name)
