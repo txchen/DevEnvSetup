@@ -109,6 +109,8 @@ set t_RV=               " http://bugs.debian.org/608242, http://groups.google.co
 " map F2 to toggle paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
+" map F3 to toggle wrap
+nnoremap <F3> :set wrap! wrap?<CR>
 
 " map ctrl+q,q to quit without save in command and insert mode
 nnoremap  <C-q><C-q>    <ESC>:q!<CR>
@@ -137,6 +139,14 @@ noremap  <C-k>          <C-w>W
 inoremap <C-j>          <C-o><C-w>w
 inoremap <C-k>          <C-o><C-w>W
 
+" in visual mode, indentation keep the selection
+vnoremap < <gv
+vnoremap > >gv
+
+" visual mode, move lines
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
 " handle ctrl+arrow, shift+arrow correctly in tmux"
 if &term =~ '^screen'
   execute "set <xUp>=\e[1;*A"
@@ -144,6 +154,16 @@ if &term =~ '^screen'
   execute "set <xRight>=\e[1;*C"
   execute "set <xLeft>=\e[1;*D"
 endif
+
+" leader configs
+let mapleader = " "
+" select all
+map <Leader>sa ggVG"
+" grep (the current) word
+nnoremap <leader>gw :Rg <C-R>=expand("<cword>")<CR><CR>
+" select previous next buffer
+map <C-l> :bnext<CR>
+map <C-h> :bprev<CR>
 
 " ==== PLUGIN CONFIG ====
 " configure easymotion
