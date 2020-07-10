@@ -72,6 +72,7 @@ zinit for \
     light-mode OMZ::lib/key-bindings.zsh \
     light-mode OMZ::lib/directories.zsh \
     light-mode OMZ::lib/clipboard.zsh \
+    light-mode OMZ::lib/termsupport.zsh \
     light-mode OMZ::plugins/colored-man-pages/colored-man-pages.plugin.zsh \
     light-mode OMZ::plugins/git/git.plugin.zsh \
     light-mode OMZ::plugins/extract/extract.plugin.zsh \
