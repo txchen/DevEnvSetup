@@ -12,6 +12,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'junegunn/vim-plug'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -147,6 +148,10 @@ vnoremap > >gv
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+" select previous next buffer
+map <C-l> :bnext<CR>
+map <C-h> :bprev<CR>
+
 " handle ctrl+arrow, shift+arrow correctly in tmux"
 if &term =~ '^screen'
   execute "set <xUp>=\e[1;*A"
@@ -161,9 +166,6 @@ let mapleader = " "
 map <Leader>sa ggVG"
 " grep (the current) word
 nnoremap <leader>gw :Rg <C-R>=expand("<cword>")<CR><CR>
-" select previous next buffer
-map <C-l> :bnext<CR>
-map <C-h> :bprev<CR>
 
 " ==== PLUGIN CONFIG ====
 " configure easymotion
