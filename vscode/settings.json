@@ -6,6 +6,7 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.rulers": [ 120 ],
+  "editor.cursorSurroundingLines": 8,
   "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "One Dark Pro",
   "extensions.ignoreRecommendations": true,
