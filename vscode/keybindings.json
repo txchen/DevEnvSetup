@@ -1,0 +1,66 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "key": "ctrl+d",
+    "command": "-editor.action.addSelectionToNextFindMatch",
+    "when": "editorFocus"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-editor.action.selectAll",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+e",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-editor.action.clipboardCopyAction",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+u",
+    "command": "-cursorUndo",
+    "when": "textInputFocus"
+  },
+  {
+    "key": "ctrl+r",
+    "command": "-workbench.action.openRecent"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openFile"
+  },
+  {
+    "key": "ctrl+o",
+    "command": "-workbench.action.files.openLocalFile",
+    "when": "remoteFileDialogVisible"
+  },
+  {
+    "key": "alt+l",
+    "command": "workbench.action.nextEditorInGroup"
+  },
+  {
+    "key": "alt+h",
+    "command": "workbench.action.previousEditorInGroup"
+  },
+  {
+    "key": "ctrl+alt+l",
+    "command": "workbench.action.navigateRight"
+  },
+  {
+    "key": "ctrl+alt+h",
+    "command": "workbench.action.navigateLeft"
+  },
+  {
+    "key": "alt+]",
+    "command": "editor.action.smartSelect.expand",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+[",
+    "command": "editor.action.smartSelect.shrink",
+    "when": "editorTextFocus"
+  }
+]
