@@ -62,5 +62,10 @@
     "key": "alt+[",
     "command": "editor.action.smartSelect.shrink",
     "when": "editorTextFocus"
+  },
+  {
+    "key": "backspace",
+    "command": "-deleteLeft",
+    "when": "textInputFocus"
   }
 ]
