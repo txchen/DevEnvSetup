@@ -67,5 +67,15 @@
     "key": "backspace",
     "command": "-deleteLeft",
     "when": "textInputFocus"
+  },
+  {
+    "key": "backspace",
+    "command": "deleteLeft",
+    "when": "textInputFocus && !editorFocus"
+  },
+  {
+    "key": "ctrl+f",
+    "command": "closeFindWidget",
+    "when": "editorFocus && findWidgetVisible"
   }
 ]
