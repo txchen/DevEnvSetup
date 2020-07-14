@@ -166,6 +166,8 @@ let mapleader = " "
 map <Leader>sa ggVG"
 " grep (the current) word
 nnoremap <leader>gw :Rg <C-R>=expand("<cword>")<CR><CR>
+" ctrl-q is used in vsc, so use another way to enter visual block mode
+nnoremap <leader>vb <C-v>
 
 " ==== PLUGIN CONFIG ====
 " configure easymotion

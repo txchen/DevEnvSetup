@@ -57,6 +57,10 @@
       "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"]
     },
     {
+      "before": ["<leader>", "v", "b"],
+      "after": ["C-q"]
+    },
+    {
       "before": ["<leader>", "s", "a"],
       "after": ["g", "g", "V", "G", "\""]
     }
