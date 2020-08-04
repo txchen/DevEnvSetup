@@ -14,12 +14,17 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_COMPLETION_IGNORE='( |man |pikaur -S )*'
 
-alias f='find . | grep --color' # find files with colored output
+# find files with colored output, actually we should use fd
+alias f='find . | grep --color'
 alias nr='npm run'
 alias dn='dotnet'
 alias d-c='docker-compose'
 alias gt='git tree'
 alias pw='pwsh -c'
+# neovim is the future
+if hash nvim 2>/dev/null; then
+  alias vim=\\nvim realvim=\\vim
+fi
 
 setopt auto_cd
 
