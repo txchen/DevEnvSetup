@@ -1,9 +1,14 @@
-My development environment settings
+txchen development environment settings
 
 ## Installation
 
 ```bash
-curl -L http://install.ohmyz.sh | sh
+# install neovim for linux
+curl -LO https://github.com/neovim/neovim/releases/download/stable/nvim.appimage
+chmod u+x nvim.appimage
+sudo mv nvim.appimage /usr/bin/nvim
+
+# configure git, zsh, tmux and vim
 mkdir -p ~/code/github
 cd ~/code/github
 git clone https://github.com/txchen/DevEnvSetup.git
