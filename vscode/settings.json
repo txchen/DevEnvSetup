@@ -6,7 +6,6 @@
   "editor.tabSize": 2,
   "editor.renderWhitespace": "all",
   "editor.rulers": [ 120 ],
-  "editor.cursorSurroundingLines": 8,
   "files.trimTrailingWhitespace": true,
   "workbench.colorTheme": "One Dark Pro",
   "extensions.ignoreRecommendations": true,
@@ -24,60 +23,15 @@
   "git.enableSmartCommit": true,
   "telemetry.enableCrashReporter": false,
   "telemetry.enableTelemetry": false,
-  "vim.easymotion": true,
-  "vim.easymotionKeys": "hklyuiopnmqwertzxcvbasdgj",
-  "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
-  "vim.hlsearch": true,
-  "vim.handleKeys": {
-  },
-  "vim.leader": "<space>",
-  "vim.insertModeKeyBindings": [
-    {
-      "before": ["<C-a>"],
-      "commands": ["cursorHome"]
-    },
-    {
-      "before": ["<C-e>"],
-      "commands": ["cursorEnd"]
-    }
-  ],
-  "vim.normalModeKeyBindings": [
-    {
-      "before": ["<C-a>"],
-      "commands": ["cursorHome"]
-    },
-    {
-      "before": ["<C-e>"],
-      "commands": ["cursorEnd"]
-    },
-    {
-      "before": ["<leader>", "f"],
-      "after": ["<leader>", "<leader>", "<leader>", "b", "d", "w"]
-    },
-    {
-      "before": ["<leader>", "v", "b"],
-      "after": ["C-q"]
-    },
-    {
-      "before": ["<leader>", "s", "a"],
-      "after": ["g", "g", "V", "G", "\""]
-    }
-  ],
-  "vim.normalModeKeyBindingsNonRecursive": [
-  ],
-  "vim.textwidth": 120,
-  "vim.visualstar": true,
-  "vim.sneak": true,
-  "vim.visualModeKeyBindings": [
-    {
-      "before": ["<C-a>"],
-      "after": ["<Home>"]
-    },
-    {
-      "before": ["<C-e>"],
-      "after": ["<End>"]
-    }
-  ]
+  "editor.cursorSurroundingLines": 8,
+  "prettier.printWidth": 120,
+  "prettier.semi": false,
+  "prettier.singleQuote": true,
+  "prettier.useEditorConfig": false,
+  "vscode-neovim.neovimPath": "/usr/local/bin/nvim",
+  "vscode-neovim.neovimInitPath": "~/code/github/DevEnvSetup/nvim/vscode_init.vim",
+  "editor.scrollBeyondLastLine": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  }
 }

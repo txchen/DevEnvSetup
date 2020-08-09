@@ -64,18 +64,40 @@
     "when": "editorTextFocus"
   },
   {
-    "key": "backspace",
-    "command": "-deleteLeft",
-    "when": "textInputFocus"
-  },
-  {
-    "key": "backspace",
-    "command": "deleteLeft",
-    "when": "textInputFocus && !editorFocus"
-  },
-  {
     "key": "ctrl+f",
     "command": "closeFindWidget",
     "when": "editorFocus && findWidgetVisible"
+  },
+  {
+    "key": "alt+f",
+    "command": "vscode-neovim.send",
+    "args": "<M-f>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "alt+n",
+    "command": "vscode-neovim.send",
+    "args": "<M-n>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "alt+p",
+    "command": "vscode-neovim.send",
+    "args": "<M-p>",
+    "when": "editorTextFocus && neovim.init"
+  },
+  {
+    "key": "ctrl+/",
+    "command": "-editor.action.commentLine",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+a",
+    "command": "-vscode-neovim.ctrl-a-insert",
+    "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
+  },
+  {
+    "key": "ctrl+c",
+    "command": "-editor.action.clipboardCopyAction"
   }
 ]
