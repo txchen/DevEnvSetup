@@ -14,13 +14,8 @@ Plug 'tpope/vim-surround'
 Plug 'morhetz/gruvbox'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-if exists('g:vscode')
-  " VSCode extension
-  Plug 'asvetliakov/vim-easymotion'
-else
-  " ordinary neovim
-  Plug 'easymotion/vim-easymotion'
-endif
+Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
 Plug 'junegunn/fzf'
 Plug 'jremmen/vim-ripgrep'
 
@@ -54,7 +49,6 @@ set exrc                " Enable per-directory .vimrc files and disable unsafe c
 set secure
 
 set showcmd             " display incomplete commands
-set nobackup            " do not keep a backup file
 set ruler               " show the current row and column
 
 set autoread            " reload files changed outside vim
@@ -126,11 +120,8 @@ nnoremap  <C-s><C-s>    :wq<CR>
 " map ctrl-c to esc, otherwise they are slightly different
 inoremap  <C-c> <Esc>
 
-" map ctrl+a/e to home/end
-noremap  <C-a>          <Home>
-noremap  <C-e>          <End>
-inoremap <C-a>          <Home>
-inoremap <C-e>          <End>
+" map ctrl+a to select all text, I love windows
+map <C-a> ggVG"
 
 " map ctrl+j/k to go to next/prev split
 noremap  <C-j>          <C-w>w
@@ -142,7 +133,7 @@ inoremap <C-k>          <C-o><C-w>W
 vnoremap < <gv
 vnoremap > >gv
 
-" visual mode, move lines
+" visual mode, use J or K to move lines
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
@@ -158,12 +149,15 @@ if &term =~ '^screen'
   execute "set <xLeft>=\e[1;*D"
 endif
 
-" leader configs
+" (default) ctrl-v in iterm2 can paste from clipboard
+" use uppercase Y to yank to system clipboard
+vnoremap Y "+y
+
+" leader mappings
+" space key as leader key
 let mapleader = " "
 " select all
 map <Leader>sa ggVG"
-" rip-grep (the current) word
-nnoremap <leader>gw :Rg <C-R>=expand("<cword>")<CR><CR>
 " ctrl-q is used in vsc, so use another way to enter visual block mode
 nnoremap <leader>vb <C-v>
 
@@ -172,22 +166,21 @@ nnoremap <leader>vb <C-v>
 let g:EasyMotion_do_mapping = 0
 let g:EasyMotion_keys='hklyuiopnmqwertzxcvbasdgj'
 let g:EasyMotion_smartcase = 1
-" keep cursor column with `JK` motions
+" keep cursor column position with `JK` motions
 let g:EasyMotion_startofline = 0
 " alt+n/p, to easymotion down and up
 map <M-n> <Plug>(easymotion-j)
 map <M-p> <Plug>(easymotion-k)
 imap <M-n> <C-o><Plug>(easymotion-j)
-imap <M-p><C-o><Plug>(easymotion-k)
+imap <M-p> <C-o><Plug>(easymotion-k)
 " alt+f, to bd-w, need to unmap f to make it work
 nnoremap f <NOP>
 map <M-f> <Plug>(easymotion-bd-w)
 imap <M-f> <C-o><Plug>(easymotion-bd-w)
-map <leader>f <Plug>(easymotion-bd-w)
-imap <leader>f <Plug>(easymotion-bd-w)
 
 " configure vim-sneak
-let g:sneak#label = 1
+" don't use label mode, since vscode-neovim cannot work
+let g:sneak#label = 0
 let g:sneak#use_ic_scs = 1
 
 " configure fzf
@@ -200,8 +193,18 @@ let g:airline_theme='light'
 
 " configure vim-ripgrep
 let g:rg_command = 'rg --vimgrep -S'
+nnoremap grg :Rg <C-R>=expand("<cword>")<CR><CR>
+nnoremap ? :Rg <C-R>=expand("<cword>")<CR><CR>
+
+" configure vim-commentary
+" for some reason, vim registers C-/ as C-_
+" here enables C-/ as toggle comment, same as vscode
+map <C-_> <Plug>CommentaryLine
+xmap <C-_> <Plug>Commentarygv
+imap <C-_> <C-o><Plug>CommentaryLine
 
 " ==== OTHER SETTINGS ====
+" use different cursor shapes in different modes
 if exists('$TMUX')
   let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
   let &t_SR = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=2\x7\<Esc>\\"
