@@ -104,7 +104,7 @@ zinit snippet 'https://github.com/junegunn/fzf/blob/master/shell/key-bindings.zs
 zinit ice as="completion"
 zinit snippet 'https://github.com/robbyrussell/oh-my-zsh/blob/master/plugins/fd/_fd'
 zinit ice mv="*.zsh -> _exa" as="completion"
-zinit snippet 'https://github.com/ogham/exa/blob/master/contrib/completions.zsh'
+zinit snippet 'https://github.com/ogham/exa/blob/master/completions/completions.zsh'
 
 # p10k prompt
 zinit ice depth=1
