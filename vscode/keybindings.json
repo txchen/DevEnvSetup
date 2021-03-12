@@ -97,7 +97,9 @@
     "when": "editorTextFocus && neovim.ctrlKeysInsert && !neovim.recording && neovim.mode == 'insert'"
   },
   {
-    "key": "ctrl+c",
-    "command": "-editor.action.clipboardCopyAction"
+    "key": "ctrl+i",
+    "command": "vscode-neovim.send",
+    "args": "<ESC>",
+    "when": "editorTextFocus && neovim.mode != normal"
   }
 ]

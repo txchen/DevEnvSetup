@@ -46,7 +46,7 @@ vnoremap K :m '<-2<CR>gv=gv
 " use uppercase Y to yank to system clipboard
 vnoremap Y "+y
 
-" use current word to find in files 
+" use current word to find in files
 nnoremap <silent> ? :<C-u>call VSCodeNotify('workbench.action.findInFiles', { 'query': expand('<cword>')})<CR>
 
 " leader configs
