@@ -99,6 +99,9 @@ filetype on             " detect type of file
 filetype indent on      " load indent file for specific file type
 
 " ==== KEY REMAPPING ====
+" ctrl-i to exit insert mode
+inoremap <c-i> <ESC><ESC>
+vnoremap <c-i> <ESC><ESC>
 " map F2 to toggle paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
