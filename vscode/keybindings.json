@@ -98,8 +98,11 @@
   },
   {
     "key": "ctrl+i",
-    "command": "vscode-neovim.send",
-    "args": "<ESC>",
-    "when": "editorTextFocus && neovim.mode != normal"
+    "command": "-editor.action.triggerSuggest",
+    "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
+  },
+  {
+    "key": "ctrl+i",
+    "command": "vscode-neovim.escape"
   }
 ]
