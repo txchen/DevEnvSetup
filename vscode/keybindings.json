@@ -102,7 +102,7 @@
     "when": "editorHasCompletionItemProvider && textInputFocus && !editorReadonly"
   },
   {
-    "key": "ctrl+i",
+    "key": "alt+i",
     "command": "vscode-neovim.escape"
   }
 ]

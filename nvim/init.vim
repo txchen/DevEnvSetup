@@ -100,8 +100,8 @@ filetype indent on      " load indent file for specific file type
 
 " ==== KEY REMAPPING ====
 " ctrl-i to exit insert mode
-inoremap <c-i> <ESC><ESC>
-vnoremap <c-i> <ESC><ESC>
+inoremap <M-i> <ESC><ESC>
+vnoremap <M-i> <ESC><ESC>
 " map F2 to toggle paste mode
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
@@ -121,6 +121,7 @@ inoremap  <C-s>         <ESC>:w<CR>
 nnoremap  <C-s><C-s>    :wq<CR>
 
 " map ctrl-c to esc, otherwise they are slightly different
+" avoid to use this, ctrl-c is copy in vscode
 inoremap  <C-c> <Esc>
 
 " map ctrl+a to select all text, I love windows
