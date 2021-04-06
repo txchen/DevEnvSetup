@@ -14,6 +14,7 @@ ZSH_AUTOSUGGEST_USE_ASYNC=1
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 ZSH_AUTOSUGGEST_COMPLETION_IGNORE='( |man |pikaur -S )*'
 
+alias ls='ls --color=auto'
 # find files with colored output, actually we should use fd
 alias f='find . | grep --color'
 alias nr='npm run'
