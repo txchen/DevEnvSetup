@@ -35,9 +35,7 @@
                 "from": {
                   "key_code": "left_option",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -64,9 +62,7 @@
                 "from": {
                   "key_code": "left_command",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -93,9 +89,7 @@
                 "from": {
                   "key_code": "right_command",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -122,9 +116,7 @@
                 "from": {
                   "key_code": "right_command",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -151,9 +143,7 @@
                 "from": {
                   "key_code": "right_option",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -180,9 +170,7 @@
                 "from": {
                   "key_code": "right_option",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -200,28 +188,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "h",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option"
-                    ]
+                    "mandatory": ["left_option"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "open_bracket",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -229,28 +209,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "l",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option"
-                    ]
+                    "mandatory": ["left_option"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "close_bracket",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -258,29 +230,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "l",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option",
-                      "left_control"
-                    ]
+                    "mandatory": ["left_option", "left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "tab",
-                    "modifiers": [
-                      "left_control"
-                    ]
+                    "modifiers": ["left_control"]
                   }
                 ],
                 "type": "basic"
@@ -288,30 +251,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "h",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option",
-                      "left_control"
-                    ]
+                    "mandatory": ["left_option", "left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "tab",
-                    "modifiers": [
-                      "left_control",
-                      "left_shift"
-                    ]
+                    "modifiers": ["left_control", "left_shift"]
                   }
                 ],
                 "type": "basic"
@@ -319,29 +272,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "w",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option",
-                      "left_control"
-                    ]
+                    "mandatory": ["left_option", "left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "w",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -349,11 +293,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com.google.Chrome$",
-                      "^org.mozilla.firefox$",
-                      "^com.microsoft.edgemac"
-                    ],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -363,9 +303,7 @@
                 "to": [
                   {
                     "key_code": "r",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -379,17 +317,13 @@
                 "from": {
                   "key_code": "delete_or_backspace",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "delete_or_backspace",
-                    "modifiers": [
-                      "left_option"
-                    ]
+                    "modifiers": ["left_option"]
                   }
                 ],
                 "type": "basic"
@@ -403,19 +337,13 @@
                 "from": {
                   "key_code": "caps_lock",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "left_shift",
-                    "modifiers": [
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ]
+                    "modifiers": ["left_command", "left_control", "left_option"]
                   }
                 ],
                 "to_if_alone": [
@@ -434,15 +362,8 @@
                 "from": {
                   "key_code": "delete_or_backspace",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -461,15 +382,8 @@
                 "from": {
                   "key_code": "tab",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -488,15 +402,8 @@
                 "from": {
                   "key_code": "a",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -510,15 +417,8 @@
                 "from": {
                   "key_code": "e",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -532,15 +432,8 @@
                 "from": {
                   "key_code": "u",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -554,15 +447,8 @@
                 "from": {
                   "key_code": "d",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -581,15 +467,8 @@
                 "from": {
                   "key_code": "h",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -603,15 +482,8 @@
                 "from": {
                   "key_code": "j",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -625,15 +497,8 @@
                 "from": {
                   "key_code": "k",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -647,15 +512,8 @@
                 "from": {
                   "key_code": "l",
                   "modifiers": {
-                    "mandatory": [
-                      "left_shift",
-                      "left_command",
-                      "left_control",
-                      "left_option"
-                    ],
-                    "optional": [
-                      "any"
-                    ]
+                    "mandatory": ["left_shift", "left_command", "left_control", "left_option"],
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -674,9 +532,7 @@
                 "from": {
                   "key_code": "q",
                   "modifiers": {
-                    "mandatory": [
-                      "left_command"
-                    ]
+                    "mandatory": ["left_command"]
                   }
                 },
                 "to": [
@@ -690,17 +546,13 @@
                 "from": {
                   "key_code": "f4",
                   "modifiers": {
-                    "mandatory": [
-                      "left_option"
-                    ]
+                    "mandatory": ["left_option"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "q",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -715,15 +567,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -731,17 +579,13 @@
                 "from": {
                   "key_code": "v",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "v",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -751,15 +595,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -767,17 +607,13 @@
                 "from": {
                   "key_code": "c",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "c",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -787,15 +623,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -803,17 +635,13 @@
                 "from": {
                   "key_code": "x",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "x",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -823,15 +651,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -839,17 +663,13 @@
                 "from": {
                   "key_code": "z",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "z",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -859,15 +679,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -875,17 +691,13 @@
                 "from": {
                   "key_code": "a",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "a",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -895,15 +707,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -911,17 +719,13 @@
                 "from": {
                   "key_code": "s",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "s",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -931,15 +735,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -947,17 +747,13 @@
                 "from": {
                   "key_code": "t",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "t",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -967,15 +763,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -983,17 +775,13 @@
                 "from": {
                   "key_code": "b",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "b",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1003,15 +791,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1019,17 +803,13 @@
                 "from": {
                   "key_code": "u",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "u",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1039,15 +819,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1055,17 +831,13 @@
                 "from": {
                   "key_code": "i",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "i",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1075,15 +847,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1091,17 +859,13 @@
                 "from": {
                   "key_code": "f",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "f",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1111,15 +875,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1127,17 +887,13 @@
                 "from": {
                   "key_code": "g",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "g",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1147,15 +903,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1163,18 +915,13 @@
                 "from": {
                   "key_code": "y",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "z",
-                    "modifiers": [
-                      "left_command",
-                      "left_shift"
-                    ]
+                    "modifiers": ["left_command", "left_shift"]
                   }
                 ],
                 "type": "basic"
@@ -1184,15 +931,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1203,9 +946,7 @@
                 "to": [
                   {
                     "key_code": "g",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1215,15 +956,11 @@
                   {
                     "bundle_identifiers": [
                       "^com\\.microsoft\\.rdc\\.macos$",
-                      "^tv\\.parsec\\.www$",
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
                       "^com\\.facebook\\.fbvscode"
-                    ],
-                    "file_paths": [
-                      "\\.parsec/Parsec Game Window$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -1231,18 +968,13 @@
                 "from": {
                   "key_code": "f3",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "g",
-                    "modifiers": [
-                      "left_command",
-                      "left_shift"
-                    ]
+                    "modifiers": ["left_command", "left_shift"]
                   }
                 ],
                 "type": "basic"
@@ -1255,26 +987,20 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": [
-                      "^com\\.googlecode\\.iterm2$"
-                    ],
+                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$"],
                     "type": "frontmost_application_if"
                   }
                 ],
                 "from": {
                   "key_code": "v",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control"
-                    ]
+                    "mandatory": ["left_control"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "v",
-                    "modifiers": [
-                      "left_command"
-                    ]
+                    "modifiers": ["left_command"]
                   }
                 ],
                 "type": "basic"
@@ -1288,21 +1014,13 @@
                 "from": {
                   "key_code": "v",
                   "modifiers": {
-                    "mandatory": [
-                      "left_control",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "mandatory": ["left_control", "left_option", "left_shift"]
                   }
                 },
                 "to": [
                   {
                     "key_code": "v",
-                    "modifiers": [
-                      "left_command",
-                      "left_option",
-                      "left_shift"
-                    ]
+                    "modifiers": ["left_command", "left_option", "left_shift"]
                   }
                 ],
                 "type": "basic"
@@ -1316,9 +1034,7 @@
                 "from": {
                   "key_code": "right_shift",
                   "modifiers": {
-                    "optional": [
-                      "any"
-                    ]
+                    "optional": ["any"]
                   }
                 },
                 "to": [
@@ -1333,6 +1049,257 @@
                   }
                 ],
                 "type": "basic"
+              }
+            ]
+          },
+          {
+            "description": "mouse key, alt+enter to toggle",
+            "manipulators": [
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "mouse_keys_mode",
+                      "value": 1
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 0
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "return_or_enter",
+                  "modifiers": {
+                    "mandatory": ["left_option"],
+                    "optional": ["any"]
+                  }
+                },
+                "to": [
+                  {
+                    "set_variable": {
+                      "name": "mouse_keys_mode",
+                      "value": 0
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "a"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "x": -1536
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "d"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "x": 1536
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "s"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "y": 1536
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "w"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "y": -1536
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "q"
+                },
+                "to": [
+                  {
+                    "pointing_button": "button1"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "e"
+                },
+                "to": [
+                  {
+                    "pointing_button": "button2"
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "h"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "speed_multiplier": 0.5
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "l"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "speed_multiplier": 2
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "j"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "vertical_wheel": -32
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
+              },
+              {
+                "type": "basic",
+                "from": {
+                  "key_code": "k"
+                },
+                "to": [
+                  {
+                    "mouse_key": {
+                      "vertical_wheel": 32
+                    }
+                  }
+                ],
+                "conditions": [
+                  {
+                    "type": "variable_if",
+                    "name": "mouse_keys_mode",
+                    "value": 1
+                  }
+                ]
               }
             ]
           }
