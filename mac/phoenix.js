@@ -170,7 +170,6 @@ const appsToToggle = {
   'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
   // alt + q, vscode/FB vscode
   'com.microsoft.VSCode': { title: 'Visual Studio Code', modifiers: ['alt'], key: 'q' },
-  //'com.facebook.fbvscode': { title: 'VS Code @ FB', modifiers: ['alt'], key: 'q' },
 
   // alt + 2, edge
   'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt'], key: '2' },
@@ -179,16 +178,15 @@ const appsToToggle = {
 
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
+  // alt + e, onenote
+  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: 'e' }, 
   // alt + shift + 3, ms todo
   'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
-  // alt + e, joplin/quip
-  'net.cozic.joplin-desktop': { title: 'Joplin', modifiers: ['alt'], key: 'e' },
-  //'com.quip.Desktop': { title: 'Quip', modifiers: ['alt'], key: 'e' },
 
   // alt + 4, telegram
   'ru.keepcoder.Telegram': { title: 'Telegram', modifiers: ['alt'], key: '4' },
   // alt + r, workchat
-  'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt'], key: 'r' },
+  //'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt'], key: 'r' },
 
   // file explorer
   'com.apple.finder': { title: 'Finder', modifiers: ['cmd'], key: 'e' },
@@ -197,6 +195,7 @@ const appBundlesToToggle = Object.keys(appsToToggle)
 
 appBundlesToToggle.forEach(b => Key.on(appsToToggle[b].key, appsToToggle[b].modifiers, () => toggleApp(appsToToggle[b].title, b)))
 
+/* disable switch by hint, it is not very stable
 // f16 (right alt) to switch windows by showing hints
 let hints = {} // key = hintKey, value = { win, modal }
 let hintkeys = []
@@ -280,3 +279,4 @@ function buildHints (windows) {
 }
 
 Key.on(HINT_BUTTON, HINT_MODIFIERS, showHints)
+*/
