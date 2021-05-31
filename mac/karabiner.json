@@ -94,7 +94,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f16"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
@@ -121,7 +121,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f17"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
@@ -148,7 +148,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f17"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
