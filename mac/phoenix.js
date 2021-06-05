@@ -168,7 +168,7 @@ function toggleApp (appName, bundleName) {
 const appsToToggle = {
   // alt + 1, iterm
   'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
-  // alt + q, vscode/FB vscode
+  // alt + q, vscode
   'com.microsoft.VSCode': { title: 'Visual Studio Code', modifiers: ['alt'], key: 'q' },
 
   // alt + 2, edge
@@ -179,7 +179,7 @@ const appsToToggle = {
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
   // alt + e, onenote
-  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: 'e' }, 
+  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: 'e' },
   // alt + shift + 3, ms todo
   'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
 
