@@ -16,8 +16,9 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'tpope/vim-commentary'
 Plug 'easymotion/vim-easymotion'
-Plug 'junegunn/fzf'
-Plug 'jremmen/vim-ripgrep'
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 
 " Initialize plugin system
 call plug#end()
@@ -187,18 +188,8 @@ imap <M-f> <C-o><Plug>(easymotion-bd-w)
 let g:sneak#label = 0
 let g:sneak#use_ic_scs = 1
 
-" configure fzf
-" map ctrl-p to fzf
-map <C-p> :FZF<CR>
-imap <C-p> <C-o>:FZF<CR>
-
 " settings for airline-vim, make it beautiful
 let g:airline_theme='light'
-
-" configure vim-ripgrep
-let g:rg_command = 'rg --vimgrep -S'
-nnoremap grg :Rg <C-R>=expand("<cword>")<CR><CR>
-nnoremap ? :Rg <C-R>=expand("<cword>")<CR><CR>
 
 " configure vim-commentary
 " for some reason, vim registers C-/ as C-_
@@ -206,6 +197,16 @@ nnoremap ? :Rg <C-R>=expand("<cword>")<CR><CR>
 map <C-_> <Plug>CommentaryLine
 xmap <C-_> <Plug>Commentarygv
 imap <C-_> <C-o><Plug>CommentaryLine
+
+" configure telescope
+nnoremap <leader>ff :Telescope find_files<cr>
+map <C-p> :Telescope find_files<cr>
+imap <C-p> <C-o>:Telescope find_files<cr>
+nnoremap <leader>fg :Telescope live_grep<cr>
+" use current word under cursor to search, then fuzzy find in the picker
+nnoremap ? :Telescope grep_string search=<C-R><C-W><CR>
+nnoremap <leader>fb :Telescope buffers<cr>
+nnoremap <leader>fh :Telescope help_tags<cr>
 
 " ==== OTHER SETTINGS ====
 " use different cursor shapes in different modes
