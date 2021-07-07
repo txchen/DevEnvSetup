@@ -178,8 +178,8 @@ const appsToToggle = {
 
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
-  // alt + e, onenote
-  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: 'e' },
+  // alt + e, apple notes
+  'com.apple.Notes': { title: 'Notes', modifiers: ['alt'], key: 'e' },
   // alt + shift + 3, ms todo
   'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
 
