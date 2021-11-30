@@ -173,22 +173,31 @@ const appsToToggle = {
 
   // alt + 2, edge
   'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt'], key: '2' },
+  //// alt + 2, vivaldi
+  //'com.vivaldi.Vivaldi': { title: 'Vivaldi', modifiers: ['alt'], key: '2' },
   // alt + w, chrome
   'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: 'w' },
 
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
-  // alt + 3, fsnotes
+  // alt + e, fsnotes
   'co.fluder.FSNotes': { title: 'FSNotes', modifiers: ['alt'], key: 'e' },
-  // alt + shift + e, apple notes
-  'com.apple.Notes': { title: 'Notes', modifiers: ['alt', 'shift'], key: 'e' },
+  //// alt + e, obsidian
+  //'md.obsidian': { title: 'Obsidian', modifiers: ['alt'], key: 'e' },
   // alt + shift + 3, ms todo
   'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
+  // alt + shift + e, apple notes
+  'com.apple.Notes': { title: 'Notes', modifiers: ['alt', 'shift'], key: 'e' },
 
   // alt + 4, telegram
   'ru.keepcoder.Telegram': { title: 'Telegram', modifiers: ['alt'], key: '4' },
-  // alt + r, workchat
-  //'workplace-desktop': { title: 'Workplace Chat', modifiers: ['alt'], key: 'r' },
+  //// alt + 4, slack
+  //'com.tinyspeck.slackmacgap': { title: 'Slack', modifiers: ['alt'], key: '4'},
+  // alt + r, discord
+  'com.hnc.Discord': { title: 'Discord', modifiers: ['alt'], key: 'r'},
+
+  // alt + 5, safari
+  'com.apple.Safari': { title: 'Safari', modifiers: ['alt'], key: '5'},
 
   // file explorer
   'com.apple.finder': { title: 'Finder', modifiers: ['cmd'], key: 'e' },
