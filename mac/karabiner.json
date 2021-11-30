@@ -188,7 +188,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -209,7 +209,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -230,7 +230,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -251,7 +251,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -272,7 +272,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -293,7 +293,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac", "^com.vivaldi.Vivaldi"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -570,8 +570,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -598,8 +597,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -626,8 +624,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -654,8 +651,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -682,8 +678,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -710,8 +705,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -738,8 +732,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -766,8 +759,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -794,8 +786,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -822,8 +813,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -850,8 +840,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -878,8 +867,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -906,8 +894,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -934,8 +921,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -959,8 +945,7 @@
                       "^com\\.google\\.android\\.studio$",
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
-                      "^com\\.googlecode\\.iterm2$",
-                      "^com\\.facebook\\.fbvscode"
+                      "^com\\.googlecode\\.iterm2$"
                     ],
                     "type": "frontmost_application_unless"
                   }
