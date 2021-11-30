@@ -14,6 +14,8 @@ cd ~/code/github
 git clone https://github.com/txchen/DevEnvSetup.git
 cd DevEnvSetup
 ./install-configs.sh
+
+# optional: manually install `rg`, `fd`
 ```
 
 ## Keymaps
