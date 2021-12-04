@@ -175,7 +175,7 @@
                 },
                 "to": [
                   {
-                    "key_code": "f16"
+                    "key_code": "escape"
                   }
                 ],
                 "type": "basic"
