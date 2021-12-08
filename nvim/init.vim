@@ -23,19 +23,24 @@ Plug 'nvim-telescope/telescope.nvim'
 " Initialize plugin system
 call plug#end()
 
+let g:airline#extensions#tabline#enabled = 1
+
 let g:gruvbox_contrast_dark = 'hard'
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
   let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
 endif
 let g:gruvbox_invert_selection='0'
+let g:gruvbox_transparent_bg = 1
 
 colorscheme gruvbox
 set background=dark
 
+autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE
+
 set noswapfile          " we don't need swapfile
 set nobackup            " real man does not need it
-set nowrap              " no wrap line
+"set nowrap              " no wrap line
 set scrolloff=8         " keep 8 lines when scrolling
 set hidden              " Hide files in the background instead of closing them.
 set colorcolumn=120
