@@ -45,3 +45,7 @@ SAVEHIST=10000
 typeset -aU path
 # make ctrl+u same as bash. To delete entire line, use ctrl+c
 bindkey \^U backward-kill-line
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+[ -d ~/.fnm ] && eval "$(fnm env)"
+# END OF PRE-CONFIGURED ZSHRC

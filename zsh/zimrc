@@ -41,4 +41,3 @@ zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
 
 zmodule fzf
-zmodule pvenv
