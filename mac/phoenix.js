@@ -175,8 +175,10 @@ const appsToToggle = {
   'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt'], key: '2' },
   //// alt + 2, vivaldi
   //'com.vivaldi.Vivaldi': { title: 'Vivaldi', modifiers: ['alt'], key: '2' },
-  // alt + w, chrome
-  'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: 'w' },
+  //// alt + w, chrome
+  //'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: 'w' },
+  // alt + w, firefox
+  'org.mozilla.firefox': { title: 'Firefox', modifiers: ['alt'], key: 'w' },
 
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
