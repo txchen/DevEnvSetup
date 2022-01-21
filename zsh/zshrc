@@ -23,6 +23,7 @@ alias pw='pwsh -c'
 alias gt='git tree'
 alias gst='git status'
 alias gd='git diff'
+alias http='xh'
 
 # neovim is the future
 if hash nvim 2>/dev/null; then
