@@ -1,5 +1,5 @@
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
-stty -ixon
+stty -ixon <$TTY >$TTY
 
 ZSH_AUTOSUGGEST_STRATEGY=(completion)
 ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
