@@ -166,8 +166,10 @@ function toggleApp (appName, bundleName) {
 }
 
 const appsToToggle = {
-  // alt + 1, iterm
-  'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
+  // alt + 1, kitty
+  'net.kovidgoyal.kitty': { title: 'kitty', modifiers: ['alt'], key: '1' },
+  //// alt + 1, iterm
+  //'com.googlecode.iterm2': { title: 'iTerm', modifiers: ['alt'], key: '1' },
   // alt + q, vscode
   'com.microsoft.VSCode': { title: 'Visual Studio Code', modifiers: ['alt'], key: 'q' },
 
