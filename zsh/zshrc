@@ -25,7 +25,7 @@ alias gt='git tree'
 alias gst='git status'
 alias gd='git diff'
 alias http='xh'
-if [[ $(TERM) == 'xterm-kitty' ]]; then
+if [[ $TERM == 'xterm-kitty' ]]; then
   alias ssh="kitty +kitten ssh"
 fi
 
