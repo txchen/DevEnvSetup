@@ -1,1 +1,0 @@
-zinit author abandoned zinit, now I will switch to zimfw

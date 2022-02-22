@@ -1,3 +1,4 @@
+# START OF PRE-CONFIGURED ZSHRC
 # disable ctrl+s to stop the terminal, as vim might need this hotkey
 stty -ixon <$TTY >$TTY
 
@@ -24,6 +25,9 @@ alias gt='git tree'
 alias gst='git status'
 alias gd='git diff'
 alias http='xh'
+if [[ $(TERM) == 'xterm-kitty' ]]; then
+  alias ssh="kitty +kitten ssh"
+fi
 
 # neovim is the future
 if hash nvim 2>/dev/null; then
@@ -49,4 +53,8 @@ bindkey \^U backward-kill-line
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 [ -d ~/.fnm ] && eval "$(fnm env)"
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
 # END OF PRE-CONFIGURED ZSHRC
