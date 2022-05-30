@@ -11,7 +11,7 @@ rm -rf ~/.local/share/nvim
 rm -rf ~/.cache/nvim
 git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
 mkdir -p ~/.config/nvim/lua/custom/
-cp -r -f nvchad/custom/ ~/.config/nvim/lua/custom/
+cp -r -f nvchad/custom ~/.config/nvim/lua/
 
 nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
 echo "nvim config done"
