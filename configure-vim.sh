@@ -5,9 +5,15 @@ echo -e "\ncopy vimrc..."
 cp -f vim/vimrc ~/.vimrc || { echo "!! failed to cp vimrc"; exit 2; }
 echo "copy vimrc done"
 
-echo -e "\ncopy init.vim for neovim..."
-mkdir -p ~/.config/nvim
-cp -f nvim/init.vim ~/.config/nvim/init.vim || { echo "!! failed to cp init.vim"; exit 2; }
-echo "copy init.vim done"
+echo -e "\nconfigure nvim with nvchad..."
+rm -rf ~/.config/nvim
+rm -rf ~/.local/share/nvim
+rm -rf ~/.cache/nvim
+git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+mkdir -p ~/.config/nvim/lua/custom/
+cp -r -f nvchad/custom/ ~/.config/nvim/lua/custom/
 
-echo "vim config done"
+nvim --headless -c 'autocmd User PackerComplete quitall' -c 'PackerSync'
+echo "nvim config done"
+
+echo "vim/nvim config done"
