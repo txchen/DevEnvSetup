@@ -35,6 +35,8 @@ M.common = {
       end,
       "   close buffer",
     },
+    -- * to search current (in file) word without move cursor
+    ["*"] = { "*N", "Search word under the cursor" }
   },
   i = {
     ["<C-q><C-q>"] = { "<ESC>:q!<CR>", "Quit without saving"},
