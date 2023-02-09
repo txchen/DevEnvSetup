@@ -175,23 +175,19 @@ const appsToToggle = {
 
   // alt + 2, edge
   'com.microsoft.edgemac': { title: 'Microsoft Edge', modifiers: ['alt'], key: '2' },
-  //// alt + 2, vivaldi
-  //'com.vivaldi.Vivaldi': { title: 'Vivaldi', modifiers: ['alt'], key: '2' },
-  //// alt + w, chrome
-  //'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt'], key: 'w' },
+  // alt + shift + 2, safari
+  'com.apple.Safari': { title: 'Safari', modifiers: ['alt', 'shift'], key: '2' },
   // alt + w, firefox
   'org.mozilla.firefox': { title: 'Firefox', modifiers: ['alt'], key: 'w' },
+  // alt + shift + w, chrome
+  'com.google.Chrome': { title: 'Google Chrome', modifiers: ['alt', 'shift'], key: 'w' },
 
   // alt + 3, notion
   'notion.id': { title: 'Notion', modifiers: ['alt'], key: '3' },
-  // alt + e, fsnotes
-  'co.fluder.FSNotes': { title: 'FSNotes', modifiers: ['alt'], key: 'e' },
-  //// alt + e, obsidian
-  //'md.obsidian': { title: 'Obsidian', modifiers: ['alt'], key: 'e' },
-  // alt + shift + 3, ms todo
-  'com.microsoft.to-do-mac': { title: 'Microsoft To Do', modifiers: ['alt', 'shift'], key: '3' },
-  // alt + shift + e, apple notes
-  'com.apple.Notes': { title: 'Notes', modifiers: ['alt', 'shift'], key: 'e' },
+  // alt + e, onenote
+  'com.microsoft.onenote.mac': { title: 'Microsoft OneNote', modifiers: ['alt'], key: 'e' },
+  // alt + shift + 3, apple notes
+  'com.apple.Notes': { title: 'Notes', modifiers: ['alt', 'shift'], key: '3' },
 
   // alt + 4, telegram
   'ru.keepcoder.Telegram': { title: 'Telegram', modifiers: ['alt'], key: '4' },
@@ -200,98 +196,9 @@ const appsToToggle = {
   // alt + r, discord
   'com.hnc.Discord': { title: 'Discord', modifiers: ['alt'], key: 'r'},
 
-  // alt + 5, safari
-  'com.apple.Safari': { title: 'Safari', modifiers: ['alt'], key: '5'},
-
   // file explorer
   'com.apple.finder': { title: 'Finder', modifiers: ['cmd'], key: 'e' },
 }
 const appBundlesToToggle = Object.keys(appsToToggle)
 
 appBundlesToToggle.forEach(b => Key.on(appsToToggle[b].key, appsToToggle[b].modifiers, () => toggleApp(appsToToggle[b].title, b)))
-
-/* disable switch by hint, it is not very stable
-// f16 (right alt) to switch windows by showing hints
-let hints = {} // key = hintKey, value = { win, modal }
-let hintkeys = []
-let hintsActive = false
-let escbind = null
-let delbind = null
-const HINT_BUTTON = 'f16'
-const HINT_MODIFIERS = [  ]
-const HINT_CHARS = 'fjdkslaghrueiwovncmbxqpzty'.split('') // I only support single char hint, I would not open too many windows
-
-function cancelHints () {
-  for (let hintkey in hints) {
-    hints[hintkey].modal.close()
-  }
-  Key.off(escbind)
-  Key.off(bsbind)
-  hintkeys.map(Key.off)
-  hints = {}
-  hintkeys = []
-  hintsActive = false
-}
-
-function showHints () {
-  if (hintsActive) {
-    cancelHints()
-    return
-  }
-  const allWindows = Window.all({ visible: true })
-  buildHints(allWindows)
-  HINT_CHARS.forEach(hintchar => {
-    hintkeys.push(Key.on(hintchar, [], () => {
-      const activator = hints[hintchar]
-      if (activator) {
-        activator.win.focus()
-      }
-      cancelHints()
-    }))
-  })
-}
-
-function buildHints (windows) {
-  if (windows.length > HINT_CHARS.length) {
-    windows = windows.slice(0, HINT_CHARS.length) // sorry, cannot support too long
-  }
-
-  const screenModalCounts = {} // key: screen, value: count
-  windows.forEach((win, i) => {
-    if (win.title().length === 0 || appBundlesToToggle.includes(win.app().bundleIdentifier())) {
-      return
-    }
-    const title = `${HINT_CHARS[i].toUpperCase()}  =>  ${win.title().substr(0, 25) + (win.title().length > 25 ? "…" : "")}`
-    const ws = win.screen()
-    const wsf = ws.frame()
-    const hintModal = Modal.build({
-      text: title,
-      appearance: 'dark',
-      icon: win.app().icon(),
-      weight: 16,
-      animationDuration: 0
-    })
-    const mf = hintModal.frame()
-    const si = ws.identifier()
-    screenModalCounts[si] = (screenModalCounts[si] ? screenModalCounts[si] : 0) + 1
-    const indexInScreen = screenModalCounts[si] // one based
-    const cellAdjustment = Math.floor(indexInScreen / 2) * (indexInScreen % 2 ? 1 : -1)
-    hintModal.origin = {
-      x: wsf.x + wsf.width / 2 - mf.width / 2,
-      y: wsf.y + wsf.height / 2 + cellAdjustment * (mf.height + 5)
-    }
-    // Phoenix.log(win.title(), cellAdjustment, mf.height, si, indexInScreen)
-    // Phoenix.log(JSON.stringify(hintModal.origin))
-    hints[HINT_CHARS[i]] = {
-      win,
-      modal: hintModal
-    }
-  })
-  escbind = Key.on('escape', [], cancelHints)
-  bsbind = Key.on('delete', [], cancelHints) // delete is actually backspace
-  Object.values(hints).forEach(act => act.modal.show())
-  hintsActive = true
-}
-
-Key.on(HINT_BUTTON, HINT_MODIFIERS, showHints)
-*/

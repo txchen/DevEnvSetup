@@ -22,8 +22,8 @@ zmodule utility
 zmodule duration-info
 # Exposes git repository status information to prompts, used by asciiship.
 zmodule git-info
-## A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
-#zmodule asciiship
+# p10k zsh theme
+zmodule romkatv/powerlevel10k
 
 # Additional completion definitions for Zsh.
 zmodule zsh-users/zsh-completions
@@ -41,4 +41,3 @@ zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
 
 zmodule fzf
-zmodule romkatv/powerlevel10k

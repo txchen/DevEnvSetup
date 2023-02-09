@@ -1,9 +1,6 @@
 #!/bin/bash
 echo "configuring zsh"
 
-# prepare for fnm
-mkdir -p ~/.fnm
-
 # copy p10k config
 echo -e "copying p10k config..."
 cp -f zsh/p10k.zsh ~/.p10k.zsh
