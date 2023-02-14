@@ -155,12 +155,20 @@ function horizontalResize (direction) {
 }
 
 // Toggle apps
-function toggleApp (appName, bundleName) {
+function toggleApp(appName, bundleName) {
   const foremostApp = App.focused()
-  if (foremostApp && foremostApp.bundleIdentifier() === bundleName) {
-    // Phoenix.log(foremostApp.name())
-    foremostApp.hide()
-    return
+  if (foremostApp) {
+    if (foremostApp.bundleIdentifier() === 'com.carriez.rustdesk') {
+      // ignore toggling when remote desktop is in fullscreen mode
+      const window = Window.focused()
+      if (window && window.isFullScreen()) {
+        return
+      }
+    }
+    if (foremostApp.bundleIdentifier() === bundleName) {
+      foremostApp.hide()
+      return
+    }
   }
   App.launch(appName, { focus: true })
 }
