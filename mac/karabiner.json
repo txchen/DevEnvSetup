@@ -571,7 +571,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -599,7 +600,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -627,7 +629,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -655,7 +658,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -683,7 +687,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -711,7 +716,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -739,7 +745,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -767,7 +774,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -795,7 +803,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -823,7 +832,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -851,7 +861,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -879,7 +890,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -907,7 +919,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -935,7 +948,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -960,7 +974,8 @@
                       "^com\\.microsoft\\.VSCode$",
                       "^com\\.microsoft\\.visual-studio$",
                       "^com\\.googlecode\\.iterm2$",
-                      "^net\\.kovidgoyal\\.kitty$"
+                      "^net\\.kovidgoyal\\.kitty$",
+                      "^com\\.github\\.wez\\.wezterm$"
                     ],
                     "type": "frontmost_application_unless"
                   }
@@ -987,7 +1002,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$", "^net\\.kovidgoyal\\.kitty$"],
+                    "bundle_identifiers": ["^com\\.googlecode\\.iterm2$", "^net\\.kovidgoyal\\.kitty$","^com\\.github\\.wez\\.wezterm$"],
                     "type": "frontmost_application_if"
                   }
                 ],
