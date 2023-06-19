@@ -63,6 +63,11 @@ config.keys = {
     action = wezterm.action.ActivateTabRelative(1),
   },
   {
+    key = 'w',
+    mods = 'CTRL|ALT',
+    action = wezterm.action.CloseCurrentTab { confirm = false },
+  },
+  {
     key = 'h',
     mods = 'CTRL|ALT|SHIFT',
     action = wezterm.action.MoveTabRelative(-1),
