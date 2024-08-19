@@ -206,7 +206,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -227,7 +227,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -248,7 +248,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -269,7 +269,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -290,7 +290,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
@@ -311,7 +311,7 @@
               {
                 "conditions": [
                   {
-                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^com.microsoft.edgemac"],
+                    "bundle_identifiers": ["^com.google.Chrome$", "^org.mozilla.firefox$", "^org.mozilla.floorp$"],
                     "type": "frontmost_application_if"
                   }
                 ],
