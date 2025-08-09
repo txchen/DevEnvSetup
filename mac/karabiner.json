@@ -1261,6 +1261,23 @@
             "vendor_id": 1133
           },
           "ignore": true
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "product_id": 58566,
+            "vendor_id": 13357
+          },
+          "ignore": false
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "is_pointing_device": true,
+            "device_address": "c2-01-62-fd-05-e6"
+          },
+          "ignore": false
         }
       ],
       "fn_function_keys": [
