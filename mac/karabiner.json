@@ -290,7 +290,7 @@
             ]
           },
           {
-            "description": "web browser: alt+HL to go back/forward history, ctrl+alt+HLW to cycle or close browser tabs, f5 to refresh",
+            "description": "web browser: alt+HL to go back/forward history, f5 to refresh",
             "manipulators": [
               {
                 "conditions": [
@@ -298,7 +298,8 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^org.mozilla.floorp$"
+                      "^org.mozilla.floorp$",
+                      "^app.zen-browser.zen$"
                     ],
                     "type": "frontmost_application_if"
                   }
@@ -327,7 +328,8 @@
                     "bundle_identifiers": [
                       "^com.google.Chrome$",
                       "^org.mozilla.firefox$",
-                      "^org.mozilla.floorp$"
+                      "^org.mozilla.floorp$",
+                      "^app.zen-browser.zen$"
                     ],
                     "type": "frontmost_application_if"
                   }
